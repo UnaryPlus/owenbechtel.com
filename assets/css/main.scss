@@ -32,6 +32,7 @@ a {
 .page {
   height: 100%;
   font-family: "Libre Baskerville";
+  code, pre { font-size: 16px; }
   @include large {
     display: grid;
     grid-template-columns: Max(25%, 260px); /* nav width */

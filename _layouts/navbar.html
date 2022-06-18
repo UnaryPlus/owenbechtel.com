@@ -34,6 +34,9 @@ nav_items:
   </nav>
 
   <main>
+    {% if page.no_heading != true %}
+      <h2>{{ page.title }}</h2>
+    {% endif %}
     {{ content }}
   </main>
 

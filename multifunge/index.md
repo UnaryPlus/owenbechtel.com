@@ -3,8 +3,6 @@ layout: 'navbar'
 title: 'Multifunge'
 ---
 
-## Multifunge
-
 Multifunge is an esoteric programming language inspired by Asciidots and Befunge. You can download the interpreter on [Github](https://github.com/UnaryPlus/multifunge).
 
 `@` marks the starting location of an instruction pointer in the code. Instruction pointers always start moving right, but can also move left, up, or down. Each instruction pointer has a value, which starts at 0. When a pointer reaches a command character, the associated command is executed.
