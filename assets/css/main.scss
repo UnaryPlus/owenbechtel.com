@@ -1,7 +1,8 @@
 ---
 ---
 
-@import 'https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap';
+@import 'highlight.css';
+@import 'font.css';
 
 $nav-color: hsl(275, 100%, 25.5%);
 $nav-breakpoint: 700px;
@@ -23,25 +24,28 @@ html, body {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
 .page {
+  height: 100%;
+  font-family: "Libre Baskerville";
   @include large {
     display: grid;
     grid-template-columns: Max(25%, 260px); /* nav width */
   }
-  height: 100%;
-  font-family: "Libre Baskerville";
 }
 
 nav {
   padding: 10px 30px;
   background-color: $nav-color;
   a { color: white; }
-
   @include small {
     #menu-icon { float: right; }
     .hidden { display: none; }
   }
-
   @include large {
     height: 100%;
     #menu-icon { display: none; }
@@ -50,17 +54,11 @@ nav {
 }
 
 main {
+  padding: 10px 30px;
   @include large {
     grid-column: 2;
     p { padding-right: 20%; }
   }
-
-  padding: 10px 30px;
-}
-
-a {
-  text-decoration: none;
-  &:hover { text-decoration: underline; }
 }
 
 .image-row {
@@ -81,7 +79,6 @@ a {
       column-count: 3;
     }
   }
-
   @include large {
     column-count: 2;
     @media only screen and (min-width: 810px) {
@@ -101,16 +98,13 @@ a {
   border: 1px solid black;
   break-inside: avoid;
   margin-bottom: 20px;
-
   a {
     color: black;
   }
-
   img {
     width: 100%;
     display: block;
   }
-
   div {
     text-align: center;
     padding: 10px;
