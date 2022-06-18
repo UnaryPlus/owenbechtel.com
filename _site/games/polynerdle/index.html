@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="/bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+
+        <title>Polynerdle</title>
+    </head>
+    <body>
+        <script src="/navbar.js"></script>
+        <script>navbar("games")</script>
+        
+        <div class="text-center padded-top">
+            <h1>Polynerdle</h1><br><br>
+        </div>
+        
+        <div id="info"></div>
+        <div id="game"></div>
+        <div id="buttons" class="padded-top padded-bottom"></div>
+
+        <div class="instructions instructions-text">
+            <p>
+                Polynerdle is a math game similar to
+                <a href="https://nerdlegame.com/">Nerdle</a>,
+                but based on differential calculus instead of arithmetic.
+                The goal of Polynerdle is to guess the polynomial
+                differential equation is six tries or less. For example, the
+                solution might be:
+            </p>
+        </div>
+        
+        <div id="example" class="instructions"></div>
+        
+        <div class="instructions instructions-text padded-top-10">
+            <p>
+                which says that the derivative of 4x<sup>3</sup> is
+                12x<sup>2</sup>. A new puzzle will appear each day.
+            </p>
+            <p>
+                Use the buttons at the bottom of the game to enter
+                your guess. You can also use the keyboard. Every guess must
+                be a correct and well-formed equation. Once you hit
+                enter, the squares in the current row will change color.
+            </p>
+            <ul>
+                <li>
+                    A <span class="text-correct">teal</span> square means that
+                    the symbol is in the solution, and in the position you guessed.
+                </li>
+                <li>
+                    A <span class="text-somewhere">purple</span> square means
+                    that the symbol is in the solution, but not in the position
+                    you guessed.
+                </li>
+                <li>
+                    A black square means there are more of that symbol in your
+                    guess than in the solution.
+                </li>
+            </ul>
+        </div>
+
+        <script src="/bootstrap.min.js"></script>
+        <script src="/jquery.min.js"></script>
+        <script src="/seedrandom.min.js"></script>
+        
+        <script src="game.js"></script>
+    </body>
+</html>

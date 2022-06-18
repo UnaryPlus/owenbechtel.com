@@ -1,0 +1,45 @@
+---
+layout: 'basic'
+
+nav_items:
+  - dir: 'games'
+    text: 'Games and Animations'
+  - dir: 'blog'
+    text: 'Articles'
+  - dir: 'multifunge'
+    text: 'Multifunge'
+  - dir: 'unique'
+    text: 'Unique'
+  - dir: 'symmetrica'
+    text: 'Symmetrica'
+  - dir: 'alphabet'
+    text: 'Featural Alphabet'
+  - dir: 'googology'
+    text: 'Googology'
+---
+
+<div class="page">
+  <nav>
+    <div class="fixed">
+      <img id="menu-icon" src="/assets/images/menu-icon.svg" width="40px">
+      <h2><a href="/">Owen Bechtel</a></h2>
+      <div id="toggle" class="hidden">
+        {% for item in layout.nav_items %}
+          <p><a href="/{{ item.dir }}">
+            {{ item.text }}
+          </a></p>
+        {% endfor %}
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <script>
+    document.querySelector("#menu-icon").onclick = function() {
+      document.querySelector("#toggle").classList.toggle("hidden")
+    }
+  </script>
+</div>

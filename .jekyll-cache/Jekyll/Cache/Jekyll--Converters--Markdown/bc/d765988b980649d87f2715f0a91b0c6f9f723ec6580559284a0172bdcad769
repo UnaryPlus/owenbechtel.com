@@ -1,0 +1,35 @@
+I"z<h2 id="multifunge">Multifunge</h2>
+
+<p>Multifunge is an esoteric programming language inspired by Asciidots and Befunge.
+You can download the interpreter on <a href="https://github.com/UnaryPlus/multifunge">Github</a>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">@</code> marks the starting location of an instruction pointer in the code. Instruction pointers
+always start moving right, but can also move left, up, or down. Each instruction pointer
+has a value, which starts at 0. When a pointer reaches a command character, the associated
+command is executed.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">x</code> deletes the pointer. (They are also deleted if they leave the boundaries of the program.)</li>
+  <li><code class="language-plaintext highlighter-rouge">;</code> ends the program by deleting all pointers.</li>
+  <li><code class="language-plaintext highlighter-rouge">^</code> causes the pointer to move up.</li>
+  <li><code class="language-plaintext highlighter-rouge">v</code> causes the pointer to move down.</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;</code> causes the pointer to move left.</li>
+  <li><code class="language-plaintext highlighter-rouge">&gt;</code> causes the pointer to move right.</li>
+  <li><code class="language-plaintext highlighter-rouge">/</code> and <code class="language-plaintext highlighter-rouge">\</code> duplicate the pointer. You can think of them as semi-transparent mirrors.
+One copy of the pointer keeps going forward, and the other copy “bounces off.”</li>
+  <li><code class="language-plaintext highlighter-rouge">*</code> creates two new copies of the pointer moving perpendicular to the original.</li>
+  <li><code class="language-plaintext highlighter-rouge">+</code> increments the pointer’s value.</li>
+  <li><code class="language-plaintext highlighter-rouge">-</code> decrements the pointer’s value.</li>
+  <li><code class="language-plaintext highlighter-rouge">~</code> negates the pointer’s value.</li>
+  <li><code class="language-plaintext highlighter-rouge">#</code> resets the pointer’s value to 0.</li>
+  <li>Any digit 0-9 multiplies the pointer’s value by 10 and then adds the given digit.
+This basically just appends the digit to the end of the value.</li>
+  <li><code class="language-plaintext highlighter-rouge">!</code> prints the pointer’s value.</li>
+  <li><code class="language-plaintext highlighter-rouge">?</code> waits for the user to enter a value, and then sets the pointer to that value.</li>
+  <li><code class="language-plaintext highlighter-rouge">"</code> prints every character until the next quote.</li>
+  <li><code class="language-plaintext highlighter-rouge">.</code> prints a newline.</li>
+  <li><code class="language-plaintext highlighter-rouge">c</code> puts the pointer in character mode. While in character mode, the ? and ! commands input and output single characters rather than integers, and the pointer’s value is treated as an ascii code.</li>
+  <li><code class="language-plaintext highlighter-rouge">i</code> puts the pointer back in integer mode.</li>
+  <li>Other characters are ignored by the interpreter.</li>
+</ul>
+:ET

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/bootstrap.min.css">
+
+        <title>Escape</title>
+    </head>
+    <body>
+        <script src="/navbar.js"></script>
+        <script>navbar("games")</script>
+        
+        <div class="text-center" style="padding-top:50px">
+            <h1>Escape</h1><br>
+            <button type="button" class="btn btn-secondary" id="button" onClick="beginGame();">Begin Game</button><br><br>
+            <p>
+                Highscore: <span id = "highscore">0</span>
+            </p>
+            <canvas id = "gameCanvas" style="border:1px solid black;" width = "500" height = "500" onMouseMove = "mouseUpdate(event);"></canvas><br><br>
+            <p>
+                Get to the top of the screen as slowly as possible without the red circle catching you.<br>
+                You cannot move down.
+            </p>
+        </div>
+        
+        <script src="game.js"></script>
+
+        <!-- Bootstrap JS -->
+        <script src="/bootstrap.min.js"></script>
+    </body>
+</html>

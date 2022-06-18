@@ -1,0 +1,165 @@
+---
+layout: 'navbar'
+title: 'Games and Animations'
+
+my_games:
+  - name: 'Adventure Colonialist'
+    href: 'adventure-colonialist'
+    image: 'adventure-colonialist/image.png'
+
+  - name: 'Arrow Game'
+    href: 'arrow-game'
+    image: 'arrow-game/image.png'
+
+  - name: 'Battle'
+    href: 'battle'
+    image: 'battle/image.png'
+
+  - name: 'Blockade'
+    href: 'blockade'
+    image: 'blockade/image.png'
+
+  - name: 'Chaos Game'
+    href: 'chaos-game'
+    image: 'chaos-game/image.png'
+
+  - name: 'Chat Room'
+    href: 'https://chat-room.unaryplus.repl.co'
+    image: 'chat-room/image.png'
+
+  - name: 'Click Inside the Box'
+    href: 'click-inside-the-box'
+    image: 'click-inside-the-box/image.png'
+
+  - name: 'Dark Forest'
+    href: 'dark-forest'
+    image: 'dark-forest/image.png'
+
+  - name: 'Disease Spread Simulation'
+    href: 'https://ellie-app.com/8NND92szqfNa1'
+    image: 'disease-spread/image.png'
+
+  - name: 'Dodge the Rectangles'
+    href: 'dodge-the-rectangles'
+    image: 'dodge-the-rectangles/image.png'
+
+  - name: 'Dodge the Rectangles 2'
+    href: 'https://studio.code.org/projects/applab/-xqODk1HMCyR26iOLZ35HH5FGthWiXNRitZhNdUSjW0'
+    image: 'dodge-the-rectangles-2/image.png'
+
+  - name: 'Escape'
+    href: 'escape'
+    image: 'escape/image.png'
+
+  - name: 'Evica Text Adventure'
+    href: 'evica'
+    image: 'evica/image.png'
+
+  - name: 'Flappy Bird'
+    href: 'flappy-bird'
+    image: 'flappy-bird/image.png'
+
+  - name: 'Forces at Play'
+    href: 'forces-at-play'
+    image: 'forces-at-play/image.png'
+
+  - name: 'Gravity Ball'
+    href: 'gravity-ball'
+    image: 'gravity-ball/image.png'
+
+  - name: 'Guess the Color'
+    href: 'guess-the-color'
+    image: 'guess-the-color/image.png'
+
+  - name: 'Hangman'
+    href: 'hangman'
+    image: 'hangman/image.png'
+
+  - name: 'Homecoming'
+    href: 'homecoming'
+    image: 'homecoming/image.png'
+
+  - name: 'Mini Golf'
+    href: 'mini-golf'
+    image: 'mini-golf/image.png'
+
+  - name: 'Orbit Animation'
+    href: 'orbit-animation'
+    image: 'orbit-animation/image.png'
+
+  - name: 'Paint Splatter'
+    href: 'paint-splatter'
+    image: 'paint-splatter/image.png'
+
+  - name: 'Particle Life'
+    href: 'https://ellie-app.com/9Gw3LC2FGGHa1'
+    image: 'particle-life/image.png'
+
+  - name: 'Polynerdle'
+    href: 'polynerdle'
+    image: 'polynerdle/image.png'
+
+  - name: 'Ripples'
+    href: 'ripples'
+    image: 'ripples/image.png'
+
+  - name: 'Scrimish'
+    href: 'scrimish'
+    image: 'scrimish/image.png'
+
+  - name: 'Tanks Battle Royale'
+    href: 'https://tanks-battle-royale.unaryplus.repl.co'
+    image: 'tanks-battle-royale/image.png'
+
+  - name: 'Times Tables'
+    href: 'times-tables'
+    image: 'times-tables/image.png'
+
+  - name: 'Twelve Points'
+    href: 'twelve-points'
+    image: 'twelve-points/image.png'
+
+other_games:
+  - name: 'Car Clicker'
+    href: 'car-clicker'
+    image: 'car-clicker/image.png'
+    author: 'Cole Bechtel'
+
+  - name: 'Chunguscraft Story Mode'
+    href: 'https://studio.code.org/projects/applab/i1vqFe0nBncyxuRCbfVwvyViYoK7eoVwKw2HwxyB4_U'
+    image: 'chunguscraft-story-mode/image.png'
+    author: 'Ryan Allison'
+
+  - name: 'Dodge the Circles'
+    href: 'dodge-the-circles'
+    image: 'dodge-the-circles/image.png'
+    author: 'Cole Bechtel'
+
+  - name: 'Garfield''s Shoot ''em Up'
+    href: 'https://studio.code.org/projects/applab/U5laFDTwMMqmUazEfjIV67Y-cZ4oB_mBWp85wqWKrSA'
+    image: 'garfields-shoot-em-up/image.png'
+    author: 'Mat Ormsbee'
+
+  - name: 'Island Defender'
+    href: 'https://studio.code.org/projects/applab/4ePKo5VXA3X7Cyi68myZEexX5FYV8WxIk5XK3Amchao'
+    image: 'island-defender/image.png'
+    author: 'Eli Willett'
+
+  - name: 'Quiz of Champions'
+    href: 'https://studio.code.org/projects/applab/xQ_3SilIk2PD-FITG3_oTz94KnDXvA4dzt18Fv6G6ic'
+    image: 'quiz-of-champions/image.png'
+    author: 'Sam Commisso'
+---
+
+<h2>Games and Animations</h2>
+
+<div class="game-section">
+  {% for game in page.my_games %}
+      <div class="game-card">
+        <a href="{{ game.href }}">
+          <img alt="{{ game.name }} image" src="{{ game.image }}">
+          <div>{{ game.name }}</div>
+        </a>
+      </div>
+  {% endfor %}
+</div>
