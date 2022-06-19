@@ -18,13 +18,13 @@ I'll start by defining a recursive array function with three rules. This functio
 3. [x, y, Z] = [x - 1, [y, Z], Z] \
    (If there is more than one number inside the brackets and the first number is greater than 1, the first number is decremented and the second number is replaced with the entire array except for the first number.)
 
- The third rule is what makes this function capable of generating extremely large numbers. Let’s see what happens when we evaluate something like [3, 3].
+The third rule is what makes this function capable of generating extremely large numbers. Let’s see what happens when we evaluate something like [3, 3].
 
- * [3, 3] = [2, [3]] = [1, [[3]]] (rule 3)
- * [1, [[3]]] = [[[3]]] (rule 2)
- * [[[3]]] = [[2^3]] = [[8]] = [2^8] = [256] = 2^256 (rule 1)
+* [3, 3] = [2, [3]] = [1, [[3]]] (rule 3)
+* [1, [[3]]] = [[[3]]] (rule 2)
+* [[[3]]] = [[2^3]] = [[8]] = [2^8] = [256] = 2^256 (rule 1)
 
- By applying the three rules, a short array of small numbers like [3, 3] can end up evaluating to something truly enormous. In case you’re wondering, the full decimal representation of 2^256 is 115 792 089 237 316 195 423 570 985 008 687 907 853 269 984 665 640 564 039 457 584 007 913 129 639 936. What happens if we try [4, 4]?
+By applying the three rules, a short array of small numbers like [3, 3] can end up evaluating to something truly enormous. In case you’re wondering, the full decimal representation of 2^256 is 115 792 089 237 316 195 423 570 985 008 687 907 853 269 984 665 640 564 039 457 584 007 913 129 639 936. What happens if we try [4, 4]?
 
 * [4, 4] = [3, [4]] = [2, [[4]]] = [1, [[[4]]]] (rule 3)
 * [1, [[[4]]]] = [[[[4]]]] (rule 2)
@@ -32,8 +32,8 @@ I'll start by defining a recursive array function with three rules. This functio
 
 In other words, [4, 4] is equal to 2 to the power of [this number](2-65536). Imagine multiplying that many 2s together! We’ve already reached values far larger than googolplex, and we haven’t even tried putting more than two numbers inside the brackets. Let’s try evaluating [4, 4, 4].
 
-[4, 4, 4] = [3, [4, 4], 4] = [2, [[4, 4], 4], 4] = [1, [[[4, 4], 4], 4], 4] (rule 3) \
-[1, [[[4, 4], 4], 4], 4] = [[[[4, 4], 4], 4], 4] (rule 2)
+* [4, 4, 4] = [3, [4, 4], 4] = [2, [[4, 4], 4], 4] = [1, [[[4, 4], 4], 4], 4] (rule 3)
+* [1, [[[4, 4], 4], 4], 4] = [[[[4, 4], 4], 4], 4] (rule 2)
 
 I’m going to stop here, because you can probably already tell how big this is going to get. It’s difficult to imagine the size of something like [4, 4, 4] but we might as well try. First, imagine a 4 inside of [4, 4] sets of brackets. Now imagine a 4 inside of that many brackets. Now imagine a 4 inside of _that_ many brackets. Repeat the process one more time and you have finally reached [4, 4, 4].
 
@@ -46,11 +46,11 @@ Adding more arguments to the bracket function increases the resulting values hyp
 
 Here are a few examples to demonstrate the tremendous power of this new operator:
 
-2 ϟ 2 = [2, 2] = 16 \
-2 ϟ 5 = [5, 5, 5, 5, 5] \
-2 ϟ 8 = [8, 8, 8, 8, 8, 8, 8, 8] \
-3 ϟ 2 = 2 ϟ [2, 2] = 2 ϟ 16 = [16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16] \
-3 ϟ 3 = 2 ϟ [3, 3, 3] = [[3, 3, 3], [3, 3, 3], ...... [3, 3, 3], [3, 3, 3]] with [3, 3, 3] [3, 3, 3]'s
+* 2 ϟ 2 = [2, 2] = 16
+* 2 ϟ 5 = [5, 5, 5, 5, 5]
+* 2 ϟ 8 = [8, 8, 8, 8, 8, 8, 8, 8]
+* 3 ϟ 2 = 2 ϟ [2, 2] = 2 ϟ 16 = [16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+* 3 ϟ 3 = 2 ϟ [3, 3, 3] = [[3, 3, 3], [3, 3, 3], ...... [3, 3, 3], [3, 3, 3]] with [3, 3, 3] [3, 3, 3]'s
 
 Well that escalated quickly.
 
