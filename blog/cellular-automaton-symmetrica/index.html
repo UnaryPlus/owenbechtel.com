@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/bootstrap.min.css">
+                
+        <style>
+            .flex-container {
+                display:flex;
+                flex-wrap:wrap;
+            }
+            .flex-container > div {
+                margin-right:30px;
+                margin-bottom:10px;
+                flex-basis:100px;
+            }
+            .pattern {
+                margin-top:5px;
+            }
+        </style>
+        
+        <title>Cellular automaton: Symmetrica</title>
+    </head>
+    <body>
+        <script src="/navbar.js"></script>
+        <script>navbar("blog")</script>
+        <div class="w-75 m-auto" style="padding-top:50px">
+            <h4>Cellular automaton: Symmetrica</h4>
+            <p>8 Feb 2022</p>
+            <p>
+                Symmetrica is an <a href="https://conwaylife.com/wiki/Isotropic_non-totalistic_Life-like_cellular_automaton">isotropic, non-totalistic</a> 
+                cellular automaton. Like the Game of Life, it has two states (alive and dead) and is played on a square grid. The future state of a cell 
+                is determined not only by the number of live cells in its Moore neighborhood, but also by 
+                the relative configuration of those neighbors.
+            </p>
+            <p>
+                A dead cell becomes alive in the following conditions:
+            </p>
+            <ul>
+                <li>
+                    It has two or three live neighbors, and the configuration of the cell along with its 
+                    neighbors has reflectional symmetry.
+                </li>
+                <li>
+                    It has four live neighbors, and the neighbors are either all orthogonal or all 
+                    diagonal.
+                </li>
+            </ul>
+            <p>
+                The conditions for survival are the same as those in Life: a cell needs two or three live 
+                neighbors to survive, regardless of configuration. In the <a href="https://conwaylife.com/wiki/Isotropic_non-totalistic_Life-like_cellular_automaton#Moore_neighbourhood">Hensel notation</a>, 
+                Symmetrica is written B2-ak3-jnqr4ce/S23. The name "Symmetrica" comes from the word "symmetry" and 
+                the letters "ca" for cellular automaton.
+            </p>
+            <p>
+                Unlike my other automaton <a href="../cellular-automaton-longevity">Longevity</a>, 
+                random patterns in Symmetrica do not explode indefinitely. Also, stable patterns can 
+                interact much more easily. Below is a list of notable patterns I have discovered so far. 
+                For oscillators where the <a href="https://conwaylife.com/wiki/Mod">mod</a> is different 
+                from the period, the period and the mod are written with a slash, e.g. 4/2.
+            </p>
+            <div class="flex-container">
+                <div>
+                    <b>Tugboat</b><br>
+                    spaceship<br>
+                    period 2<br>
+                    <img src="tugboat.png" alt="tugboat pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Schooner</b><br>
+                    spaceship<br>
+                    period 2<br>
+                    <img src="schooner.png" alt="schooner pattern" class="pattern">
+                </div>
+            </div>
+            <div class="flex-container">
+                <div>
+                    <b>Flare</b><br>
+                    oscillator<br>
+                    period 2/1<br>
+                    volatility 1<br>
+                    <img src="flare.png" alt="flare pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Blinker</b><br>
+                    oscillator<br>
+                    period 2/1<br>
+                    volatility 0.8<br>
+                    <img src="blinker.png" alt="blinker pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Chomp</b><br>
+                    oscillator<br>
+                    period 2<br>
+                    volatility 1<br>
+                    <img src="chomp.png" alt="chomp pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Long chomp</b><br>
+                    oscillator<br>
+                    period 2<br>
+                    volatility 1<br>
+                    <img src="long-chomp.png" alt="long chomp pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Throw</b><br>
+                    oscillator<br>
+                    period 4<br>
+                    volatility 0.67<br>
+                    <img src="throw.png" alt="throw pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Long throw</b><br>
+                    oscillator<br>
+                    period 4<br>
+                    volatility 0.79<br>
+                    <img src="long-throw.png" alt="long throw pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Bacon</b><br>
+                    oscillator<br>
+                    period 4<br>
+                    volatility 0.33<br>
+                    <img src="bacon.png" alt="bacon pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Long bacon</b><br>
+                    oscillator<br>
+                    period 4<br>
+                    volatility 0.57<br>
+                    <img src="long-bacon.png" alt="long bacon pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Quartet</b><br>
+                    oscillator<br>
+                    period 3<br>
+                    volatility 0.37<br>
+                    <img src="quartet.png" alt="quartet pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Boomerang</b><br>
+                    oscillator<br>
+                    period 8<br>
+                    volatility 0.68<br>
+                    <img src="boomerang.png" alt="boomerang pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Pinwheel</b><br>
+                    oscillator<br>
+                    period 8/2<br>
+                    volatility 1<br>
+                    <img src="pinwheel.png" alt="pinwheel pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Victory</b><br>
+                    oscillator<br>
+                    period 20/10<br>
+                    volatility 1<br>
+                    <img src="victory.png" alt="victory pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Shellshock</b><br>
+                    oscillator<br>
+                    period 4<br>
+                    volatility 0.59<br>
+                    <img src="shellshock.png" alt="shellshock pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Double shellshock</b><br>
+                    oscillator<br>
+                    period 4<br>
+                    volatility 0.76<br>
+                    <img src="double-shellshock.png" alt="double shellshock pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Insect</b><br>
+                    oscillator<br>
+                    period 3<br>
+                    volatility 0.16<br>
+                    <img src="insect.png" alt="insect pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Long insect</b><br>
+                    oscillator<br>
+                    period 3<br>
+                    volatility 0.21<br>
+                    <img src="long-insect.png" alt="long insect pattern" class="pattern">
+                </div>
+            </div>
+            <div class="flex-container">
+                <div>
+                    <b>Block</b><br>
+                    still life<br>
+                    <img src="block.png" alt="block pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Carrier</b><br>
+                    still life<br>
+                    <img src="carrier.png" alt="carrier pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Arcade</b><br>
+                    still life<br>
+                    <img src="arcade.png" alt="arcade pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Shell</b><br>
+                    still life<br>
+                    <img src="shell.png" alt="shell pattern" class="pattern">
+                </div>
+            </div>
+            <div class="flex-container">
+                <div>
+                    <b>Chip</b><br>
+                    induction coil<br>
+                    <img src="chip.png" alt="chip pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Table</b><br>
+                    induction coil<br>
+                    <img src="table.png" alt="table pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Long table</b><br>
+                    induction coil<br>
+                    <img src="long-table.png" alt="long table pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Horn</b><br>
+                    induction coil<br>
+                    <img src="horn.png" alt="horn pattern" class="pattern">
+                </div>
+                <div>
+                    <b>Long horn</b><br>
+                    induction coil<br>
+                    <img src="long-horn.png" alt="long horn pattern" class="pattern">
+                </div>
+            </div>
+            <p>
+                The names "blinker", "block", "carrier", and "table" are taken from the 
+                Game of Life. All of the other names are original. Pinwheel is named for 
+                its rotating behavior; it is the only oscillator yet discovered whose mod 
+                is a quarter of its period. The period 8 oscillator is called "boomerang"
+                because it looks like a blinker being thrown back and forth by two blocks.
+            </p>
+            <p>
+                All of the patterns with a "long" variant are infinitely extensible. For example,
+                the family of oscillators begginging with insect and long insect can be extended 
+                to form very long insect, extra long insect, <a href="https://conwaylife.com/wiki/Long#Specific_names">remarkably long</a> insect, and so on
+                by adding additional components to the chain. However, the schooner, despite looking 
+                like an extended tugboat, cannot be extended further. Adding 3 cells behind a schooner
+                will create a tugboat and a bunch of ash after 1149 generations.
+            </p>
+            <p>
+                If you add a cell diagonally adjecent to a block, the block will absorb the 
+                new cell and restabilise after 2 generations. This spark-eating ability
+                allows the block to interact with other patterns in interesting ways. Several of
+                the oscillators above contain blocks (throw, bacon, quartet, and boomerang).
+                You can also create an oscillator by placing a block near a table or by placing
+                two blocks on opposite sides of a long horn.
+            </p>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="/bootstrap.min.js"></script>
+    </body>
+</html>

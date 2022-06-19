@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/bootstrap.min.css">
+                
+        <!-- Highlight CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/base16/atelier-cave-light.min.css">
+        
+        <title>A clever means of numerical overloading</title>
+    </head>
+    <body>
+        <script src="/navbar.js"></script>
+        <script>navbar("blog")</script>
+        <div class="w-75 m-auto" style="padding-top:50px">
+            <h4>A clever means of numerial overloading</h4>
+            <p>30 Oct 2021</p>
+            <p>
+                Statically typed programming languages almost always have more than one numerical data type. 
+                Java has six: <code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>, 
+                <code>float</code>, and <code>double</code>. 
+                Having more than one type of number is useful in many cases, 
+                because there are some operations which only work on integers (e.g. modulo), 
+                and some which only work on floating-point numbers (e.g. square root). 
+                But there are some operations, like addition and multiplication, 
+                which work on all types of numbers; adding two integers returns an integer, 
+                and adding two floats returns a float. 
+                Programming languages have many ways of getting around this problem.
+            </p>
+            <ul>
+                <li>
+                    Most C-like languages support ad-hoc overloading. In these languages, 
+                    you can simply define two versions of a function, one for integers and one for floats. 
+                    The compiler will figure out which version to use based on the types of the arguments.
+                </li>
+                <li>
+                    Haskell has a more principled method of ad-hoc polymorphism called a <em>typeclass</em>.
+                    The Haskell standard library defines a typeclass called <code>Num</code> 
+                    containing the addition and multiplication functions. 
+                    This means that any type with an instance of the <code>Num</code> 
+                    class can be added and multiplied. The type of the addition operation is 
+                    <code>Num a => a -> a -> a</code>, which means "for any type <code>a</code>  
+                    with a Num instance, take two values of type <code>a</code> and return 
+                    a value of type <code>a</code>."
+                </li>
+                <li>
+                    Elm has a special type variable called <code>number</code> which can be instantiated 
+                    as either <code>Int</code> or <code>Float</code>. In Elm, 
+                    the addition operation has the type <code>number -> number -> number</code>. 
+                    There is a key difference between this method and Haskell's typeclasses. 
+                    In Haskell, typeclasses are extensible, so you can define addition to work on any type 
+                    you want by providing a <code>Num</code> instance for that type. 
+                    In Elm, addition only works on integers and floats.
+                </li>
+                <li>
+                    OCaml avoids the problem by having two separate operators: <code>+</code> for integers, 
+                    and <code>+.</code> for floats.
+                </li>
+            </ul>
+            <p>
+                About a month ago, I made a post called "The Lune Type System." 
+                It turns out the type system I described in that post is impossible to implement. 
+                The combination of arbitrary set unions and universal quantification makes type checking 
+                undecidable, because it is not always possible to test if two types are the same. 
+                With that in mind, I have completely redesigned the type system, 
+                and have spent the last few weeks implementing it for the Lune compiler.
+            </p>
+            <p>
+                Recently, I ran into the same problem described above: how should I implement addition, 
+                subtraction, and multiplication so that they work for both integers and floats? 
+                Even though I'm a huge fan of typeclasses, I don't want to add full support for typeclasses 
+                in Lune just yet. I also don't want to go the Elm route and add "restricted type variables." 
+                That solution seems a bit too arbitrary. And I certainly don't want to go the OCaml route.
+                <code>+.</code> is ugly as hell.
+            </p>
+            <p>
+                Instead, I came up with a novel solution to the problem:
+            </p>
+            <ul>
+                <li>
+                    Create a new kind called <code>Num</code>.
+                </li>
+                <li>
+                    Create two types of the kind <code>Num</code>, called <code>i</code> and <code>f</code>.
+                </li>
+                <li>
+                    Create a type called <code>num</code> of kind <code>Num -> Type</code>.
+                </li>
+                <li>
+                    Define <code>int</code> and <code>float</code> as type synonyms for <code>num i</code>
+                    and <code>num f</code> respectively.
+                </li>
+            </ul>
+            <p>
+                Here's what this looks like in Lune:
+            </p>
+            <pre><code>type i :: Num
+type f :: Num
+type num :: Num -> Type
+type int = num i
+type float = num f
+
+--modulo function (only works on ints)
+val mod :: int -> int -> int
+let mod = ...
+
+--square root function (only works on floats)
+val sqrt :: float -> float
+let sqrt = ...
+
+--addition function (works on any numbers)
+val (+) :: any x. num x -> num x -> num x
+let (+) = ...</code></pre>
+            <p>
+                The type annotation for the addition operator states that for any type <code>x</code> of 
+                the kind <code>Num</code>, the addition operator takes two values of type <code>num x</code>
+                and returns a value of type <code>num x</code>. The only types of the form <code>num x</code>
+                are <code>num i</code> and <code>num f</code>, also known as <code>int</code> and 
+                <code>float</code>. This means that the addition function works for both integers and floats, 
+                but nothing else.
+            </p>
+            <p>
+                It is also possible to define type functions which only work on numerical types. 
+                For example, a type synonym for complex numbers could be defined like so:
+            </p>
+            <pre><code>type complex x = (num x, num x)</code></pre>
+            <p>
+                Because <code>x</code> is passed as an argument to <code>num</code>, it must be of the kind 
+                <code>Num</code>. This means that the only valid complex number types are 
+                <code>complex f</code> and <code>complex i</code>.
+            </p>
+            <p>
+                In practice, this solution is similar to Elm's restricted type variables. 
+                But I think it's more elegant, because it utilises the already-in-place kind-checking system, 
+                and treats all type variables equally. The Lune method of overloading would seem out of place
+                in other languages, because it requires adding a new kind. But Lune already has several
+                different kinds, so adding one more isn't a big deal.
+            </p>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="/bootstrap.min.js"></script>
+    
+        <!-- Highlight JS -->
+        <script src="/highlight.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('code').forEach((el) => {
+                    if(!el.classList.contains("language-haskell") && !el.classList.contains("language-javascript"))
+                        el.classList.add("language-plaintext");
+                    hljs.highlightElement(el);
+                });
+            });
+        </script>
+    </body>
+</html>

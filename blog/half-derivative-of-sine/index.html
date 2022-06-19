@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/bootstrap.min.css">
+                
+        <title>Half derivative of sine</title>
+    </head>
+    <body>
+        <script src="/navbar.js"></script>
+        <script>navbar("blog")</script>
+        <div class="w-75 m-auto" style="padding-top:50px">
+            <h4>Half derivative of sine</h4>
+            <p>15 Sep 2021</p>
+            <p>
+                A few days ago I came across 
+                <a href="https://www.youtube.com/watch?v=gaAhCTDc6oA">this video</a> by Dr. Peyam, 
+                where he extends the power rule of differential calculus to allow for fractional derivatives. 
+                Using the formula in the video, I decided to calculate the half derivative of the sine function.
+            </p>
+            <p>
+                Before we begin, here is the power rule for half derivatives:
+            </p>
+            <img src="equation-1.png" alt="equation image" height="80px">
+            <p>
+                And here is another equation which will be useful later:
+            </p>
+            <img src="equation-2.png" alt="equation image" height="80px">
+            <p>
+                Now let's calculate the half derivative of sine. To start, we'll begin with the Taylor series. 
+                The sine function can be written as the following infinite polynomial:
+            </p>
+            <img src="equation-3.png" alt="equation image" height="60px">
+            <p>
+                The half derivative, like the normal derivative, is a linear map, 
+                so we can distribute it over each term like so:
+            </p>
+            <img src="equation-4.png" alt="equation image" height="60px">
+            <p>
+                Using the second equation from before, we can simplify all of the half derivatives.
+            </p>
+            <img src="equation-5.png" alt="equation image" height="80px">
+            <p>
+                Or using the sigma notation:
+            </p>
+            <img src="equation-6.png" alt="equation image" height="80px">
+            <p>
+                That's it! We now have a relatively simple formula for the half derivative of sine. 
+                By comparing it with the Taylor series for the sine and cosine functions, 
+                you can see that the half derivative of sine is in some sense "halfway between" sine and cosine.
+            </p>
+            <img src="equation-7.png" alt="equation image" height="80px">
+            <p>
+                In the series for sine, the exponent is 2n + 1. In the formula for the half derivative of sine, 
+                the exponent is 2n + 1/2. And in the series for cosine (i.e. the first derivative of sine), 
+                the exponent is simply 2n.
+            </p>
+            <p>
+                I strongly suspect that the half derivative of sine is equal to sin(x + pi/4). 
+                It certainly looks that way when plotted on a chart. 
+                In fact, I suspect there is a more general pattern:
+            </p>
+            <img src="equation-8.png" alt="equation image" height="50px">
+            <p>
+                This equation is certainly true for integer values of "k", 
+                but I'm not sure how to prove the more general case.
+            </p>
+            <div class="alert alert-primary" role="alert">
+                UPDATE: <a href="https://www.youtube.com/watch?v=k2T0YilPrWw">This video</a>
+                (also by Dr. Peyam) describes how to find the half derivative of sine and cosine.
+                He starts with the formula for the complex sine function in terms of exponentials. Finding
+                the half derivative in this manner is much easier than using the Taylor series.
+            </div>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="/bootstrap.min.js"></script>
+    </body>
+</html>

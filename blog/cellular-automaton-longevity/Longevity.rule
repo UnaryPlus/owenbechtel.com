@@ -1,0 +1,26 @@
+@RULE Longevity
+
+@TABLE
+n_states:3
+neighborhood:Moore
+symmetries:permute
+
+var a={1,2}
+var b={1,2}
+var c={1,2}
+
+var z={0,1,2}
+var y={0,1,2}
+var x={0,1,2}
+var w={0,1,2}
+var v={0,1,2}
+var u={0,1,2}
+var t={0,1,2}
+var s={0,1,2}
+
+0, a,b,c,0,0,0,0,0, 1
+
+1, a,b,c,0,0,0,0,0, 1
+1, z,y,x,w,v,u,t,s, 2
+
+2, z,y,x,w,v,u,t,s, 0

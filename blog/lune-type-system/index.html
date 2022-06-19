@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/bootstrap.min.css">
+                
+        <!-- Highlight CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/base16/atelier-cave-light.min.css">
+        
+        <title>The Lune type system</title>
+    </head>
+    <body>
+        <script src="/navbar.js"></script>
+        <script>navbar("blog")</script>
+        <div class="w-75 m-auto" style="padding-top:50px">
+            <h4>The Lune type system</h4>
+            <p>8 Sep 2021</p>
+            <p>
+                At the moment, I’m working on a compiler for a purely functional language called Lune. 
+                The parser and code generator are finished, but the type checker is still incomplete. 
+                The type system I plan to implement in Lune is very different from that of other functional languages. 
+                Most notably, it allows for subtypes. As a result, every expression can be assigned multiple types, 
+                with some more general than others.
+            </p>
+            <p>
+                There are a few built-in types:
+            </p>
+            <ul>
+                <li>
+                    <code>number</code> is the set of real numbers. 
+                    In practice, these are stored as double-precision floating-point values.
+                </li>
+                <li>
+                    <code>int</code> is the set of integers. It is a subset of <code>number</code>.
+                </li>
+                <li>
+                    <code>string</code> is the set of strings. String literals are written with double quotes.
+                </li>
+                <li>
+                    <code>char</code> is the set of single-character strings. It is a subset of <code>string</code>.
+                </li>
+                <li>
+                    <code>atom</code> is the set of atoms. 
+                    An atom is any word beginning with a capital letter, e.g. <code>Hello</code>. 
+                    (All identifiers must start with a lowercase letter in Lune, so this doesn't create any ambiguity.) 
+                    Atoms are not strictly necessary&mdash;you could use strings instead&mdash;
+                    but the use case for atoms is completely different from that of strings, 
+                    so I think they deserve a separate type.
+                </li>
+                <li>
+                    There are an infinite number of "literal types" inhabited by a single value. 
+                    For example, <code>3</code> is a set containing just the number three, 
+                    <code>"owo"</code> is a set containing just the string <code>"owo"</code>, 
+                    and <code>Null</code> is a set containing just the atom <code>Null</code>.
+                </li>
+                <li>
+                    <code>any</code> is the supertype of all types. 
+                    Every expression can be given the type <code>any</code>.
+                </li>
+                <li>
+                    <code>void</code> is an uninhabited "bottom type". 
+                    Since it contains no values, it is a subtype of all types.
+                </li>
+            </ul>
+            <p>
+                There are also a few operators that act on types:
+            </p>
+            <ul>
+                <li>
+                    <code>a -> b</code> is the type of a function with domain <code>a</code> and range <code>b</code>. 
+                    For example, a "round" function would have the type <code>number -> int</code>.
+                </li>
+                <li>
+                    <code>a | b</code> denotes the union of sets <code>a</code> and <code>b</code>.
+                </li>
+                <li>
+                    <code>a, b</code> denotes the set of ordered pairs of elements of <code>a</code>
+                    and elements of <code>b</code>.
+                </li>
+            </ul>
+            <p>
+                Universal quantification is denoted with square brackets. 
+                For example, the type of the identity function is <code>[a] a -> a</code>. 
+                (You could also annotate it as <code>any -> any</code>, but in that case, 
+                you'd hardly be able to do anything with the returned value, 
+                because its type would be way too general.) 
+                I'm probably going to disallow higher-ranked types for the sake of simplicity.
+            </p>
+            <p>
+                Type synonyms are created with the <code>type</code> keyword. 
+                For example, <code>type bit = 0 | 1</code> assigns the synonym <code>bit</code> 
+                to the set with two elements: 0 and 1. 
+                You can also use the <code>type</code> keyword to create type-level functions 
+                which take sets as arguments. 
+                For example, a "maybe" type could be defined as <code>type maybe a = Null | Just, a</code>. 
+                This means that a value of type <code>maybe int</code> can be either 
+                the atom <code>Null</code> or the atom <code>Just</code> combined with an integer. 
+                Type synonyms can also be recursive, allowing you to define things such as linked lists 
+                and Peano-style natural numbers.
+            </p>
+            <p>
+                As I said earlier, the existence of subtypes implies that many values 
+                can be assigned more than one type. 
+                In fact, every value has an infinite number of types associated with it. 
+                For example, the string <code>"x"</code> is a member of the following sets:
+            </p>
+            <ul>
+                <li><code>"x"</code></li>
+                <li><code>char</code></li>
+                <li><code>string</code></li>
+                <li><code>any</code></li>
+                <li><code>"x" | a</code></li>
+                <li><code>char | a</code></li>
+                <li><code>string | a</code></li>
+            </ul>
+            <p>
+                where <code>a</code> can be any type.
+            </p>
+            <p>
+                I haven't figured out all the details of the type-checking algorithm yet. 
+                Type inference is going to be a major issue, 
+                because every function can have a wide variety of possible types. 
+                I'm going to have to create an algorithm which infers the "most reasonable" 
+                type for every function, but what exactly is the definition of "most reasonable"?
+                I'll post the solution here once I figure it all out.
+            </p>
+            <div class="alert alert-primary" role="alert">
+                UPDATE: The type system I described in this post is way
+                too expressive to work in practice. The combination of arbitrary set unions
+                and universal quantification makes type checking undecidable in most cases.
+                For a more recent description of the Lune type system, see
+                <a href="../clever-means-of-numerical-overloading">A Clever Means of Numerical Overloading</a> and
+                <a href="../variants-are-monads">Variants are Monads</a>.
+            </div>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="/bootstrap.min.js"></script>
+        
+        <!-- Highlight JS -->
+        <script src="/highlight.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('code').forEach((el) => {
+                    if(!el.classList.contains("language-haskell") && !el.classList.contains("language-javascript"))
+                        el.classList.add("language-plaintext");
+                    hljs.highlightElement(el);
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/bootstrap.min.css">
+                
+        <style>
+            .flex-container {
+                display:flex;
+                flex-wrap:wrap;
+            }
+            .flex-container > div {
+                margin-right:30px;
+                margin-bottom:10px;
+                flex-basis:100px;
+            }
+            .pattern {
+                margin-top:5px;
+            }
+        </style>
+        
+        <title>Cellular automaton: Longevity</title>
+    </head>
+    <body>
+        <script src="/navbar.js"></script>
+        <script>navbar("blog")</script>
+        <div class="w-75 m-auto" style="padding-top:50px">
+            <h4>Cellular automaton: Longevity</h4>
+            <p>31 Jan 2022</p>
+            <p>
+                In August 2021, I downloaded an application called <a href="http://golly.sourceforge.net/">Golly</a> and investigated two cellular 
+                automata of my own invention. The first rule, which I call <em>Longevity</em>, is a three-state 
+                automaton in which nearly all patterns exhibit infinite growth. Longevity has an extremely 
+                simple replicator and a wide variety of naturally-occuring spaceships. The second rule, 
+                <em>Symmetrica</em>, will be discussed in my next post.
+            </p>
+            <p>
+                The rules of Longevity are somewhat similar to the <a href="https://conwaylife.com/wiki/Conway%27s_Game_of_Life">Game of Life</a>, except that there are two 
+                types of live cells: young and old. Each generation, the following rules are applied to each cell:
+            </p>
+            <ul>
+                <li>Dead cells become young if they have three live neighbors.</li>
+                <li>Young cells become old if they have anything other than three live neighbors.</li>
+                <li>Old cells become dead.</li>
+            </ul>
+            <p>
+                If you want to investigate Longevity in Golly yourself, click <a download href="Longevity.rule">here</a> to download the .rule file.
+            </p>
+            <p>
+                The patterns I've discovered consist of:
+            </p>
+            <ul>
+                <li>one period 2 replicator,</li>
+                <li>eight orthogonal spaceships with speed c/2 and periods ranging from 2 to 12,</li>
+                <li>two period 4 mod 2 oscillators,</li>
+                <li>one period 3 oscillator,</li>
+                <li>one still life.</li>
+            </ul>
+            <p>
+                In the images below, red squares represent young cells and blue squares represent old cells.
+            </p>
+            <div class="flex-container">
+                <div>
+                    <b>Virus</b><br>
+                    replicator<br>
+                    period 2<br>
+                    <img src="virus.png" alt="virus pattern" width="62px" class="pattern">
+                </div>
+            </div>
+            <div class="flex-container">
+                <div>
+                    <b>Beetle</b><br>
+                    spaceship<br>
+                    period 12<br>
+                    <img src="beetle.png" alt="beetle pattern" width="62px" class="pattern">
+                </div>
+                <div>
+                    <b>Inchworm 1</b><br>
+                    spaceship<br>
+                    period 2<br>
+                    <img src="inchworm-1.png" alt="inchworm 1 pattern" width="62px" class="pattern">
+                </div>
+                <div>
+                    <b>Inchworm 2</b><br>
+                    spaceship<br>
+                    period 2<br>
+                    <img src="inchworm-2.png" alt="inchworm 2 pattern" width="62px" class="pattern">
+                </div>
+                <div>
+                    <b>Drone</b><br>
+                    spaceship<br>
+                    period 4/2<br>
+                    <img src="drone.png" alt="drone pattern" width="62px" class="pattern">
+                </div>
+                <div>
+                    <b>Jogger</b><br>
+                    spaceship<br>
+                    period 4/2<br>
+                    <img src="jogger.png" alt="jogger pattern" width="62px" class="pattern">
+                </div>
+                <div>
+                    <b>Limper</b><br>
+                    spaceship<br>
+                    period 4<br>
+                    <img src="limper.png" alt="limper pattern" width="82px" class="pattern">
+                </div>
+                <div>
+                    <b>Dragonfly</b><br>
+                    spaceship<br>
+                    period 6<br>
+                    <img src="dragonfly.png" alt="dragonfly pattern" width="102px" class="pattern">
+                </div>
+                <div>
+                    <b>Bomber</b><br>
+                    spaceship<br>
+                    period 8<br>
+                    <img src="bomber.png" alt="bomber pattern" width="122px" class="pattern">
+                </div>
+            </div>
+            <div class="flex-container">
+                <div>
+                    <b>Flag</b><br>
+                    oscillator<br>
+                    period 4/2<br>
+                    <img src="flag.png" alt="flag pattern" width="62px" class="pattern">
+                </div>
+                <div>
+                    <b>Council</b><br>
+                    oscillator<br>
+                    period 4/2<br>
+                    <img src="council.png" alt="council pattern" width="62px" class="pattern">
+                </div>
+                <div>
+                    <b>Ribbon</b><br>
+                    oscillator<br>
+                    period 3<br>
+                    <img src="ribbon.png" alt="ribbon pattern" width="82px" class="pattern">
+                </div>
+            </div>
+            <div class="flex-container">
+                <div>
+                    <b>Block</b><br>
+                    still life<br>
+                    <img src="block.png" alt="block pattern" width="42px" class="pattern">
+                </div>
+            </div>
+            <p>
+                The virus and all eight of the spaceships occur naturally; in other words, they can 
+                evolve from random starting configurations. The oscillators also form naturally, 
+                but only if the starting population is very small. Most patterns larger than about 
+                5 by 5 cells will explode indefinitely, and any oscillators that<em> </em>form in the 
+                resulting chaotic stew will be very short-lived. The block, perhaps surprisingly, 
+                is the least natural pattern of all, and was the last pattern I discovered. I'm
+                fairly certain that the block has no parent configurations other than itself.
+            </p>
+            <p>
+                A still life in Longevity must be made entirely of young cells, because old cells
+                die unconditionally. Also, each cell in the still life must have exactly three live
+                neighbors, because that is the only way for young cells to stay young in the next
+                generation. This means that the block is Longevity's only still life. It's the only
+                way to arrange cells in a square grid such that each has three neighbors.
+            </p>
+            <p>
+                The beetle is the most common spaceship, followed by the limper. The second rarest
+                is the dragonfly, and the rarest (of those discovered so far) is the bomber. 
+                The dragonfly and the bomber are the only spaceships not based on a virus-like
+                design. Therefore, it makes sense to call them "non-viral," and the other spaceships
+                "viral."
+            </p>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="/bootstrap.min.js"></script>
+    </body>
+</html>

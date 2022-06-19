@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/bootstrap.min.css">
+                
+        <!-- Highlight CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/base16/atelier-cave-light.min.css">
+        
+        <title>Variants are monads</title>
+    </head>
+    <body>
+        <script src="/navbar.js"></script>
+        <script>navbar("blog")</script>
+        <div class="w-75 m-auto" style="padding-top:50px">
+            <h4>Variants are monads</h4>
+            <p>12 Nov 2021</p>
+            <p>
+                Recently I've been working on a statically typed, pure functional programming language 
+                called Lune. Lune's syntax is similar to ML-family languages such as OCaml and Haskell. 
+                But Lune does not have ML-style algebraic data types. Instead, 
+                it uses a form of row polymorphism based on these two papers:
+            </p>
+            <ul>
+                <li><a href="https://www.microsoft.com/en-us/research/publication/extensible-records-with-scoped-labels/">Extensible records with scoped labels</a></li>
+                <li><a href="https://www.microsoft.com/en-us/research/publication/first-class-labels-for-extensible-rows/">First-class labels for extensible rows</a></li>
+            </ul>
+            <p>
+                A <em>row</em> is a list of label-type pairs. Rows are implemented in Lune with 
+                two type constructors: <code>nil :: Row</code>, and 
+                <code>(:=) :: Label -> Type -> Row</code>. 
+                The standard Prelude module also includes a type operator <code>(;)</code>, 
+                defined as <code>(;) f t = f t</code>. 
+                The labels in a row can be any identifier starting with a capital letter. 
+                Here are some examples:
+            </p>
+            <ul>
+                <li><code>nil</code></li>
+                <li><code>X := float; nil</code></li>
+                <li><code>X := float; Y := float; nil</code></li>
+                <li><code>Name := string; Age := int; nil</code></li> 
+                <li><code>Name := string; Name := string; Age := int; nil</code></li>
+            </ul>
+            <p>
+                As you can see in the last example, the labels in a row do not have to be unique. 
+                There are very few cases where duplicate labels are useful, 
+                but allowing duplicate labels greatly simplifies the type system. 
+                Rows also have a special unification rule that allows labels to be swapped. 
+                Thus <code>N := int; S := string; nil</code> is equivalent to 
+                <code>S := string; N := int; nil</code>.
+            </p>
+            <p>
+                Because rows have the kind <code>Row</code> rather than the kind <code>Type</code>, 
+                it is impossible to construct a value with a row as its type. 
+                There are two ways of transforming rows into normal types: 
+                by surrounding them in curly brackets, or by surrounding them in square brackets. 
+                Curly brackets are used to define <em>record </em>types, 
+                and square brackets are used to define <em>variant </em>types. 
+                In this post I will focus on the latter.
+            </p>
+            <p>
+                Variants represent a choice between multiple types, 
+                each with a different label attached to them. For example, 
+                suppose there is a function that returns an integer labeled with <code>Success</code> 
+                if it succeeds, or an error message labeled with <code>Error</code> if it fails. 
+                The return type of this function would be 
+                <code>[Success := int; Error := string; nil]</code>.
+            </p>
+            <p>
+                In Lune, labels are first-class values. 
+                This means they can be passed as arguments and returned from functions. 
+                The standard Prelude defines a type constructor <code>label :: Label -> Type</code>. 
+                The type of a term-level label <code>x</code> is <code>label x</code>. 
+                For example, <code>Name</code> has the type <code>label Name</code>. 
+                This is what makes labels so powerful; unlike strings, 
+                they can be differentiated at the type level.
+            </p>
+            <p>
+                There are three basic operations on variants: <em>injection</em>, 
+                <em>embedding</em>, and <em>deconstruction</em>. These are represented in Lune 
+                with the functions <code>(^)</code>, <code>embed</code>, and <code>match</code> 
+                respectively.
+            </p>
+            <ul>
+                <li>
+                    The <code>(^)</code> operator has the type 
+                    <code>any s a r. label s -> a -> [s := a; r]</code>. 
+                    For example, <code>Success ^ 5</code> has the type <code>[Success := int; r]</code>, 
+                    where <code>r</code> can be any row. Basically, 
+                    what you are doing when you write <code>Success ^ 5</code> 
+                    is labelling the value 5 with the label <code>Success</code>.
+                </li>
+                <li>
+                    The existence of variants allows for subtypes. 
+                    For example, <code>[Message := string; nil]</code> is a subtype of 
+                    <code>[Message := string; Number := int; nil]</code>. 
+                    Every value of the type <code>[Message := string; nil]</code>, 
+                    such as <code>Message ^ "hello"</code> and <code>Message ^ "abc"</code>, 
+                    is also a value of the type <code>[Message := string; Number := int; nil]</code>. 
+                    However, the Lune type system, like every other ML type system, 
+                    does not implicitly coerce between values of different monotypes. 
+                    This means that if you have a function <code>f</code> that returns a value of type 
+                    <code>[Message := string; nil]</code>, and a function <code>g</code> 
+                    that expects a value of type <code>[Message := string; Number := int; nil]</code>, 
+                    you cannot legally compose <code>f</code> with <code>g</code>. 
+                    This is where label embedding comes in. 
+                    The standard Prelude defines a function called <code>embed</code> 
+                    with the type <code>any s a r. label s -> [r] -> [s := a; r]</code>. 
+                    This allows you to explicitly coerce a value of any variant type to 
+                    any of its supertypes. Instead of writing <code>g (f x)</code>, 
+                    which does not type-check, you can write <code>g (embed Number (f x))</code>.
+                </li>
+                <li>
+                    The <code>match</code> function allows you to extract a value from a label. 
+                    It has the type <code>any s a b r. label s -> (a -> b) -> ([r] -> b) -> [s := a; r] -> b</code>. 
+                    For example, suppose you want to convert a value of the type 
+                    <code>[Success := int; Error := string; nil]</code> into an integer. 
+                    If the value is <code>Success ^ x</code>, you want to return <code>x</code>, 
+                    but if the value is an error, you want to return 0. 
+                    Such a function can be defined with <code>match</code> by writing 
+                    <code>match Success (do x. x) (do x. 0)</code>. (In Lune, anonymous functions are 
+                    created with the <code>do</code> keyword.) The standard Prelude exports a function 
+                    called <code>else</code>, which is defined as <code>else x y = x</code>. 
+                    This allows you to make pattern-matching expressions more readable. 
+                    For instance, the above function could be written 
+                    <code>match Success (do x. x) (else 0)</code>. 
+                    This is roughly equivalent to the Haskell expression 
+                    <code>\case Success x -> x; _ -> 0</code>.
+                </li>
+            </ul>
+            <p>
+                The promotion of labels to first-class allows you to define functions that work on any variant. 
+                This is an enormous improvement on other ML languages. 
+                For example, you can define a function called <code>case</code> 
+                that does the same thing as <code>match</code>, but ignores the value inside the label.
+            </p>
+            <pre><code>val case :: any s a b r. label s -> b -> ([r] -> b) -> [s := a; r] -> b
+let case s x = match s (do y. x)</code></pre>
+            <p>
+                But this is only the tip of the iceberg. It turns out that <code>[s := a; r]</code> 
+                is a monad for any label <code>s</code> and any row <code>r</code>. 
+                And with first-class labels, it is possible to define a monadic operation 
+                that works on all variant types.
+            </p>
+            <pre><code>val map :: any s a b r. label s -> (a -> b) -> [s := a; r] -> [s := b; r]
+let map s f = match s (do x. s ^ f x) (embed s)
+            
+val apply :: any s a b r. label s -> [s := (a -> b); r] -> [s := a; r] -> [s := b; r]
+let apply s vf vx = vf # match s (do f. map s f vx) (embed s)
+            
+val bind :: any s a b r. label s -> (a -> [s := b; r]) -> [s := a; r] -> [s := b; r]
+let bind s f = match s f (embed s)</code></pre>
+            <p>
+                These higher-order functions are equivalent to Haskell's <code>fmap</code>, 
+                <code>(&lt;*>)</code>, and <code>(=&lt;&lt;)</code>, 
+                except that they each take a label as a parameter; the label to map the given function over. 
+                In Haskell terminology, I have defined a <code>Monad</code> 
+                instance for every single sum type at once. This is not remotely possible in any ML language. 
+                In my opinion, Lune's combination of row polymorphism and first-class labels 
+                almost makes up for its lack of typeclasses.
+            </p>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="/bootstrap.min.js"></script>
+        
+        <!-- Highlight JS -->
+        <script src="/highlight.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('code').forEach((el) => {
+                    if(!el.classList.contains("language-haskell") && !el.classList.contains("language-javascript"))
+                        el.classList.add("language-plaintext");
+                    hljs.highlightElement(el);
+                });
+            });
+        </script>
+    </body>
+</html>
