@@ -5,6 +5,8 @@
 @import 'font.css';
 
 $nav-color: hsl(275, 100%, 25.5%);
+$heading-color: hsl(275, 10%, 82.7%);
+$code-color: hsl(275, 10%, 92.2%);
 $nav-breakpoint: 700px;
 
 @mixin large {
@@ -35,8 +37,13 @@ a {
 
 .page {
   height: 100%;
-  font-family: "Libre Baskerville";
-  code, pre { font-size: 16px; }
+  font-family: "Libre Baskerville", serif;
+  code, pre {
+    font-size: 16px;
+    background-color: $code-color;
+  }
+  code { padding: 1px; }
+  pre { padding: 5px; }
   @include large {
     display: grid;
     grid-template-columns: Max(25%, 260px); /* nav width */
@@ -68,7 +75,7 @@ main {
   }
   .heading {
     @include padded;
-    background-color: lightgray;
+    background-color: $heading-color;
   }
   .content {
     @include padded;
