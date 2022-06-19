@@ -71,6 +71,8 @@ main {
     @include large {
       p { padding-right: 20%; }
     }
+    font-family: "Work Sans", sans-serif;
+    h2 { font-family: "Libre Baskerville"; }
   }
 }
 
