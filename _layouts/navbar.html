@@ -35,9 +35,13 @@ nav_items:
 
   <main>
     {% if page.no_heading != true %}
-      <h2>{{ page.title }}</h2>
+      <div class="heading">
+        <h2>{{ page.title }}</h2>
+      </div>
     {% endif %}
-    {{ content }}
+    <div class="content">
+      {{ content }}
+    </div>
   </main>
 
   <script>

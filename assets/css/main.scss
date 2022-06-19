@@ -19,6 +19,10 @@ $nav-breakpoint: 700px;
   }
 }
 
+@mixin padded {
+  padding: 10px 30px;
+}
+
 html, body {
   margin: 0px;
   height: 100%;
@@ -40,7 +44,7 @@ a {
 }
 
 nav {
-  padding: 10px 30px;
+  @include padded;
   background-color: $nav-color;
   a { color: white; }
   @include small {
@@ -55,10 +59,18 @@ nav {
 }
 
 main {
-  padding: 10px 30px;
   @include large {
     grid-column: 2;
-    p { padding-right: 20%; }
+  }
+  .heading {
+    @include padded;
+    background-color: lightgray;
+  }
+  .content {
+    @include padded;
+    @include large {
+      p { padding-right: 20%; }
+    }
   }
 }
 
@@ -70,6 +82,7 @@ main {
 }
 
 .game-section {
+  padding-top: 20px;
   /* min card width should be about 150px */
   @include small {
     column-count: 1;
@@ -112,4 +125,9 @@ main {
     border-top: 1px solid black;
     color: black;
   }
+}
+
+.featural {
+  font-family: "English Featural Alphabet";
+  font-size: 18px;
 }
