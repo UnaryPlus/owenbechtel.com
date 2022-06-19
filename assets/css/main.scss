@@ -48,7 +48,11 @@ nav {
   background-color: $nav-color;
   a { color: white; }
   @include small {
-    #menu-icon { float: right; }
+    #menu-icon {
+      float: right;
+      position: relative;
+      bottom: 5px;
+    }
     .hidden { display: none; }
   }
   @include large {
@@ -77,6 +81,7 @@ main {
 }
 
 .image-row {
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
