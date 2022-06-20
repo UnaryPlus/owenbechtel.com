@@ -5,8 +5,8 @@
 @import 'font.css';
 
 $nav-color: hsl(275, 100%, 25.5%);
-$heading-color: hsl(275, 10%, 82.7%);
-$code-color: hsl(275, 10%, 92.2%);
+$heading-color: hsl(275, 5%, 82.7%);
+$code-color: hsl(275, 5%, 92.2%);
 $nav-breakpoint: 700px;
 
 @mixin large {
@@ -35,16 +35,18 @@ a {
   &:hover { text-decoration: underline; }
 }
 
+code, pre {
+  font-size: 15px;
+  background-color: $code-color;
+}
+code { padding: 1px; }
+pre { padding: 5px; }
+
 .page {
   height: 100%;
   font-family: "Libre Baskerville", serif;
   line-height: 1.4;
-  code, pre {
-    font-size: 15px;
-    background-color: $code-color;
-  }
-  code { padding: 1px; }
-  pre { padding: 5px; }
+
   @include large {
     display: grid;
     grid-template-columns: Max(25%, 260px); /* nav width */
@@ -83,7 +85,7 @@ main {
     @include large {
       p { padding-right: 20%; }
     }
-    font-family: "Work Sans", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     h2 { font-family: "Libre Baskerville", serif; }
     .serif { font-family: "Libre Baskerville", serif; }
   }
@@ -145,5 +147,5 @@ main {
 
 .featural {
   font-family: "English Featural Alphabet";
-  font-size: 18px;
+  font-size: 17px;
 }
