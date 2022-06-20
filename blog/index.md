@@ -3,7 +3,7 @@ layout: 'navbar'
 title: 'Articles'
 ---
 
-2022
+<span class="serif">2022</span>
 
 [Free extensions](free-extensions) \
 [Overcategories and relations](overcategories-and-relations) \
@@ -14,7 +14,7 @@ title: 'Articles'
 [Generalising the mean of a list](generalising-mean-of-list) \
 [Feasibility of regular polytopes](feasibility-of-regular-polytopes)
 
-2021
+<span class="serif">2021</span>
 
 [Notation complaints](notation-complaints) \
 [A pointfree proof](pointfree-proof) \
