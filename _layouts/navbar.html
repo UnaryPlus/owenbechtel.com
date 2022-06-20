@@ -34,7 +34,7 @@ nav_items:
   </nav>
 
   <main>
-    {% if page.no_heading != true %}
+    {% if page.no_heading != true and layout.no_heading != true %}
       <div class="heading">
         <h2>{{ page.title }}</h2>
       </div>
