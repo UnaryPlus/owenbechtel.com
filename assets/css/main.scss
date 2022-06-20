@@ -36,17 +36,24 @@ a {
 }
 
 code, pre {
-  font-size: 15px;
+  font-size: 15px; /* default is 13 */
   background-color: $code-color;
 }
 code { padding: 1px; }
 pre { padding: 5px; }
 
+sup {
+  font-size: 11px; /* default is 13.5 */
+}
+
+.featural {
+  font-family: "English Featural Alphabet";
+  font-size: 17px; /* default is 16 */
+}
+
 .page {
   height: 100%;
   font-family: "Libre Baskerville", serif;
-  line-height: 1.4;
-
   @include large {
     display: grid;
     grid-template-columns: Max(25%, 260px); /* nav width */
@@ -143,9 +150,4 @@ main {
     border-top: 1px solid black;
     color: black;
   }
-}
-
-.featural {
-  font-family: "English Featural Alphabet";
-  font-size: 17px;
 }

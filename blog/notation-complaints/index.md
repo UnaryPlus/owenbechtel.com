@@ -15,17 +15,17 @@ But the drawbacks of the sin<sup>2</sup> notation far outweigh its benefits.
 1. It adds an unnecessary notational rule that must be taught to students.
 2. I often have to mentally replace sin<sup>2</sup>(x) with sin(x)<sup>2</sup> when performing calculations.
 3. A superscript -1 is commonly used to denote the inverse of a function. Thus, sin<sup>-1</sup> means the inverse sine function. This introduces an outrageous inconsistency: sin<sup>2</sup>(x) is equivalent to sin(x)<sup>2</sup>, but sin<sup>-1</sup>(x) is absolutely _not_ equivalent to sin(x)<sup>-1</sup>. Every student of mathematics has been confused by this at some point.
-4. In many fields of mathematics, the notation f<sup>2</sup> means the function f composed with itself. By this convention, sin<sup>2</sup>(x) would be equivalent to sin(sin(x)). But it isn’t.
+4. In many fields of mathematics, the notation f&#8202;<sup>2</sup> means the function f composed with itself. By this convention, sin<sup>2</sup>(x) would be equivalent to sin(sin(x)). But it isn’t.
 
 In short, the sin<sup>2</sup> notation is unnecessary, counterintuitive, and inconsistent. Is a single pair of brackets really worth it?
 
 The solution I propose, of course, is to get rid of sin<sup>2</sup>(x) in the sense that it is normally used, and use sin(x)<sup>2</sup> or (sin x)<sup>2</sup> instead.
 
-The fundamental binary operation of functions is _composition_. Sure, you can define a pointwise multiplication operator, but multiplication is primarily a thing that _numbers_ do. Therefore, unless otherwise specified, I believe that f<sup>2</sup> should mean a function composed with itself, rather than a function multiplied with itself. That is also the only definition that’s consistent with the f<sup>-1</sup> notation for inverses. If “id” represents the identity function id(x) = x, you can define numeric superscripts recursively as follows:
+The fundamental binary operation of functions is _composition_. Sure, you can define a pointwise multiplication operator, but multiplication is primarily a thing that _numbers_ do. Therefore, unless otherwise specified, I believe that f&#8202;<sup>2</sup> should mean a function composed with itself, rather than a function multiplied with itself. That is also the only definition that’s consistent with the f&#8202;<sup>-1</sup> notation for inverses. If “id” represents the identity function id(x) = x, you can define numeric superscripts recursively as follows:
 
-1. f&thinsp;<sup>0</sup> = id
-2. f&thinsp;<sup>n</sup> = f ∘ f&thinsp;<sup>n-1</sup>
+1. f&#8202;<sup>0</sup> = id
+2. f&#8202;<sup>n</sup> = f ∘ f&#8202;<sup>n-1</sup>
 
-This means that f<sup>1</sup> = f, f<sup>2</sup> = f ∘ f, and f<sup>3</sup> = f ∘ f ∘ f. By substituting 0 for “n” in the second equation, you get id = f ∘ f<sup>-1</sup>, or in other words, f<sup>-1</sup> is the inverse of f. You can keep going in reverse, so f<sup>-2</sup> = f<sup>-1</sup> ∘ f<sup>-1</sup>, and so on. This notation is already used in many fields of mathematics.
+This means that f&#8202;<sup>1</sup> = f, f&#8202;<sup>2</sup> = f ∘ f, and f&#8202;<sup>3</sup> = f ∘ f ∘ f. By substituting 0 for “n” in the second equation, you get id = f ∘ f&#8202;<sup>-1</sup>, or in other words, f&#8202;<sup>-1</sup> is the inverse of f. You can keep going in reverse, so f&#8202;<sup>-2</sup> = f&#8202;<sup>-1</sup> ∘ f&#8202;<sup>-1</sup>, and so on. This notation is already used in many fields of mathematics.
 
 The last example of bad notation I’d like to address is the use of the radical symbol for roots beyond the square root. The square root is common enough to warrant its own symbol, but there is no point in using the same symbol with an integer next to it for cube roots, fourth roots, and so on. It is just as easy to write x<sup>1/3</sup> as it is to write ∛x. And expressions like x∛y can look very similar to x<sup>3</sup>√y.
