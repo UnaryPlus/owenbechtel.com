@@ -7,3 +7,12 @@ no_heading: true
 <p class="serif">{{ page.date }}</p>
 
 {{ content }}
+
+{% if page.mathjax %}
+  <script>
+    window.MathJax = {
+      chtml: { displayAlign: 'left' }
+    };
+  </script>
+  <script type="text/javascript" async src="/assets/js/mathjax.js"></script>
+{% endif %}
