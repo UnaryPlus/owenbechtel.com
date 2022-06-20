@@ -4,9 +4,10 @@
 @import 'highlight.css';
 @import 'font.css';
 
-$nav-color: hsl(275, 100%, 25.5%);
-$heading-color: hsl(275, 5%, 82.7%);
-$code-color: hsl(275, 5%, 92.2%);
+$nav-color: hsl(275, 100%, 25%);
+$heading-color: hsl(275, 5%, 83%);
+$code-bg-color: hsl(275, 5%, 94%);
+$code-color: hsl(275, 5%, 30%);
 $nav-breakpoint: 700px;
 
 @mixin large {
@@ -37,7 +38,8 @@ a {
 
 code, pre {
   font-size: 15px; /* default is 13 */
-  background-color: $code-color;
+  background-color: $code-bg-color;
+  color: $code-color
 }
 code { padding: 1px; }
 pre { padding: 5px; }
