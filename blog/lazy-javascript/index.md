@@ -4,7 +4,7 @@ title: 'Lazy Javascript'
 date: '15 Nov 2021'
 ---
 
-In strict languages such as Javascript, the arguments to a function are evaluated even if they are never used.
+In _strict_ languages such as Javascript, the arguments to a function are evaluated even if they are never used.
 
 ```javascript
 const always = (x, y) => x;
@@ -12,7 +12,7 @@ always(0, console.log("!!!"));
 //returns 0, prints "!!!"
 ```
 
-In non-strict languages such as Haskell, evaluation is delayed until the value is actually used. If a parameter is never used in the function body, that parameter will never be evaluated.
+In _non-strict_ languages such as Haskell, evaluation is delayed until the value is actually used. If a parameter is never used in the function body, that parameter will never be evaluated.
 
 ```haskell
 let always x y = x
