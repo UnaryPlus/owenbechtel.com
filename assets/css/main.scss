@@ -41,8 +41,13 @@ code, pre {
   background-color: $code-bg-color;
   color: $code-color
 }
-code { padding: 1px; }
-pre { padding: 5px; }
+code {
+  padding: 1px 3px;
+}
+pre {
+  padding: 8px;
+  overflow: scroll;
+}
 
 sup {
   font-size: 11px; /* default is 13.5 */
