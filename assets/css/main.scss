@@ -53,6 +53,11 @@ sup {
   font-size: 11px; /* default is 13.5 */
 }
 
+mjx-container {
+  overflow: scroll;
+  overflow-y: hidden;
+}
+
 .featural {
   font-family: "English Featural Alphabet";
   font-size: 17px; /* default is 16 */
@@ -96,9 +101,7 @@ main {
   }
   .content {
     @include padded;
-    @include large {
-      p { padding-right: 20%; }
-    }
+    &.narrow { max-width: 800px; }
     font-family: "Noto Sans", sans-serif;
     h2 { font-family: "Libre Baskerville", serif; }
     .serif { font-family: "Libre Baskerville", serif; }

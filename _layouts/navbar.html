@@ -41,7 +41,7 @@ nav_items:
         <h2>{{ page.title }}</h2>
       </div>
     {% endif %}
-    <div class="content">
+    <div class="content {% if page.wide != true %} narrow {% endif %}">
       {{ content }}
     </div>
   </main>
