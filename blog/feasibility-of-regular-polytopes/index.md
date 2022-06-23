@@ -64,7 +64,7 @@ $$ \begin{align}
     \sqrt{\frac{1}{\sin(\frac{\pi}{b})^2 - \cos(\frac{\pi}{a})^2}} \right) ^{\ast\ast}
 \end{align} $$
 
-\* The equation (a - 2) π/a = 2 sin-1(cos(π/a)) is true for a ≥ 1. This means we can write all three formulas as 2 sin<sup>-1</sup>(Y), where Y is a function of π/a, π/b, and so on.
+\* The equation (a - 2) π/a = 2 sin<sup>-1</sup>(cos(π/a)) is true for a ≥ 1. This means we can write all three formulas as 2 sin<sup>-1</sup>(Y), where Y is a function of π/a, π/b, and so on.
 
 ** [source for third formula](https://math.stackexchange.com/questions/2748840/dichoral-angle-in-4d-platonic-solid-from-schlafli-symbol/2750226#2750226)
 
