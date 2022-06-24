@@ -45,8 +45,9 @@ code {
   padding: 1px 3px;
 }
 pre {
-  padding: 8px;
   overflow: scroll;
+  padding: 8px;
+  code { padding: 0; }
 }
 
 sup, sub {
@@ -103,7 +104,7 @@ main {
     @include padded;
     &.narrow { max-width: 800px; }
     font-family: "Noto Sans", sans-serif;
-    h2 { font-family: "Libre Baskerville", serif; }
+    h2, h3 { font-family: "Libre Baskerville", serif; }
     .serif { font-family: "Libre Baskerville", serif; }
   }
 }
