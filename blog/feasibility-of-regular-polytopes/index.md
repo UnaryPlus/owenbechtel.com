@@ -43,11 +43,11 @@ It isn’t difficult to show that these statements are true. Consider what happe
 
 If we plot the equation D{x, y} = 0 on the coordinate plane, the result is a hyperbolic curve. Every lattice point on the curve corresponds to a regular tiling, and every lattice point below the curve (with both coordinates greater than 2) corresponds to one of the five Platonic solids. This is a neat graphical explanation of why there are exactly three regular tilings, and five Platonic solids.
 
-![Hyperbola graph with platonic solids labeled.](hyperbola-1.png)
+![hyperbola graph with platonic solids labeled](hyperbola-1.png)
 
 Points of the form (2, n) and (n, 2) are also located below the curve. When considered as solids in Euclidean space, these Schläfli symbols make no sense; it is impossible to have a 2-sided polygon. But if you analyse convex polyhedra as tilings of the sphere, then symbols containing a "2" are perfectly valid; they represent the hosohedra and the dihedra respectively. This interpretation is somewhat cleaner: lattice points on the curve represent tilings of the plane, and lattice points below the curve represent tilings of the sphere.
 
-![Hyperbola graph with platonic solids, hosohedra, and dihedra labeled.](hyperbola-2.png)
+![hyperbola graph with platonic solids, hosohedra, and dihedra labeled](hyperbola-2.png)
 
 The concept of "feasibility" can be extended to higher dimensions. For a Schläfli symbol of dimension n, the feasibility is defined as:
 
