@@ -20,6 +20,11 @@ my_games:
     href: 'blockade'
     image: 'blockade/image.png'
 
+  - name: 'Car Clicker'
+    href: 'car-clicker'
+    image: 'car-clicker/image.png'
+    author: 'Cole Bechtel'
+
   - name: 'Chaos Game'
     href: 'chaos-game'
     image: 'chaos-game/image.png'
@@ -27,6 +32,11 @@ my_games:
   - name: 'Chat Room'
     href: 'https://chat-room.unaryplus.repl.co'
     image: 'chat-room/image.png'
+
+  - name: 'Chunguscraft Story Mode'
+    href: 'https://studio.code.org/projects/applab/i1vqFe0nBncyxuRCbfVwvyViYoK7eoVwKw2HwxyB4_U'
+    image: 'chunguscraft-story-mode/image.png'
+    author: 'Ryan Allison'
 
   - name: 'Click Inside the Box'
     href: 'click-inside-the-box'
@@ -39,6 +49,11 @@ my_games:
   - name: 'Disease Spread Simulation'
     href: 'https://ellie-app.com/8NND92szqfNa1'
     image: 'disease-spread/image.png'
+
+  - name: 'Dodge the Circles'
+    href: 'dodge-the-circles'
+    image: 'dodge-the-circles/image.png'
+    author: 'Cole Bechtel'
 
   - name: 'Dodge the Rectangles'
     href: 'dodge-the-rectangles'
@@ -64,6 +79,11 @@ my_games:
     href: 'forces-at-play'
     image: 'forces-at-play/image.png'
 
+  - name: 'Garfield''s Shoot ''em Up'
+    href: 'https://studio.code.org/projects/applab/U5laFDTwMMqmUazEfjIV67Y-cZ4oB_mBWp85wqWKrSA'
+    image: 'garfields-shoot-em-up/image.png'
+    author: 'Mat Ormsbee'
+
   - name: 'Gravity Ball'
     href: 'gravity-ball'
     image: 'gravity-ball/image.png'
@@ -79,6 +99,11 @@ my_games:
   - name: 'Homecoming'
     href: 'homecoming'
     image: 'homecoming/image.png'
+
+  - name: 'Island Defender'
+    href: 'https://studio.code.org/projects/applab/4ePKo5VXA3X7Cyi68myZEexX5FYV8WxIk5XK3Amchao'
+    image: 'island-defender/image.png'
+    author: 'Eli Willett'
 
   - name: 'Mini Golf'
     href: 'mini-golf'
@@ -100,6 +125,11 @@ my_games:
     href: 'polynerdle'
     image: 'polynerdle/image.png'
 
+  - name: 'Quiz of Champions'
+    href: 'https://studio.code.org/projects/applab/xQ_3SilIk2PD-FITG3_oTz94KnDXvA4dzt18Fv6G6ic'
+    image: 'quiz-of-champions/image.png'
+    author: 'Sam Commisso'
+
   - name: 'Ripples'
     href: 'ripples'
     image: 'ripples/image.png'
@@ -119,37 +149,6 @@ my_games:
   - name: 'Twelve Points'
     href: 'twelve-points'
     image: 'twelve-points/image.png'
-
-other_games:
-  - name: 'Car Clicker'
-    href: 'car-clicker'
-    image: 'car-clicker/image.png'
-    author: 'Cole Bechtel'
-
-  - name: 'Chunguscraft Story Mode'
-    href: 'https://studio.code.org/projects/applab/i1vqFe0nBncyxuRCbfVwvyViYoK7eoVwKw2HwxyB4_U'
-    image: 'chunguscraft-story-mode/image.png'
-    author: 'Ryan Allison'
-
-  - name: 'Dodge the Circles'
-    href: 'dodge-the-circles'
-    image: 'dodge-the-circles/image.png'
-    author: 'Cole Bechtel'
-
-  - name: 'Garfield''s Shoot ''em Up'
-    href: 'https://studio.code.org/projects/applab/U5laFDTwMMqmUazEfjIV67Y-cZ4oB_mBWp85wqWKrSA'
-    image: 'garfields-shoot-em-up/image.png'
-    author: 'Mat Ormsbee'
-
-  - name: 'Island Defender'
-    href: 'https://studio.code.org/projects/applab/4ePKo5VXA3X7Cyi68myZEexX5FYV8WxIk5XK3Amchao'
-    image: 'island-defender/image.png'
-    author: 'Eli Willett'
-
-  - name: 'Quiz of Champions'
-    href: 'https://studio.code.org/projects/applab/xQ_3SilIk2PD-FITG3_oTz94KnDXvA4dzt18Fv6G6ic'
-    image: 'quiz-of-champions/image.png'
-    author: 'Sam Commisso'
 ---
 
 <div class="game-section">
@@ -157,7 +156,11 @@ other_games:
       <div class="game-card">
         <a href="{{ game.href }}">
           <img alt="{{ game.name }} image" src="{{ game.image }}">
-          <div>{{ game.name }}</div>
+          <div>
+            {{ game.name }}
+            <br>
+            <small>{{ game.author }}</small>
+          </div>
         </a>
       </div>
   {% endfor %}
