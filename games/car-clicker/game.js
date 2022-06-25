@@ -1,4 +1,4 @@
-//This is not Cole's original code. I altered most of the code to make the game work on my website.
+//This is not Cole's original code. I altered some of the code to make the game work on my website.
 
 let highscore = 0
 let speed = 3
@@ -16,7 +16,7 @@ function setup(){
     const canvas = createCanvas(400, 400)
     canvas.parent("game")
     canvas.elt.onselectstart = () => false
-    
+
     noStroke()
     textAlign(CENTER, CENTER)
 }
@@ -25,7 +25,7 @@ function draw(){
     //menu scene
     if(scene === 0){
         background(200)
-        
+
         //menu car
         fill(125, 0, 255)
         rect(menuX, 10, 90, 60)
@@ -34,7 +34,7 @@ function draw(){
         ellipse(menuX + 70, 85, 30, 30)
         menuX += 2
         if(menuX > 400) menuX = -90
-        
+
         //score text
         if(playedYet){
             fill(0)
@@ -46,7 +46,7 @@ function draw(){
             textSize(60)
             text("Car Clicker", 200, 140)
         }
-        
+
         //buttons
         noFill()
         stroke(0)
@@ -58,15 +58,15 @@ function draw(){
         text("Play", 200, 230)
         text("How to play", 200, 330)
     }
-    
+
     //game scene
     else if(scene === 1){
         background(30, 145, 245)
-        
+
         //ground
         fill(150, 100, 0)
         rect(0, 300, 400, 100)
-        
+
         //car
         fill(125, 0, 255)
         rect(x, 210, 90, 60)
@@ -75,22 +75,22 @@ function draw(){
         ellipse(x + 70, 285, 30, 30)
         x += speed
         if(x > 400) x = -90
-        
+
         //sun
         fill(255, 255, 0)
         ellipse(0, 0, 100, 100)
-        
+
         //score text
         fill(0)
         textSize(40)
         text("Score: " + score, 200, 80)
         text("Highscore: " + highscore, 200, 145)
     }
-    
+
     //how to play scene
     else if(scene === 2){
         background(200)
-        
+
         //main menu button
         noFill()
         stroke(0)
@@ -99,7 +99,7 @@ function draw(){
         noStroke()
         textSize(35)
         text("Main menu", 200, 330)
-        
+
         //how to play text
         textSize(18)
         text("Click on the purple car to get points. If you\n\nmiss the car your score and speed will reset.\n\nThe speed of the car increases as your score\n\ngoes up. Have fun playing Car Clicker!\n\n\nGame created by Cole Bechtel", 200, 140)
@@ -115,13 +115,13 @@ function mouseClicked(){
             score = 0
             speed = 3
         }
-        
+
         //how to play button
         else if(mouseIn(90, 300, 220, 60)){
             scene = 2
         }
     }
-    
+
     //game scene
     else if(scene === 1){
         //score and speed increase if you click the car, otherwise you lose
@@ -135,7 +135,7 @@ function mouseClicked(){
             if(score > highscore) highscore = score
         }
     }
-    
+
     //how to play scene
     else if(scene === 2){
         if(mouseIn(90, 300, 220, 60)){
@@ -143,44 +143,3 @@ function mouseClicked(){
         }
     }
 }
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
