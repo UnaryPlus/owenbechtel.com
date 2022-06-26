@@ -1,49 +1,24 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+---
+layout: 'basic'
+title: 'Battle'
+---
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="/bootstrap.min.css">
-        
-        <title>Battle</title>
-    </head>
-    <body onKeyDown="move();">
-        <script src="/navbar.js"></script>
-        <script>navbar("games")</script>
-        
-        <div class="text-center" style="padding-top:50px">
-            <h1>Battle</h1><br>
-            <button type="button" class="btn btn-secondary" onClick = "beginGame();" id = "button">
-                Start Game
-            </button>
-            <br><br>
-            <span style="color:red;">
-                Wins:
-                <span id = "score1">
-                    0
-                </span>
-            </span>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span style="color:blue;">
-                Wins:
-                <span id = "score2">
-                    0
-                </span>
-            </span>
-            <br><br>
-            <canvas height = "300" width = "500" id = "canvas"></canvas>
-            <p>
-                Player 1 controls the red square with the W, A, S, and D keys.<br>
-                Player 2 controls the blue square with the arrow keys.<br>
-                Both players constantly shoot forward. Collect the green squares to gain health.
-            </p>
-        </div>
-        
-        <script src="game.js"></script>
+<div class="centered">
+  <button id="start-game">Start Game</button>
+  <br><br>
+  <span class="red">
+    Wins: <span id="score1">0</span>
+  </span>
+  <span class="blue">
+    Wins: <span id="score2">0</span>
+  </span>
+  <br><br>
+  <canvas height="300" width="500" id="canvas"></canvas>
+  <p>
+    Player 1 controls the red square with the W, A, S, and D keys.<br>
+    Player 2 controls the blue square with the arrow keys.<br>
+    Both players constantly shoot forward. Collect the green squares to gain health.
+  </p>
+</div>
 
-        <!-- Bootstrap JS -->
-        <script src="/bootstrap.min.js"></script>
-    </body>
-</html>
+<script src="game.js"></script>

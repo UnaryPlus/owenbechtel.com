@@ -29,7 +29,7 @@ function Player(x, y, color){
             this.y += this.ySpeed;
             ctx.fillStyle = color;
             ctx.fillRect(this.x, this.y, 50, 50);
-            
+
             //Draws health bar
             if(this.health > 150) ctx.fillStyle = "#0f0";
             else ctx.fillStyle = "#ff0";
@@ -94,7 +94,7 @@ function Bullet(player, color){
 function move(){
     //Moves player 2
     if(event.keyCode == 37){
-        player2.xSpeed = -1;  
+        player2.xSpeed = -1;
         player2.ySpeed = 0;
         player2.direction = "left";
     }
@@ -113,10 +113,10 @@ function move(){
         player2.xSpeed = 0;
         player2.direction = "down";
     }
-    
+
     //Moves player 1
     if(event.keyCode == 65){
-        player1.xSpeed = -1;  
+        player1.xSpeed = -1;
         player1.ySpeed = 0;
         player1.direction = "left";
     }
@@ -135,7 +135,7 @@ function move(){
         player1.xSpeed = 0;
         player1.direction = "down";
     }
-    
+
     event.preventDefault();
 }
 
@@ -152,7 +152,7 @@ function beginGame(){
     health.x = Math.random()*480;
     health.y = Math.random()*280;
     interval = setInterval(draw, 10);
-    document.getElementById("button").onclick = null;
+    document.getElementById("start-game").onclick = null;
 }
 
 var canvas = document.getElementById("canvas");
@@ -182,7 +182,7 @@ for(var i = 0; i < 20; i++){
 function draw(){
     time += 1;
     ctx.clearRect(0, 0, 500, 300);
-    
+
     //Draws bullets and checks if player is dying
     for(var i = 0; i < 20; i++){
         player1Bullets[i].draw();
@@ -196,7 +196,7 @@ function draw(){
             player1Bullets[i].shot = false;
         }
     }
-    
+
     //Makes players respawn if they run into each other
     while(player1.x + 50 >= player2.x && player1.y + 50 >= player2.y && player1.x <= player2.x + 50 && player1.y <= player2.y + 50){
         player1.x = Math.random()*450;
@@ -204,14 +204,14 @@ function draw(){
         player2.x = Math.random()*450;
         player2.y = Math.random()*250;
     }
-    
+
     //Draws players
     player1.draw();
     player2.draw();
-    
+
     //Draws powerup
     health.draw();
-    
+
     //Shoots bullets
     if(time % 20 == 0){
         switch(player1.direction){
@@ -229,7 +229,7 @@ function draw(){
         bullet ++;
         if(bullet > 19) bullet = 0;
     }
-    
+
     //Kills Players
     if(player1.health <= 0){
         player1.dead = true;
@@ -265,3 +265,6 @@ function draw(){
     document.getElementById("score1").innerHTML = player1.wins;
     document.getElementById("score2").innerHTML = player2.wins;
 }
+
+document.body.onkeydown = move;
+document.getElementById("start-game").onclick = beginGame;
