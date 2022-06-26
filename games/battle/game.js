@@ -246,7 +246,7 @@ function draw(){
         ctx.fillText("Player 2 Wins!", 250, 160);
         clearInterval(interval);
         player2.wins += 1;
-        document.getElementById("button").onclick = function(){
+        document.getElementById("start-game").onclick = function(){
             beginGame();
         }
     }
@@ -258,7 +258,7 @@ function draw(){
         ctx.fillText("Player 1 Wins!", 250, 160);
         clearInterval(interval);
         player1.wins += 1;
-        document.getElementById("button").onclick = function(){
+        document.getElementById("start-game").onclick = function(){
             beginGame();
         };
     }

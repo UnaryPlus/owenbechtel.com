@@ -8,6 +8,10 @@ $nav-color: hsl(275, 100%, 25%);
 $heading-color: hsl(275, 5%, 83%);
 $code-bg-color: hsl(275, 5%, 94%);
 $code-color: hsl(275, 5%, 30%);
+
+$button-color: hsl(275, 5%, 92%);
+$button-color-hover: hsl(275, 5%, 80%);
+
 $nav-breakpoint: 700px;
 
 @mixin large {
@@ -33,6 +37,14 @@ html, body {
 
 body {
   font-family: "Noto Sans", sans-serif;
+}
+
+button {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  border-radius: 0px;
+  background-color: $button-color;
+  &:hover { background-color: $button-color-hover; }
 }
 
 .centered { text-align: center; }
@@ -99,7 +111,6 @@ nav {
 }
 
 main {
-  font-family: "Noto Sans", sans-serif;
   h2, h3 { font-family: "Libre Baskerville", serif; }
   .serif { font-family: "Libre Baskerville", serif; }
 

@@ -3,16 +3,32 @@ layout: 'basic'
 title: 'Battle'
 ---
 
-<div class="centered">
-  <button id="start-game">Start Game</button>
-  <br><br>
+<style>
+  #start-game {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 5px 8px;
+  }
+  .red {
+    color: red;
+    margin-right: 30px;
+  }
+  .blue {
+    color: blue;
+  }
+  canvas {
+    margin-top: 20px;
+  }
+</style>
+
+<div class="centered container">
+  <button id="start-game">Start Game</button><br>
   <span class="red">
     Wins: <span id="score1">0</span>
   </span>
   <span class="blue">
     Wins: <span id="score2">0</span>
-  </span>
-  <br><br>
+  </span><br>
   <canvas height="300" width="500" id="canvas"></canvas>
   <p>
     Player 1 controls the red square with the W, A, S, and D keys.<br>
