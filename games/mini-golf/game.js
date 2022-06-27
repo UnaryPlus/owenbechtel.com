@@ -1421,7 +1421,7 @@ function draw(){
         ctx.fillText("Game created by Owen Bechtel", 317, 578)
     }
 
-    ball.draw();a
+    ball.draw();
 
     if(pressed === false){
         mouse.startX = mouse.x;
