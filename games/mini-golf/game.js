@@ -1,4 +1,16 @@
-//This file is way too big.
+document.body.onmousemove = function() {
+  mouseUpdate(event);
+}
+
+document.body.onmousedown = function() {
+  pressed = true;
+}
+
+document.body.onmouseup = function() {
+  pressed = false;
+  justPressed = true;
+  canvasClick();
+}
 
 //Executes when canvas is clicked
 function canvasClick(){
@@ -16,9 +28,9 @@ function canvasClick(){
 function roundRect(x, y, width, height, radius, funct, locked){
     //Draws rounded rectangle
     ctx.beginPath();
-    ctx.arc(x + radius, y + radius, radius, tau/2, 3*tau/4);        
+    ctx.arc(x + radius, y + radius, radius, tau/2, 3*tau/4);
     ctx.lineTo(x + width - radius, y);
-    ctx.arc(x + width - radius, y + radius, radius, 3*tau/4, tau);  
+    ctx.arc(x + width - radius, y + radius, radius, 3*tau/4, tau);
     ctx.lineTo(x + width, y + height - radius);
     ctx.arc(x + width - radius, y + height - radius, radius, tau, tau/4);
     ctx.lineTo(x + radius, y + height);
@@ -26,7 +38,7 @@ function roundRect(x, y, width, height, radius, funct, locked){
     ctx.lineTo(x, y + radius);
     ctx.closePath();
     ctx.stroke();
-    
+
     //Draws lock symbol if locked
     if(locked === true){
         ctx.fillStyle = "#000000";
@@ -38,7 +50,7 @@ function roundRect(x, y, width, height, radius, funct, locked){
         ctx.closePath();
         ctx.fill();
     }
-    
+
     //Performs function if clicked
     if(clicked === true && mouse.x >= x && mouse.y >= y && mouse.x <= x + width && mouse.y <= y + height && locked === false){
         funct();
@@ -69,7 +81,7 @@ function check(){
         ctx.fillStyle = "#000";
         ctx.textAlign = "center";
         ctx.font = "50px garamond";
-        ctx.fillText("Level Complete!", 300, 175);              
+        ctx.fillText("Level Complete!", 300, 175);
         ctx.font = "30px garamond";
         ctx.fillText("Your score: " + level.score, 300, 250);
         ctx.fillText("Par: " + level.par, 300, 325);
@@ -111,7 +123,7 @@ function check(){
         level.on += 1;
         ball.xSpeed = 0;
         ball.ySpeed = 0;
-        
+
         //Next Level Button
         roundRect(200, 390, 200, 70, 20, function(){
             level.screen = level.on;
@@ -150,28 +162,28 @@ function obstacle(x, y, width, height){
         } else {
             ctx.fillStyle = "#41a000";
         }
-        ctx.fillRect(this.x, this.y, this.width, this.height);   
+        ctx.fillRect(this.x, this.y, this.width, this.height);
         //Left side
         if(ball.x + 10 > this.x && ball.y + 10 > this.y + 5 && ball.x - 10 < this.x && ball.y - 10 < this.y + this.height - 5){
             ball.x = this.x - 10;
             ball.xSpeed = -ball.xSpeed + this.xSpeed;
             bounce.play();
         }
-        
+
         //Right side
         if(ball.x - 10 < this.x + this.width && ball.y + 10 > this.y + 5 && ball.x + 10 > this.x + this.width && ball.y - 10 < this.y + this.height - 5){
             ball.x = this.x + this.width + 10;
             ball.xSpeed = -ball.xSpeed + this.xSpeed;
             bounce.play();
         }
-        
+
         //Top side
         if(ball.x + 10 >= this.x + 5 && ball.x - 10 <= this.x + this.width -5 && ball.y + 10 >= this.y && ball.y - 10 <= this.y){
             ball.y = this.y - 10;
             ball.ySpeed = -ball.ySpeed + this.ySpeed;
             bounce.play();
         }
-        
+
         //Bottom side
         if(ball.x + 10 >= this.x + 5 && ball.x - 10 <= this.x + this.width - 5 && ball.y + 10 >= this.y + this.height && ball.y - 10 <= this.y + this.height){
             ball.y = this.y + this.height + 10;
@@ -200,13 +212,13 @@ function bumper(x, y, radius){
             ctx.fillStyle = "#dd0000";
         }
         ctx.arc(this.x, this.y, this.radius, 0, tau);               ctx.fill();
-        
+
         //Checks for collision
         if(Math.sqrt(Math.pow(this.x - ball.x, 2) + Math.pow(this.y - ball.y, 2)) <= this.radius + 10){
-            let angle = Math.atan2(ball.y - this.y, ball.x - this.x);     
+            let angle = Math.atan2(ball.y - this.y, ball.x - this.x);
             //Speed of the ball
             let vectLength = Math.sqrt(ball.xSpeed*ball.xSpeed + ball.ySpeed*ball.ySpeed);
-            
+
             if(vectLength === 0){
                 ball.xSpeed = Math.cos(angle);
                 ball.ySpeed = Math.sin(angle);
@@ -247,7 +259,7 @@ function sand(x, y, width, height){
     this.draw = function(){
         ctx.fillStyle = "#edd9af";
         ctx.fillRect(x, y, width, height);
-        
+
         //Makes ball slower
         if(ball.x >= x && ball.x <= x + width && ball.y <= y + height && ball.y >= y){
             ball.xSpeed -= ball.xSpeed/20;
@@ -283,10 +295,10 @@ function hill(x, y, width, height, direction){
                 break;
         }
         ctx.fillRect(x, y, width, height);
-        
+
         ctx.translate(center.x, center.y);
         ctx.rotate(rotateAmount);
-        
+
         //Draws arrow
         ctx.beginPath();
         ctx.fillStyle = "#000000";
@@ -295,10 +307,10 @@ function hill(x, y, width, height, direction){
         ctx.lineTo(15, 10);
         ctx.closePath();
         ctx.fill();
-        
+
         ctx.rotate(-rotateAmount);
         ctx.translate(-center.x, -center.y);
-        
+
         if(ball.x >= x && ball.x <= x + width && ball.y >= y && ball.y <= y + height){
             ball.onHill = true;
             switch(direction){
@@ -336,7 +348,7 @@ function portal(x1, y1, x2, y2, color){
         this.y1 += this.y1Speed;
         this.x2 += this.x2Speed;
         this.y2 += this.y2Speed;
-        
+
         //Draws black circles
         ctx.beginPath();
         ctx.fillStyle = "#000000";
@@ -346,13 +358,13 @@ function portal(x1, y1, x2, y2, color){
         ctx.fillStyle = "#000000";
         ctx.arc(this.x2, this.y2, 30, 0, tau);
         ctx.fill();
-        
+
         ctx.fillStyle = color;
         ctx.beginPath();
         ctx.arc(this.x1, this.y1, 30, 0, tau);                        ctx.fill();
         ctx.beginPath();
         ctx.arc(this.x2, this.y2, 30, 0, tau);                        ctx.fill();
-        
+
         //Draws spinning arcs
         ctx.translate(this.x1, this.y1);
         ctx.rotate(rotateAmount);
@@ -368,7 +380,7 @@ function portal(x1, y1, x2, y2, color){
         ctx.fill();
         ctx.rotate(-rotateAmount);
         ctx.translate(-this.x1, -this.y1);
-        
+
         ctx.translate(this.x2, this.y2);
         ctx.rotate(rotateAmount);
         ctx.beginPath();
@@ -383,11 +395,11 @@ function portal(x1, y1, x2, y2, color){
         ctx.fill();
         ctx.rotate(-rotateAmount);
         ctx.translate(-this.x2, -this.y2);
-        
+
         //Teleports ball
         var dx1 = ball.x - this.x1;
         var dy1 = ball.y - this.y1;
-        var distance1 = Math.sqrt(dx1*dx1 + dy1*dy1);             
+        var distance1 = Math.sqrt(dx1*dx1 + dy1*dy1);
         if(distance1 < 40){
             ball.x = this.x2 - dx1;
             ball.y = this.y2 - dy1;
@@ -396,7 +408,7 @@ function portal(x1, y1, x2, y2, color){
     }
 }
 
-var canvas = document.getElementById("gameCanvas");          
+var canvas = document.getElementById("gameCanvas");
 var ctx = canvas.getContext("2d");
 
 //Sounds
@@ -454,7 +466,7 @@ var score = {
 }
 
 var level = {
-    screen : 0, 
+    screen : 0,
 //0 = main menu, -1 = how to play, -2 = level select
     on : 1, //level player is on
     num : 9, //Number of levels
@@ -530,7 +542,7 @@ var obstacles6 = [
     new hill(400, 0, 200, 350, "down"),
     new bumper(400, 350, 50),
     new bumper(600, 300, 100),
-    new obstacle(350, 160, 50, 190), 
+    new obstacle(350, 160, 50, 190),
     new water(200, 350, 50, 125),
     new bumper(300, 575, 25),
     new obstacle(0, 350, 200, 50)
@@ -580,21 +592,21 @@ var obstacles8 = [
 var obstacles9 = [
     new hill(200, 225, 400, 100, "left"),
     new bumper(225, 225, 25),
-    new obstacle(0, 200, 400, 25), 
+    new obstacle(0, 200, 400, 25),
     new obstacle(200, 100, 25, 100),
     new hill(200, 0, 225, 100, "right"),
     new obstacle(225, 100, 375, 25),
-    new portal(475, 50, 265, 162.5, "#9600ff"), 
-    new water(500, 125, 100, 50), 
+    new portal(475, 50, 265, 162.5, "#9600ff"),
+    new water(500, 125, 100, 50),
     new obstacle(225, 325, 375, 25),
     new sand(0, 325, 125, 100),
     new obstacle(200, 450, 25, 150),
     new bumper(225, 325, 40),
     new bumper(100, 510, 20),
-    new obstacle(400, 350, 25, 250), 
+    new obstacle(400, 350, 25, 250),
     new water(425, 350, 25, 250),
     new water(450, 350, 150, 25),
-    new water(575, 375, 25, 225), 
+    new water(575, 375, 25, 225),
     new portal(350, 550, 512.5, 430, "#ff0000")
 ]
 
@@ -688,7 +700,7 @@ function draw(){
         ctx.textAlign = "left";
 
         //Start game button
-        roundRect(115, 220, 160, 70, 15, 
+        roundRect(115, 220, 160, 70, 15,
         function(){
             level.screen = level.on;
             ball.x = 100;
@@ -742,7 +754,7 @@ function draw(){
             if(controls === "click"){
                 controls = "drag";
             } else {
-                controls = "click";   
+                controls = "click";
             }
             clicked = false;
         }, false);
@@ -754,7 +766,7 @@ function draw(){
         }
         if(controls === "click"){
             circleX = 330;
-        } 
+        }
 
         ctx.beginPath();
         ctx.arc(circleX, 490, 12, 0, tau);
@@ -902,7 +914,7 @@ function draw(){
         ctx.arc(95, 472, 15, 3*tau/4, tau/2, true);              ctx.fill();
 
         //Main menu button
-        roundRect(50, 500, 200, 70, 20, 
+        roundRect(50, 500, 200, 70, 20,
         function(){
             level.screen = 0;
         }, false);
@@ -917,7 +929,7 @@ function draw(){
         ctx.font = "50px garamond";
         ctx.fillText("Level Select", 180, 90);
 
-        roundRect(100, 150, 100, 100, 20, 
+        roundRect(100, 150, 100, 100, 20,
         function(){
             level.screen = 1;
             ball.x = 100;
@@ -930,7 +942,7 @@ function draw(){
             }, 10);
         }, false);
 
-        roundRect(250, 150, 100, 100, 20, 
+        roundRect(250, 150, 100, 100, 20,
         function(){
             level.screen = 2;
             ball.x = 100;
@@ -942,7 +954,7 @@ function draw(){
             }, 10);
         }, false);
 
-        roundRect(400, 150, 100, 100, 20, 
+        roundRect(400, 150, 100, 100, 20,
         function(){
             level.screen = 3;
             ball.x = 100;
@@ -954,7 +966,7 @@ function draw(){
             }, 10);
         }, false);
 
-        roundRect(100, 300, 100, 100, 20, 
+        roundRect(100, 300, 100, 100, 20,
         function(){
             level.screen = 4;
             ball.x = 100;
@@ -966,7 +978,7 @@ function draw(){
             }, 10);
         }, false);
 
-        roundRect(250, 300, 100, 100, 20, 
+        roundRect(250, 300, 100, 100, 20,
         function(){
             level.screen = 5;
             ball.x = 100;
@@ -978,7 +990,7 @@ function draw(){
             }, 10);
         }, false);
 
-        roundRect(400, 300, 100, 100, 20, 
+        roundRect(400, 300, 100, 100, 20,
         function(){
             level.screen = 6;
             ball.x = 100;
@@ -990,7 +1002,7 @@ function draw(){
             }, 10);
         }, false);
 
-        roundRect(100, 450, 100, 100, 20, 
+        roundRect(100, 450, 100, 100, 20,
         function(){
             level.screen = 7;
             ball.x = 100;
@@ -1002,7 +1014,7 @@ function draw(){
             }, 10);
         }, false);
 
-        roundRect(250, 450, 100, 100, 20, 
+        roundRect(250, 450, 100, 100, 20,
         function(){
             level.screen = 8;
             ball.x = 100;
@@ -1014,7 +1026,7 @@ function draw(){
             }, 10);
         }, false);
 
-        roundRect(400, 450, 100, 100, 20, 
+        roundRect(400, 450, 100, 100, 20,
         function(){
             level.screen = 9;
             ball.x = 100;
@@ -1384,7 +1396,7 @@ function draw(){
         ctx.fillText("Level 4: " + score.l4, 80, 300);
         ctx.fillText("Level 5: " + score.l5, 80, 350);
         ctx.fillText("Level 6: " + score.l6, 300, 150);
-        ctx.fillText("Level 7: " + score.l7, 300, 200);               
+        ctx.fillText("Level 7: " + score.l7, 300, 200);
         ctx.fillText("Level 8: " + score.l8, 300, 250);
         ctx.fillText("Level 9: " + score.l9, 300, 300);
         if(selectLocked === true){

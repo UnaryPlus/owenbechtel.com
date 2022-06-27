@@ -1,49 +1,31 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+---
+layout: 'basic'
+title: 'Mini Golf'
+---
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="/bootstrap.min.css">
-        
-        <title>Mini Golf</title>
-    </head>
-    <body>
-        <script src="/navbar.js"></script>
-        <script>navbar("games")</script>
-        
-        <div class="text-center" style="padding-top:50px">
-            <h1>Mini Golf</h1><br><br>
-            <canvas id = "gameCanvas" width = "600" height = "600" onMouseMove = "mouseUpdate(event);" onClick = "canvasClick();" onMouseDown = "pressed = true;" onMouseUp = "pressed = false; justPressed = true; canvasClick();"></canvas>  
-        </div>
-        
-        <!-- Audio -->
-        <audio loop id = "song">
-            <source src = "music.mp3">
-        </audio>
-        <audio id = "bounce">
-            <source src = "https://codehs.com/uploads/a5e98b1a6e50cb89fd6f9133a20739f2">
-        </audio>
-        <audio id = "splash">
-            <source src = "https://codehs.com/uploads/a7966fcab9d194892337093a34099e31">
-        </audio>
-        <audio id = "ballInHole">
-            <source src = "https://codehs.com/uploads/318d7e7075cca1c18f52e0f461d28324">
-        </audio>
-        <audio id = "ballHit">
-            <source src = "https://codehs.com/uploads/0b70f8e1e17b4076d3a04c44817ea408">
-        </audio>
-        <audio id = "teleportation">
-            <source src = "https://codehs.com/uploads/a67e0b41660a66f3acaa18614ed053a4">
-        </audio>
-        
-        <!--MUSIC IMAGE-->
-        <img id = "image" src = "https://codehs.com/uploads/229cd5fb701f5a4b4bf4c11f1cc73a3f" width = "0" height = "0">
-        
-        <script src="game.js"></script>
+<div class="centered">
+  <canvas id="gameCanvas" width="600" height="600"></canvas>
+</div>
 
-        <!-- Bootstrap JS -->
-        <script src="/bootstrap.min.js"></script>
-    </body>
-</html>
+<audio loop id="song">
+    <source src="music.mp3">
+</audio>
+<audio id="bounce">
+    <source src="https://codehs.com/uploads/a5e98b1a6e50cb89fd6f9133a20739f2">
+</audio>
+<audio id="splash">
+    <source src="https://codehs.com/uploads/a7966fcab9d194892337093a34099e31">
+</audio>
+<audio id="ballInHole">
+    <source src="https://codehs.com/uploads/318d7e7075cca1c18f52e0f461d28324">
+</audio>
+<audio id="ballHit">
+    <source src="https://codehs.com/uploads/0b70f8e1e17b4076d3a04c44817ea408">
+</audio>
+<audio id="teleportation">
+    <source src="https://codehs.com/uploads/a67e0b41660a66f3acaa18614ed053a4">
+</audio>
+
+<img id="image" src="https://codehs.com/uploads/229cd5fb701f5a4b4bf4c11f1cc73a3f" width="0" height="0">
+
+<script src="game.js"></script>
