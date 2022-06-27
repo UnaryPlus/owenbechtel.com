@@ -1,7 +1,7 @@
 "use strict";
 
 (function() {
-    
+
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
@@ -42,7 +42,7 @@ function Rectangle(x, y, width, height, color){
 }
 
 function startGame() {
-    document.getElementById("button").onclick = null;
+    document.getElementById("start-game").onclick = null;
     player = new Rectangle(50, 50, 50, 50, "blue");
     player.gravity = 0.25;
     for(var i = 0; i < 1000; i += 1){
@@ -71,7 +71,7 @@ function updateGame() {
         if(player.x + 50 >= obstacles[i].x && player.y + 50 >= obstacles[i].y && player.x <= obstacles[i].x + 20 && player.y <= obstacles[i].y + 100){
             restartGame();
         }
-    } 
+    }
     document.getElementById("score").innerText = score;
     document.getElementById("highscore").innerText = highscore;
 }
@@ -85,7 +85,7 @@ function restartGame() {
     }
 }
 
-document.getElementById("button").onclick = startGame;
+document.getElementById("start-game").onclick = startGame;
 
 document.body.onkeydown = function(evt) {
     if(evt.repeat) return;

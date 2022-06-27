@@ -1,32 +1,31 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+---
+layout: 'basic'
+title: 'Dodge the Rectangles'
+---
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="/bootstrap.min.css">
+<style>
+  #start-game {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 5px 8px;
+  }
+  #score {
+    margin-right: 30px;
+  }
+  canvas {
+    margin-top: 20px;
+  }
+</style>
 
-        <title>Dodge the Rectangles</title>
-    </head>
-    <body>
-        <script src="/navbar.js"></script>
-        <script>navbar("games")</script>
-        
-        <div class="text-center" style="padding-top:50px">
-            <h1>Dodge the Rectangles</h1><br>
-             <button type="button" class="btn btn-secondary" id="button">Begin Game</button><br><br>
-            <p>Score: <span id = "score">0</span> Highscore: <span id = "highscore">0</span></p>
-            <canvas width = "480" height = "270" id = "canvas"></canvas><br><br>
-            <p>
-                Press any key to switch the direction of gravity.<br>
-                Avoid the red rectangles. They will move faster with time.
-            </p>
-        </div>
-        
-        <script src="game.js"></script>
+<div class="centered">
+  <button id="start-game">Start Game</button><br>
+  Score: <span id="score">0</span>
+  Highscore: <span id="highscore">0</span><br>
+  <canvas width="480" height="270" id="canvas"></canvas>
+  <p>
+      Press any key to switch the direction of gravity.<br>
+      Avoid the red rectangles. They will move faster with time.
+  </p>
+</div>
 
-        <!-- Bootstrap JS -->
-        <script src="/bootstrap.min.js"></script>
-    </body>
-</html>
+<script src="game.js"></script>
