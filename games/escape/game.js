@@ -1,3 +1,6 @@
+document.getElementById("start-game").onclick = beginGame;
+document.body.onmousemove = function() { mouseUpdate(event) };
+
 //countdown
 function countdown(){
     var count = 4;
@@ -12,13 +15,13 @@ function countdown(){
         } if(count === 0){
             ctx.fillText("Begin!", 250, 275);
         }
-        
+
         if(count > -2){
             setTimeout(function(){
                 this.update();
             }, 1000);
         }
-        
+
     };
     this.update();
 }
@@ -103,7 +106,7 @@ function dude(x, y, color){
         if(this.y < 20){
             this.y = 20;
         }
-        
+
         ctx.fillStyle = this.color;
         ctx.beginPath();
         ctx.arc(this.x, this.y, 20, 0, tau);
@@ -113,26 +116,26 @@ function dude(x, y, color){
 
 //Starts game
 function beginGame(){
-    
-    document.getElementById("button").onclick = null;
-    
+
+    document.getElementById("start-game").onclick = null;
+
     //Creates player and enemy
     player = new dude(200, 400, "#00f");
     enemy = new dude(300, 460, "#f00");
     time = 0;
-    
+
     countdown();
-    
+
     setTimeout(function(){
         interval = setInterval(draw, 20);
     }, 4000);
-    
+
 }
 
 //ends game
 function endGame(victory){
     clearInterval(interval);
-    
+
     //Player wins!
     if(victory === true){
         ctx.fillStyle = "#0f0";
@@ -146,7 +149,7 @@ function endGame(victory){
             highscore = roundTime;
         }
     }
-    
+
     //Player loses!
     if(victory === false){
         ctx.fillStyle = "#f00";
@@ -156,8 +159,8 @@ function endGame(victory){
         ctx.textAlign = "center";
         ctx.fillText("You Lose!", 250, 250);
     }
-    
-    document.getElementById("button").onclick = beginGame;
+
+    document.getElementById("start-game").onclick = beginGame;
 }
 
 //Pi is wrong!
@@ -189,32 +192,32 @@ var draw = function(){
         }
     }
     player.draw();
-    
+
     time += 0.02;
     roundTime = Math.round(time*10)/10;
-    
+
     //Moves enemy
     if(Number.isInteger(roundTime)){
         enemyUpdate();
     }
     enemy.draw();
-    
+
     //Checks if player has won
     if(player.y === 20){
         endGame(true);
     }
-    
+
     //Checks if player has lost
     if(Math.sqrt((player.x - enemy.x)*(player.x - enemy.x) + (player.y - enemy.y)*(player.y - enemy.y)) < 40){
         endGame(false);
     }
-    
+
     //Checks if player has lost
-    
+
     ctx.fillStyle = "#000";
     ctx.textAlign = "right";
     ctx.font = "30px garamond";
     ctx.fillText(roundTime, 490, 30);
-    
+
     document.getElementById("highscore").innerHTML = highscore;
 }
