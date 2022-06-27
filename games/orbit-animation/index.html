@@ -1,32 +1,29 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+---
+layout: 'basic'
+title: 'Orbit Animation'
+---
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="/bootstrap.min.css">
-        
-        <title>Orbit Animation</title>
-    </head>
-    <body>
-        <script src="/navbar.js"></script>
-        <script>navbar("games")</script>
-        
-        <div class="text-center" style="padding-top:50px">
-            <h1>Orbit Animation</h1><br>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary" onClick="speed = 100;">Slow</button>
-                <button type="button" class="btn btn-secondary" onClick="speed = 30;">Normal</button>
-                <button type="button" class="btn btn-secondary" onClick="speed = 10;">Fast</button>
-                <button type="button" class="btn btn-secondary" onClick="speed = 3;">Very Fast</button>
-            </div><br><br>
-            <canvas id = "bigCanvas" style="background-color:black;" width = "500" height = "500"></canvas><br>
-        </div>
-        
-        <script src="game.js"></script>
+<style>
+  .centered {
+    padding-top: 30px;
+  }
+  button {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  canvas {
+    margin-top: 30px;
+    background-color: black;
+  }
+</style>
 
-        <!-- Bootstrap JS -->
-        <script src="/bootstrap.min.js"></script>
-    </body>
-</html>
+<div class="centered">
+  <button onClick="speed = 100;">Slow</button>
+  <button onClick="speed = 30;">Normal</button>
+  <button onClick="speed = 10;">Fast</button>
+  <button onClick="speed = 3;">Very Fast</button>
+  <br>
+  <canvas id="bigCanvas" width="500" height="500"></canvas>
+</div>
+
+<script src="game.js"></script>
