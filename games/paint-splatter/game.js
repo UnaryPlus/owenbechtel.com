@@ -5,16 +5,16 @@ function setup(){
     canvas.parent("game")
     canvas.elt.onselectstart = () => false
 
-    hue = createSlider(0, 255, 255)
+    hue = createSlider(0, 360, 240)
     hue.parent("slider1")
 
-    saturation = createSlider(0, 255, 255)
+    saturation = createSlider(0, 100, 100)
     saturation.parent("slider2")
 
-    brightness = createSlider(0, 255, 255)
+    brightness = createSlider(0, 100, 100)
     brightness.parent("slider3")
 
-    hueStd = createSlider(0, 20, 10)
+    hueStd = createSlider(0, 25, 10)
     hueStd.parent("slider4")
 
     circleNumber = createSlider(15, 150, 75)
