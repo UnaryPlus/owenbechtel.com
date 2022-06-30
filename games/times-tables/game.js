@@ -10,26 +10,21 @@ const value = {
 
 function setup() {
   //create canvas in "game" div
-  const canvas = createCanvas(600, 420)
-  canvas.parent("game")
+  const canvas = createCanvas(600, 420).parent("game")
   canvas.elt.onselectstart = () => false
   colorMode(HSB)
-  
-  //canvas coordinates
-  const x = canvas.elt.offsetLeft + 440
-  const y = canvas.elt.offsetTop
-  
+
   //create inputs
-  numInput("multiplier").position(x, y + 40)
-  numInput("modulus").position(x, y + 100)
-  slider("lineWeight", 0.5, 10, 0.1).position(x, y + 160)
-  checkbox("showLabels").position(x, y + 190)
-  checkbox("showColors").position(x, y + 220)
+  numInput("multiplier").position(440, 40)
+  numInput("modulus").position(440, 100)
+  slider("lineWeight", 0.5, 10, 0.1).position(440, 160)
+  checkbox("showLabels").position(440, 188)
+  checkbox("showColors").position(440, 218)
 }
 
 //create numerical input that updates value[key]
 function numInput(key) {
-  const input = createInput(value[key] + "")
+  const input = createInput(value[key] + "").parent("game")
   input.changed(() => {
     const x = +input.value()
     if(isFinite(x)) {
@@ -42,7 +37,7 @@ function numInput(key) {
 
 //create slider that updates value[key]
 function slider(key, lower, upper, step) {
-  const input = createSlider(lower, upper, value[key], step)
+  const input = createSlider(lower, upper, value[key], step).parent("game")
   input.changed(() => {
     value[key] = input.value()
     update = true
@@ -52,7 +47,7 @@ function slider(key, lower, upper, step) {
 
 //create checkbox that updates value[key]
 function checkbox(key) {
-  const input = createCheckbox("", value[key])
+  const input = createCheckbox("", value[key]).parent("game")
   input.changed(() => {
     value[key] = !value[key]
     update = true
@@ -63,10 +58,10 @@ function checkbox(key) {
 function draw() {
   //only redraw stuff if input has changed
   if(!update) return
-  
+
   update = false
   background(255)
-  
+
   //label inputs
   textSize(14)
   textAlign(LEFT, BASELINE)
@@ -76,15 +71,15 @@ function draw() {
   text("line weight: " + value.lineWeight, 440, 155)
   text("show labels", 465, 205)
   text("show colors", 465, 235)
-  
+
   //transform coordinates
   translate(210, 210)
   scale(180, 180)
-  
+
   //big circle
   styleStroke(0, 0.01)
   circle(0, 0, 2)
-  
+
   //times table lines
   drawLine(0)
   if(value.modulus % 2 === 0) {
@@ -104,7 +99,7 @@ function drawLine(n) {
   const x1 = cos(a1), y1 = sin(a1)
   const a2 = product * TAU / value.modulus
   const x2 = cos(a2), y2 = sin(a2)
-    
+
   //if "show colors" is checked, calculate hue based on length
   styleStroke(0, value.lineWeight / 1000)
   if(value.showColors) {
@@ -113,7 +108,7 @@ function drawLine(n) {
     styleStroke(color(hue, 255, 255, 0.5), value.lineWeight / 1000)
   }
   line(cos(a1), sin(a1), cos(a2), sin(a2))
-  
+
   //if "show labels" is checked, draw the label for 'n'
   if(value.showLabels) {
     textSize(0.1)

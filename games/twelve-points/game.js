@@ -14,43 +14,38 @@ let theta = 0
 
 function setup() {
   //create canvas
-  canvas = createCanvas(620, 420)
-  canvas.parent("game")
+  canvas = createCanvas(620, 420).parent("game")
 
   //create sliders
-  slider.star = createSlider(5, 20, 7, 1)
-  slider.polygon = createSlider(2, 9, 3, 1)
-  slider.distance = createSlider(0, 1, 0.8, 0)
-  
+  slider.star = createSlider(5, 20, 7, 1).parent("game")
+  slider.polygon = createSlider(2, 9, 3, 1).parent("game")
+  slider.distance = createSlider(0, 1, 0.8, 0).parent("game")
+
   //create checkboxes
-  checkbox.points = createCheckbox("", show.points)
-  checkbox.circles = createCheckbox("", show.circles)
-  checkbox.small = createCheckbox("", show.small)
-  checkbox.large = createCheckbox("", show.large)
-  checkbox.star = createCheckbox("", show.star)
- 
+  checkbox.points = createCheckbox("", show.points).parent("game")
+  checkbox.circles = createCheckbox("", show.circles).parent("game")
+  checkbox.small = createCheckbox("", show.small).parent("game")
+  checkbox.large = createCheckbox("", show.large).parent("game")
+  checkbox.star = createCheckbox("", show.star).parent("game")
+
   //listen for check events
   checkbox.points.changed(() => show.points = !show.points)
   checkbox.circles.changed(() => show.circles = !show.circles)
   checkbox.small.changed(() => show.small = !show.small)
   checkbox.large.changed(() => show.large = !show.large)
   checkbox.star.changed(() => show.star = !show.star)
-  
-  //canvas coordinates
-  const x = canvas.elt.offsetLeft + 440
-  const y = canvas.elt.offsetTop
-  
+
   //position sliders
-  slider.star.position(x - 5, y + 45)
-  slider.polygon.position(x - 5, y + 95)
-  slider.distance.position(x - 5, y + 145)
-  
+  slider.star.position(435, 40)
+  slider.polygon.position(435, 90)
+  slider.distance.position(435, 140)
+
   //position checkboxes
-  checkbox.points.position(x, y + 190)
-  checkbox.circles.position(x, y + 220)
-  checkbox.small.position(x, y + 250)
-  checkbox.large.position(x, y + 280)
-  checkbox.star.position(x, y + 310)
+  checkbox.points.position(435, 188)
+  checkbox.circles.position(435, 218)
+  checkbox.small.position(435, 248)
+  checkbox.large.position(435, 278)
+  checkbox.star.position(435, 308)
 }
 
 function draw() {
@@ -62,22 +57,22 @@ function draw() {
   const RED = color(255, 0, 0)
   const GREEN = color(0, 255, 0)
   const BLUE = color(0, 0, 255)
-  
+
   //slider values
   const STAR = slider.star.value()
   const POLY = slider.polygon.value()
   const DIST = slider.distance.value()
-  
+
   //functions for getting coordinates
   const c = coordinate(STAR, POLY, DIST)
-  
+
   //label sliders
   textSize(14)
   styleFill(BLACK)
   text("star vertices: " + STAR, 435, 35)
   text("polygon vertices: " + POLY, 435, 85)
   text("distance from center: " + round(DIST, 3), 435, 135)
-  
+
   //label checkboxes
   textSize(14)
   styleFill(BLACK)
@@ -86,15 +81,15 @@ function draw() {
   text("show small polygons", 460, 265)
   text("show large polygons", 460, 295)
   text("show star", 460, 325)
-  
+
   //transform coordinates
   translate(210, 210)
   scale(200, -200)
-  
+
   //draw large circle
   styleStroke(BLACK)
   circle(0, 0, 2)
-  
+
   //draw small circles
   if(show.circles) {
     for(let i = 0; i < STAR - POLY; i++) {
@@ -102,7 +97,7 @@ function draw() {
       circle(c.circleX(i), c.circleY(i), 2 * POLY/STAR)
     }
   }
-  
+
   //draw points
   if(show.points) {
     for(let i = 0; i < STAR - POLY; i++) {
@@ -112,7 +107,7 @@ function draw() {
       }
     }
   }
-  
+
   //draw small polygons
   if(show.small) {
     for(let i = 0; i < STAR - POLY; i++) {
@@ -124,7 +119,7 @@ function draw() {
       endShape(CLOSE)
     }
   }
-  
+
   //draw large polygons
   if(show.large) {
     for(let j = 0; j < POLY; j++) {
@@ -136,7 +131,7 @@ function draw() {
       endShape(CLOSE)
     }
   }
-  
+
   //draw star
   if(show.star) {
     styleStroke(GREEN)
@@ -155,13 +150,13 @@ function coordinate(STAR, POLY, DIST) {
   const circleAngle = i => TAU/(STAR - POLY) * i + theta
   const circleX = i => cos(circleAngle(i)) * circleDist
   const circleY = i => sin(circleAngle(i)) * circleDist
-  
+
   //coordinates of point
   const pointDist = POLY/STAR * DIST
   const pointAngle = j => TAU/POLY * j - theta * (STAR - POLY)/POLY
   const pointX = (i, j) => circleX(i) + cos(pointAngle(j)) * pointDist
   const pointY = (i, j) => circleY(i) + sin(pointAngle(j)) * pointDist
-  
+
   return { circleX, circleY, pointX, pointY }
 }
 
