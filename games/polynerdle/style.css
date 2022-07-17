@@ -1,3 +1,7 @@
+html, body {
+  margin: 0px;
+}
+
 #info {
     position: absolute;
     top: 150px;
