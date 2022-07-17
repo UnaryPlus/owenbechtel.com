@@ -14,7 +14,7 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
-button, input[type="submit"] {
+button:not(.override), input[type="submit"] {
   font-family: "Noto Sans", sans-serif;
   font-size: 16px;
   border-radius: 0px;

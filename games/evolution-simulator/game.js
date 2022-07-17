@@ -265,6 +265,7 @@ function sketch(p) {
     function createButton(text, x, y, callback) {
         const button = p.createButton(text);
         button.parent("game");
+        button.class("override");
         button.position(x, y);
         button.mouseClicked(callback);
         button.elt.onselectstart = () => false;
