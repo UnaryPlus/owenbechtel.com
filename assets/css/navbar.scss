@@ -1,17 +1,10 @@
 ---
 ---
 
-@import 'highlight.css';
 @import 'font.css';
 
 $nav-color: hsl(275, 100%, 25%);
 $heading-color: hsl(275, 5%, 83%);
-$code-bg-color: hsl(275, 5%, 94%);
-$code-color: hsl(275, 5%, 30%);
-
-$button-color: hsl(275, 5%, 92%);
-$button-color-hover: hsl(275, 5%, 80%);
-
 $nav-breakpoint: 700px;
 
 @mixin large {
@@ -33,53 +26,6 @@ $nav-breakpoint: 700px;
 html, body {
   margin: 0px;
   height: 100%;
-}
-
-body {
-  font-family: "Noto Sans", sans-serif;
-}
-
-button {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 16px;
-  border-radius: 0px;
-  background-color: $button-color;
-  &:hover { background-color: $button-color-hover; }
-}
-
-.centered { text-align: center; }
-
-a {
-  text-decoration: none;
-  &:hover { text-decoration: underline; }
-}
-
-code, pre {
-  font-size: 15px; /* default is 13 */
-  background-color: $code-bg-color;
-  color: $code-color
-}
-code {
-  padding: 1px 3px;
-}
-pre {
-  overflow: scroll;
-  padding: 8px;
-  code { padding: 0; }
-}
-
-sup, sub {
-  font-size: 11px; /* default is 13.5 */
-}
-
-mjx-container {
-  overflow: scroll;
-  overflow-y: hidden;
-}
-
-.featural {
-  font-family: "English Featural Alphabet";
-  font-size: 17px; /* default is 16 */
 }
 
 .page {
