@@ -283,19 +283,20 @@ function sketch(p) {
             creatures.push(creature_1.default.random());
         }
         deleted = Array.from({ length: 100 }, () => false);
-        mainButton = createButton("Sort by fitness", 612, 300, mainClicked);
-        skipButton = createButton("Skip 10 generations", 612, 340, skipClicked);
-        killButton = createButton("Mass extinction", 612, 340, killClicked).hide();
-        alienButton = createButton("Alien invasion", 612, 340, alienClicked).hide();
+        mainButton = createButton("Sort by fitness", 610, 300, mainClicked);
+        skipButton = createButton("Skip 10 generations", 610, 340, skipClicked);
+        killButton = createButton("Mass extinction", 610, 340, killClicked).hide();
+        alienButton = createButton("Alien invasion", 610, 340, alienClicked).hide();
         backButton = createButton("Back", 20, 20, backClicked).hide();
         resetButton = createButton("Reset", 75, 20, resetClicked).hide();
         phylumSearch = p.createInput("", "number");
         phylumSearch.parent("game");
-        phylumSearch.position(612, 380).size(170);
+        phylumSearch.position(610, 380).size(170);
         // @ts-ignore
         phylumSearch.input(() => (0, view_1.drawGrid)(p, creatures, deleted, phylumSearch.value()));
         phylumSearch.elt.placeholder = "Phylum";
         action = "sort";
+        p.text("Click on a creature to view\nits behavior.", 610, 427);
         (0, view_1.drawGrid)(p, creatures, deleted, phylumSearch.value());
         (0, view_1.drawHeading)(p, generation, action);
         (0, view_1.drawStatistics)(p, creatures);
@@ -398,6 +399,7 @@ function sketch(p) {
         if (action === "create")
             alienButton.show();
         p.background(255);
+        p.text("Click on a creature to view\nits behavior.", 610, 427);
         (0, view_1.drawGrid)(p, creatures, deleted, phylumSearch.value());
         (0, view_1.drawHeading)(p, generation, action);
         (0, view_1.drawStatistics)(p, creatures);
