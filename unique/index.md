@@ -5,6 +5,18 @@ title: 'Unique'
 
 Unique is an esoteric programming language where the same number cannot occur more than once. The source code for the interpreter is available on [Github](https://github.com/UnaryPlus/unique).
 
+### Setup and usage
+
+1. Install [cabal](https://www.haskell.org/cabal/) if you don't have it already.
+2. Run `cabal install unique-lang` to install the `unique` executable.
+3. To evaluate a Unique program, type `unique run` followed by the path of the program.
+4. Running `unique examples` copies three example programs into the current directory: "truth-machine.uniq", "fibonacci.uniq", and "hello-world.uniq".
+  * "truth-machine.uniq" prints a single 0 if you enter a 0, and prints 1 indefinitely otherwise.
+  * "fibonacci.uniq" prints the fibonacci sequence up to 10<sup>18</sup>.
+  * "hello-world.uniq" prints "hello, world!".
+
+### Language reference
+
 Comments begin with a `#` and are ignored by the interpreter. The rest of the program is split by whitespace, and the resulting strings are evaluated sequentially.
 
 * If the string is an integer, that integer is pushed onto the stack.
@@ -54,5 +66,3 @@ For non-commutative operations, the second value popped goes on the left-hand si
 * 44: Pop an array and print each of its elements as a number, separated by newlines.
 
 The last command, represented by the number `0`, is used to push an array of numbers. The number after the `0` (N) represents the length of the array, and the next N numbers are the values to push. These values are pushed sequentially onto the front of the array rather than the back before the array is pushed onto the stack. This behavior make sense in some contexts, but in other contexts it is counterintuitive and you may want to use the `34` command to reverse the array after it is pushed.
-
-Example programs can be found on the Github repository.
