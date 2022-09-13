@@ -5,6 +5,7 @@ title: 'Articles'
 
 <span class="serif">2022</span>
 
+[An infinite chain of fields](infinite-chain-of-fields) \
 [Free extensions](free-extensions) \
 [Overcategories and relations](overcategories-and-relations) \
 [The three utilities problem](three-utilities-problem) \
