@@ -3,6 +3,10 @@ layout: 'navbar'
 title: 'Articles'
 ---
 
+<span class="serif">2023</span>
+
+[A tour of Inv](tour-of-inv)
+
 <span class="serif">2022</span>
 
 [Classification of heptatonic scales](classification-of-heptatonic-scales)\
