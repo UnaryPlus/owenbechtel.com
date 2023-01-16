@@ -26,6 +26,15 @@ html, body {
   height: 100%;
 }
 
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
+  overscroll-behavior: none;
+}
+
 .page {
   height: 100%;
   @include large {
