@@ -26,13 +26,15 @@ html, body {
   height: 100%;
 }
 
-html {
-  overflow: hidden;
-}
+@include large {
+  html {
+    overflow: hidden;
+  }
 
-body {
-  overflow: auto;
-  overscroll-behavior: none;
+  body {
+    overflow: auto;
+    overscroll-behavior: none;
+  }
 }
 
 .page {
