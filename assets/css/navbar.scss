@@ -59,7 +59,6 @@ nav {
     .hidden { display: none; }
   }
   @include large {
-    height: 100%;
     #menu-icon { display: none; }
     .fixed { position: fixed; }
   }
