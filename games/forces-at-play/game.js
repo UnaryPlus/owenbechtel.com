@@ -637,7 +637,10 @@ function sketch(p) {
                 tickLength = 2;
                 break;
         }
-        return false; //prevent scrolling with arrow keys
+        //prevent scrolling with arrow keys
+        return p.key.substring(0, 5) !== 'Arrow'
+            && p.key !== ' '
+            && p.key !== 'Tab';
     };
 }
 new p5_1.default(sketch);
