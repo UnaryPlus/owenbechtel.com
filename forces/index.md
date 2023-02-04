@@ -13,6 +13,10 @@ title: 'Forces at Play'
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
   }
+
+  li p {
+    margin: 8px 0;
+  }
 </style>
 
 [Forces at Play](/games/forces-at-play) is a cellular automaton I created in 2022. (If you don't know what a cellular automaton is, you can think of it as a simple sandbox game where you build machines out of basic units called "cells".) The source code is available on [Github](https://github.com/UnaryPlus/forces-at-play).
@@ -24,20 +28,28 @@ Forces at Play was inspired by a game called [Cell Machine](https://samhogan.itc
 There are nine kinds of cell:
 
 * Empty (white square)
+
 * Pusher (blue square with arrow)\
   Moves in the direction of the arrow, pushing the cells in front of it, unless blocked by a wall or a board.
+
 * Box (black square with white square inside it)\
   Doesn't do anything on its own, but can be moved by other cells.
+
 * Wall (solid black square)\
   Cannot be moved by other cells.
+
 * Board (black square with parallel lines)\
   Boards with horizontal lines can move horizontally but not vertically; boards with vertical lines can move vertically but not horizontally.
+
 * Destroyer (red square with parallel lines)\
   Adjacent cells in the direction of the lines are safe; adjacent cells perpendicular to the lines are deleted.
+
 * Shifter (purple square with arrow)\
   Similar to the pusher, but doesn't move itself, only the cells in front of it.
+
 * Rotator (green square with arc)\
   Rotates the adjacent cells. There are two types of rotator: the one with a "C" rotates things counterclockwise, and the one with a "Ɔ" rotates things clockwise.
+
 * Generator (yellow square with arrow)\
   Creates copies of the cell behind it.
 
