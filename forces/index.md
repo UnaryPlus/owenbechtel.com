@@ -110,7 +110,7 @@ Simplest known stacker at each period:
 | p8, p10, p12, ... | 2r;;r;2rQ;3eG;3s;3w |
 | p9, p11, p13, ... | 2z;;2r;;Z;2rQ;3eG;3s;3w |
 
-(The period-8 stacker can be extended to any even period by moving the top two rotators upward. The period-9 stacker can be extended to any odd period be moving the shifter and the top rotator upward.)
+(The period-8 stacker can be extended to any even period by moving the top two rotators upward. The period-9 stacker can be extended to any odd period by moving the shifter and the top rotator upward.)
 
 ### Guns
 
