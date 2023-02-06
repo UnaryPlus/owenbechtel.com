@@ -86,8 +86,6 @@ onto the canvas: `Pzerzfr`.
 
 A spaceship is a pattern that moves across the screen in a regular manner. Spaceships are classified by their speed, measured as a fraction of the "speed of light" (the speed at which pushers move, denoted by the letter c). For example, a spaceship that moves forward by two cells every five steps is said to have a speed of 2c/5.
 
-Smallest known spaceship at each speed:
-
 | c | P |
 | 4c/5 | Perz |
 | 3c/4 | Pzr |
@@ -97,9 +95,6 @@ Smallest known spaceship at each speed:
 | c/4 | Pzrf |
 | c/5 | Pzerzfr |
 | c/6 | PFrezeR;8PR |
-
-Miscellaneous:
-
 | steamboat | PFr |
 | destroyer ship 1 | 2PzR;PzerGD |
 | destroyer ship 2 | PfrR;PfrGD |
@@ -109,8 +104,6 @@ Miscellaneous:
 ### Stackers
 
 A stacker is a pattern that uses a generator to create a box every N generations. The number N is called the "period" of the stacker.
-
-Simplest known stacker at each period:
 
 | p1 | eG |
 | p2 | S;eG;;s |
@@ -122,13 +115,9 @@ Simplest known stacker at each period:
 | p8, p10, p12, ... | 2r;;r;2rQ;3eG;3s;3w |
 | p9, p11, p13, ... | 2z;;2r;;Z;2rQ;3eG;3s;3w |
 
-(The period-8 stacker can be extended to any even period by moving the top two rotators upward. The period-9 stacker can be extended to any odd period by moving the shifter and the top rotator upward.)
-
 ### Guns
 
 A gun is a pattern that creates a pusher every N generations. If the pushers always go in the same direction, the number N is called the "period". If the pushers alternate direction, the number N is called the "mod" or the "half-period". Guns that output more complex spaceships, rather than just pushers, can also be constructed.
-
-Simplest known gun at each period:
 
 | p1 | Pw;A;P |
 | p2 | Pw;A;;w |
@@ -137,18 +126,12 @@ Simplest known gun at each period:
 | p5, p7, p9, ... | 2R;R;1P1Rw;1A |
 | p6, p10, p12, ... | wR;2P1Rw;2A |
 | p8 | R;P;A |
-
-Simplest known alternating gun at each half-period:
-
 | m1 | wZPp1zw;3A;3P |
 | m2 | 1w;1r;wPw;1A;;1w |
 | m3 | 1S3S;;1Z1p1f;rfRArzR;1swPws |
 | m4, m6, m8, ... | 2S1S;;wr1P1Rw;3A |
 | m5 | 2S1S;;r2P2R;2rAR;;2R1r |
 | m7, m9, m11, ... | RDr;;rAR;1P;1A |
-
-Miscellaneous:
-
 | random gun | 2Pwp;wRAwArw |
 | longship gun | R;P1ee;A1AA;;2ww |
 | c/2 gun | R;P;A1w;2z;2aS;wZ;3zz;2s |
@@ -164,7 +147,6 @@ A rake is a moving gun, or a spaceship that shoots pushers. Rakes which shoot ba
 | double barrel c/4 rake | 5Pzrf;PZrfA |
 | c/4 backrake | 2Pfrez;PAFrez |
 | c/4 side rake | 2Pfrez;PAeFrez |
-
 
 ### Other
 
