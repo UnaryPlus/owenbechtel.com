@@ -97,8 +97,7 @@ A spaceship is a pattern that moves across the screen in a regular manner. Space
 | c/6 | PFrZeRp;8R |
 | | |
 | steamboat | PFr |
-| destroyer ship 1 | 2PzR;PzerGD |
-| destroyer ship 2 | PfrR;PfrGD |
+| destroyer ship | PfrGD |
 | growing spaceship | PzeG |
 | shuttle ship | PFR;3PR |
 
