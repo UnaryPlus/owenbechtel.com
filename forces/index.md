@@ -95,7 +95,7 @@ A spaceship is a pattern that moves across the screen in a regular manner. Space
 | c/4 | Pzrf |
 | c/5 | Pzerzfr |
 | c/6 | PFrZeRp;8R |
-| c/8, c/12, c/16, ... | PerF1zZ1zZ1z |
+| c/8, c/10, c/12, ... | PerF1zZ1zZ1zZ |
 | | |
 | steamboat | PFr |
 | destroyer ship | PfrGD |
@@ -125,7 +125,7 @@ A gun is a pattern that creates a pusher every N generations. If the pushers alw
 | p3 | 1S;2w;1Pzw;sA |
 | p4 | 2Pw;wrAw |
 | p5, p7, p9, ... | 2R;R;1P1Rw;1A |
-| p6, p10, p12, ... | wR;2P1Rw;2A |
+| p6, p8, p10, ... | wR;2P1Rw;2A |
 | p8 | R;P;A |
 | | |
 | m1 | wZPp1zw;3A;3P |
