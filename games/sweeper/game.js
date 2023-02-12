@@ -61,7 +61,7 @@ function drawMain() {
   }
 
   const firstMine = floor(cameraX / 100);
-  for(let i = max(firstMine, 0); i < firstMine + 12; i++) {
+  for(let i = max(firstMine, 0); i < firstMine + 8; i++) {
     const rectX = i * 100 - cameraX;
 
     //draw background tiles
