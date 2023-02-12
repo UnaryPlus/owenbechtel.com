@@ -94,8 +94,7 @@ A spaceship is a pattern that moves across the screen in a regular manner. Space
 | c/3 | PFrz |
 | c/4 | Pzrf |
 | c/5 | Pzerzfr |
-| c/6 | PFrZeRp;8R |
-| c/8, c/10, c/12, ... | PerF1zZ1zZ1zZ |
+| c/6, c/8, c/10, ... | PFre1zZ1z |
 | | |
 | steamboat | PFr |
 | destroyer ship | PfrGD |
