@@ -124,7 +124,7 @@ A gun is a pattern that creates a pusher every N generations. If the pushers alw
 | p3 | 1S;2w;1Pzw;sA |
 | p4 | 2Pw;wrAw |
 | p5, p7, p9, ... | 2R;R;1P1Rw;1A |
-| p6, p8, p10, ... | wR;2P1Rw;2A |
+| p6, p10, p12, ... | wR;2P1Rw;2A |
 | p8 | R;P;A |
 | | |
 | m1 | wZPp1zw;3A;3P |
