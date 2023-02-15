@@ -10,7 +10,7 @@ To answer this question, we first need to define the relative notions of "bigger
 
 So, using these definitions of "bigger" and "smaller", how should we define the absolute notions of "big" and "small"? Clearly, we must choose some positive value K, and define x to be "big" if and only if \|x\|&nbsp;>&nbsp;K. I assert that most natural choice for K is 1. That is, x is "big" if \|x\|&nbsp;>&nbsp;1, and "small" if \|x\|&nbsp;<&nbsp;1. The numbers 1 and -1 are neither big nor small. This definition is nice for several reasons.
 
-First, consider the following true statements.
+First, consider the following true statements:
 
 1. The additive identity, 0, is neither positive nor negative.
 2. The additive inverse of a positive number is negative; the additive inverse of a negative number is positive.
