@@ -5,11 +5,12 @@ title: 'Articles'
 
 <span class="serif">2023</span>
 
+[Big and small numbers](big-and-small-numbers) \
 [A tour of Inv](tour-of-inv)
 
 <span class="serif">2022</span>
 
-[Classification of heptatonic scales](classification-of-heptatonic-scales)\
+[Classification of heptatonic scales](classification-of-heptatonic-scales) \
 [An infinite chain of fields](infinite-chain-of-fields) \
 [Free extensions](free-extensions) \
 [Overcategories and relations](overcategories-and-relations) \
