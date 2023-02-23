@@ -5,6 +5,7 @@ title: 'Articles'
 
 <span class="serif">2023</span>
 
+[Cube rotation notation](cube-rotation-notation) \
 [Big and small numbers](big-and-small-numbers) \
 [A tour of Inv](tour-of-inv)
 
