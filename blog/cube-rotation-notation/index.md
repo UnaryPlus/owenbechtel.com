@@ -5,12 +5,12 @@ date: '22 Feb 2023'
 mathjax: true
 ---
 
+Imagine a cube with six distinct faces, such as a Rubik's cube or a six-sided die. 
 $$
 \newcommand{\tri}[2]{
 \binom{#1}{ \, #2 \, }
 }
 $$
-Imagine a cube with six distinct faces, such as a Rubik's cube or a six-sided die. 
 
 * An _orientation_ of the cube is a way of positioning the cube such that one side is on top, one side is on the left, one side is in front, and so on. There are 24 possible orientations. I will refer to the set of cube orientations as $$O$$.
 
