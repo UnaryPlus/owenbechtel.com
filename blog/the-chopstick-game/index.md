@@ -39,7 +39,7 @@ Similarly, if $$\frac{b}{a} < \frac{1}{2}$$, then A will win no matter what. Eve
 * $$(1 + q)\frac{b}{a} < 1$$&nbsp;
 * $$(1 + q)\frac{b}{a} - 1 < 0$$&nbsp;
 
-Conversely, if $$\frac{1}{2} < \frac{b}{a} < 2$$, then any outcome is possible, i.e. there are some values of $$(p, q)$$ where A wins, and other values of $$(p, q)$$ where B wins. In the edge case where $$\frac{b}{a}$$ is exactly 2, it is almost certain that B will win, but it is possible for the game to end in a tie, if $$p = 1$$ and $$q = 0$$. This is intuitively true: if B takes chickpeas as twice the rate that A does, but B takes only from the center bowl, whereas A takes only from B's bowl, then the game will end in a tie, because half of the chickpeas B takes will end up going to A. Symmetrically, in the case where $$\frac{b}{a} = \frac{1}{2}$$, it is almost certain that A will win, but a tie is still possible.
+Conversely, if $$\frac{1}{2} < \frac{b}{a} < 2$$, then any outcome is possible, i.e. there are some values of $$(p, q)$$ where A wins, and other values of $$(p, q)$$ where B wins. In the edge case where $$\frac{b}{a}$$ is exactly 2, it is almost certain that B will win, but it is possible for the game to end in a tie, if $$p = 1$$ and $$q = 0$$. This is intuitively true: if B takes chickpeas at twice the rate that A does, but B takes only from the center bowl, whereas A takes only from B's bowl, then the game will end in a tie, because half of the chickpeas B takes will end up going to A. Symmetrically, in the case where $$\frac{b}{a} = \frac{1}{2}$$, it is almost certain that A will win, but a tie is still possible.
 
 So we have the following table of outcomes:
 
