@@ -77,4 +77,4 @@ A monoid in (**Inv**, ×, 1) consists of:
   * 1\* = 1
   * (a · b)\* = a\* · b\*
 
-For any objects A B ∈ Inv, [A → B] is a monoid of the first kind, with morphism composition as its binary operation. Similarly, Func(A,&nbsp;B) is a monoid of the second kind. Also note that any ring is a monoid of the first kind; this is why I chose to denote the involution with "-".
+For any object A ∈ Inv, [A → A] is a monoid of the first kind, with morphism composition as its binary operation. Similarly, Func(A,&nbsp;A) is a monoid of the second kind. Also note that any ring is a monoid of the first kind; this is why I chose to denote the involution with "-".
