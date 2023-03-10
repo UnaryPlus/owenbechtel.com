@@ -11,7 +11,7 @@ Here's a game my friends were playing at dinner the other day:
 
 This article is a mathematical analysis of the chopstick game.
 
-Suppose A can pick up $$a$$ chickpeas per second, and B can pick up $$b$$ chickpeas per second. Let $$p$$ be the proportion of A's chickpeas which come B's bowl, and $$q$$ be the proportion of B's chickpeas which come from A's bowl. For example, if $$a = \frac{1}{2}$$ and $$p = \frac{1}{3}$$, then player A will pick up (on average) one chickpea every 2 seconds, and one-third of these will come from B's bowl, with the other two-thirds coming from the center bowl.
+Suppose A can pick up $$a$$ chickpeas per second, and B can pick up $$b$$ chickpeas per second. Let $$p$$ be the proportion of A's chickpeas which come from B's bowl, and $$q$$ be the proportion of B's chickpeas which come from A's bowl. For example, if $$a = \frac{1}{2}$$ and $$p = \frac{1}{3}$$, then player A will pick up (on average) one chickpea every 2 seconds, and one-third of these will come from B's bowl, with the other two-thirds coming from the center bowl.
 
 Note that $$a$$ and $$b$$ must both be positive real numbers, and $$p$$ and $$q$$ must both be in the interval $$[0, 1]$$. Also, $$p$$ and $$q$$ can't both be 1, because then the players would never take from the center bowl, and the game would go on forever.
 
