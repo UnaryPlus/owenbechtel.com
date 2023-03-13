@@ -1,7 +1,7 @@
 ---
 layout: 'blog'
 title: 'A tour of Inv (part 2)'
-date: '11 Mar 2023'
+date: '13 Mar 2023'
 ---
 
 Here are some facts about **Inv** that I failed to mention in the [previous article](../tour-of-inv):
