@@ -5,6 +5,7 @@ title: 'Articles'
 
 <span class="serif">2023</span>
 
+[A tour of Inv (part 2)](tour-of-inv-part-2) \
 [The chopstick game](chopstick-game) \
 [Cube rotation notation](cube-rotation-notation) \
 [Big and small numbers](big-and-small-numbers) \
