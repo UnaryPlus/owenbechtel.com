@@ -1,7 +1,7 @@
 ---
 layout: 'blog'
 title: 'The pyramid hotel'
-date: '15 Apr 2023'
+date: '19 Apr 2023'
 mathjax: true
 ---
 
