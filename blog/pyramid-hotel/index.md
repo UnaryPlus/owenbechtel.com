@@ -26,9 +26,9 @@ It is impossible to vacate the top three floors. The key to proving this is to w
 
 Number the floors 1, 2, 3, 4, etc. starting from the top. To vacate the top three floors, the room on floor 1 will eventually need to be exchanged for 8 rooms on floor 4, the 3 rooms on floor 2 will eventually need to be exchanged for 12 rooms on floor 4, and the 6 rooms on floor 3 will eventually need to be exchanged for 12 rooms on floor 4. This makes a total of 32 rooms that will have to be acquired on floor 4. As 32 is more than the total number of rooms on floor 4 (namely 10), at some point 22 rooms on floor 4 will need to be traded for 44 rooms on floor 5. This is more than the total number of rooms on floor 5 (namely 15), so 29 of these will need to be traded for 58 rooms on floor 6. And so on.
 
-Denote the number of rooms on floor _n_ by T<sub>n</sub>. This sequence, starting at term 4, can be defined by T<sub>4</sub> = 10 and T<sub>n+1</sub> = T<sub>n</sub> + n + 1. Denote the number of rooms that must be acquired on floor _n_ by S<sub>n</sub>. This sequence is defined by S<sub>4</sub> = 32 and S<sub>n+1</sub> = 2(S<sub>n</sub> - T<sub>n</sub>). The first few terms of S, starting at 4, are 32, 44, 58, 74, and 92. Taking the differences between successive terms gives 12, 14, 16, and 18. It looks like the differences are increasing at a constant rate of 2. Specifically, it looks as if S<sub>n+1</sub> - S<sub>n</sub> = 2(n + 2).
+Denote the number of rooms on floor _n_ by T<sub>n</sub>. This sequence, starting at term 4, can be defined by T<sub>4</sub>&nbsp;=&nbsp;10 and T<sub>n+1</sub>&nbsp;=&nbsp;T<sub>n</sub>&nbsp;+&nbsp;n&nbsp;+&nbsp;1. Denote the number of rooms that must be acquired on floor _n_ by S<sub>n</sub>. This sequence is defined by S<sub>4</sub>&nbsp;=&nbsp;32 and S<sub>n+1</sub>&nbsp;=&nbsp;2(S<sub>n</sub>&nbsp;-&nbsp;T<sub>n</sub>). The first few terms of S, starting at 4, are 32, 44, 58, 74, and 92. Taking the differences between successive terms gives 12, 14, 16, and 18. It looks like the differences are increasing at a constant rate of 2. Specifically, it looks as if S<sub>n+1</sub>&nbsp;-&nbsp;S<sub>n</sub>&nbsp;=&nbsp;2(n&nbsp;+&nbsp;2).
 
-One can prove by [induction](https://en.wikipedia.org/wiki/Mathematical_induction) that this equation does indeed hold for all n ≥ 4. Let P(n) be the proposition that S<sub>n+1</sub> - S<sub>n</sub> = 2(n + 2), and suppose that P(n) is true for some number n. Then
+One can prove by [induction](https://en.wikipedia.org/wiki/Mathematical_induction) that this equation does indeed hold for all n&nbsp;≥&nbsp;4. Let P(n) be the proposition that S<sub>n+1</sub>&nbsp;-&nbsp;S<sub>n</sub>&nbsp;=&nbsp;2(n&nbsp;+&nbsp;2), and suppose that P(n) is true for some number n. Then
 
 | $$ S_{n+2} - S_{n+1}                      $$ | &nbsp;&nbsp; |                                         |
 | $$ = 2(S_{n+1} - T_{n+1}) - 2(S_n - T_n)  $$ | &nbsp;&nbsp; | (definition of S)                       |
@@ -37,9 +37,9 @@ One can prove by [induction](https://en.wikipedia.org/wiki/Mathematical_inductio
 | $$ = 2(2n + 4 - n - 1)                    $$ | &nbsp;&nbsp; |                                         |
 | $$ = 2(n + 3)                             $$ | &nbsp;&nbsp; |                                         |
 
-so P(n + 1) is also true.
+so P(n&nbsp;+&nbsp;1) is also true.
 
-The difference between successive terms of T is n + 1, and (as I have just shown) the difference between successive terms of S is 2(n + 2). Since the latter is greater than the former, the number of rooms _required_ on floor _n_ is always greater than the number of rooms _available_ on floor _n_. So it will always be necessary to trade some of these rooms for rooms on floor n + 1, and the process will continue forever. 
+The difference between successive terms of T is n&nbsp;+&nbsp;1, and (as I have just shown) the difference between successive terms of S is 2(n&nbsp;+&nbsp;2). Since the latter is greater than the former, the number of rooms _required_ on floor _n_ is always greater than the number of rooms _available_ on floor _n_. So it will always be necessary to trade some of these rooms for rooms on floor n&nbsp;+&nbsp;1, and the process will continue forever. 
 
 </details>
 
