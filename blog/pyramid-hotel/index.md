@@ -22,7 +22,7 @@ _Before reading this section, try solving the problem yourself._
 <details markdown="1">
   <summary>Expand solution</summary>
 
-The key is to work not from the bottom up, but from the top down. 
+It is impossible to vacate the top three floors. The key to proving this is to work not from the bottom up, but from the top down. 
 
 Number the floors 1, 2, 3, 4, etc. starting from the top. To vacate the top three floors, the room on floor 1 will eventually need to be exchanged for 8 rooms on floor 4, the 3 rooms on floor 2 will eventually need to be exchanged for 12 rooms on floor 4, and the 6 rooms on floor 3 will eventually need to be exchanged for 12 rooms on floor 4. This makes a total of 32 rooms that will have to be acquired on floor 4. As 32 is more than the total number of rooms on floor 4 (namely 10), at some point 22 rooms on floor 4 will need to be traded for 44 rooms on floor 5. This is more than the total number of rooms on floor 5 (namely 15), so 29 of these will need to be traded for 58 rooms on floor 6. And so on.
 
@@ -39,9 +39,7 @@ One can prove by [induction](https://en.wikipedia.org/wiki/Mathematical_inductio
 
 so P(n + 1) is also true.
 
-The difference between successive terms of T is n + 1, and (as I have just shown) the difference between successive terms of S is 2(n + 2). Since the latter is greater than the former, the number of rooms _required_ on floor _n_ is always greater than the number of rooms _available_ on floor _n_. So it will always be necessary to trade some of these rooms for rooms on floor n + 1, and the process will continue forever.
-
-It is not possible to vacate the top three floors.
+The difference between successive terms of T is n + 1, and (as I have just shown) the difference between successive terms of S is 2(n + 2). Since the latter is greater than the former, the number of rooms _required_ on floor _n_ is always greater than the number of rooms _available_ on floor _n_. So it will always be necessary to trade some of these rooms for rooms on floor n + 1, and the process will continue forever. 
 
 </details>
 
