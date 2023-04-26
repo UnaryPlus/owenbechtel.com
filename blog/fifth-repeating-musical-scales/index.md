@@ -8,7 +8,7 @@ mathjax: true
 I was messing around with [Sevish](https://www.youtube.com/sevish)'s [Scale Workshop](https://sevish.com/scaleworkshop) the other day, when I discovered an interesting family of musical scales. These scales are just (consisting entirely of rational multiples of a single base frequency) and have the following properties:
 
 1. They repeat at the fifth rather than the octave.
-2. They contain four notes per fifth (just as, for example, the diatonic scale contains seven notes per octave).
+2. They contain four notes per fifth.
 3. The fourth degree is a perfect fourth (4/3) above the tonic.
 4. The third degree is either a major third (5/4) or a minor third (6/5) above the tonic.
 5. The second degree is either a major third or a minor third below the fourth degree. (This implies, along with property 3, that the second degree is either 16/15 or 10/9 above the tonic.)
@@ -31,7 +31,7 @@ Unfortunately, in none of the P scales does the tonic have an octave (or perfect
 * The second degree is at a ratio of 9/8 with the tonic.
 * The fourth degree is either a major third or a minor third above the second degree (making it either 45/32 or 27/20 above the tonic).
 
-There are four such scales, which I have decided to call "Q scales". (The letters P and Q were chosen arbitrarily.) Like the P scales, the Q scales have the property that every note is the root of a just-intonation triad. But instead of the tonic having a perfect fourth and an octave _above_ it, as in the P scales, the tonic has a perfect fifth and an octave _below_ it.
+There are four such scales, which I have decided to call "Q scales". (The letters P and Q were chosen arbitrarily.) Like the P scales, the Q scales have the property that every note is the root of a just-intonation triad. But instead of the tonic having a perfect fourth and an octave _above_ it, as in the P scales, the tonic has a perfect fourth and an octave _below_ it.
 
 * [Q-Lydian](https://sevish.com/scaleworkshop/?n=Q-Lydian&l=9F8_5F4_19Fw_3F2&version=2.0.1) (45/32, 5/4)
 * [Q-Ukrainian](https://sevish.com/scaleworkshop/?n=Q-Ukrainian&l=9F8_6F5_19Fw_3F2&version=2.0.1) (45/32, 6/5)
