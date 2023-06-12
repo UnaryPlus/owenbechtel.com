@@ -48,6 +48,7 @@ sup, sub {
 }
 
 mjx-container {
+  min-width: 0 !important; /* makes scrolling work for numbered equations */ 
   overflow: scroll;
   overflow-y: hidden;
 }

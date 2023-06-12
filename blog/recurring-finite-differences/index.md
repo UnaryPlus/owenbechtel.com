@@ -106,23 +106,28 @@ But let's return to the case $$n=3$$. We have an algorithm that will generate a 
 
 The sequence in $$E_3$$ starting with (0, 1, 1) repeats after six terms: (0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, -1, ...). This makes it a good candidate for inclusion in the new basis. I'll call this sequence $$S_1$$. Similarly, the sequence starting with (1, 1, 0) also repeats after six terms: (1, 1, 0, -1, -1, 0, 1, 1, 0, -1, -1, 0, ...). I'll call this $$S_2$$. Clearly, $$S_1$$ and $$S_2$$ are just shifted versions of each other. Both have an explicit expression in terms of sine:
 
-* &nbsp;$$S_1(i) = \frac{2}{\sqrt{3}} \sin(\frac{\pi}{3} i)$$ 
-
-* &nbsp;$$S_2(i) = \frac{2}{\sqrt{3}} \sin(\frac{\pi}{3} i + \frac{\pi}{3})$$ 
+$$
+\begin{align*}
+S_1(i) = \frac{2}{\sqrt{3}} \sin(\frac{\pi}{3} i) &&
+S_2(i) = \frac{2}{\sqrt{3}} \sin(\frac{\pi}{3} i + \frac{\pi}{3})
+\end{align*}
+$$ 
 
 Such formulas are hardly necessary, however, and betray the simplicity of these sequences. To actually calculate the values of $$S_1$$ and $$S_2$$, whether on a computer or by hand, you would be better off checking the value of $$i$$ mod 6 and then returning -1, 0, or 1 based on the repeating structure of the sequence. For the third element of the new basis, I will use the sequence $$2^i$$, which is equal to its own _first_ difference and so is definitely contained in $$E_3$$.
 
 The expressions for the standard-basis sequences in terms of this new basis are as follows:
 
-* $$\frac{2^i - 4 S_1(i) + 2 S_2(i)}{3}$$
-* $$\frac{- 2^i + 4 S_1(i) + S_2(i)}{3}$$
-* $$\frac{2^i - S_1(i) - S_2(i)}{3}$$
+$$\frac{2^i - 4 S_1(i) + 2 S_2(i)}{3}$$
+
+$$\frac{- 2^i + 4 S_1(i) + S_2(i)}{3}$$
+
+$$\frac{2^i - S_1(i) - S_2(i)}{3}$$
 
 Now remember that to find the sequence in $$E_3$$ starting with $$(a, b, c)$$, you can multiply the standard basis sequences by $$a$$, $$b$$, and $$c$$ respectively and then add the corresponding terms. So the $$i$$-th term of this sequence is
 
 $$ a\left(\frac{2^i - 4 S_1(i) + 2 S_2(i)}{3}\right) 
 + b\left(\frac{- 2^i + 4 S_1(i) + S_2(i)}{3}\right) 
-+ c\left(\frac{2^i - S_1(i) - S_2(i)}{3}\right),$$
++ c\left(\frac{2^i - S_1(i) - S_2(i)}{3}\right), $$
 
 which is equal to
 
