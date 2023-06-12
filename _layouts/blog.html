@@ -11,7 +11,8 @@ no_heading: true
 {% if page.mathjax %}
   <script>
     window.MathJax = {
-      chtml: { displayAlign: 'left' }
+      chtml: { displayAlign: 'left' },
+      tex: { tags: 'ams' }
     };
   </script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>

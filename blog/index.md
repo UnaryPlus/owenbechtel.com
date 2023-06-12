@@ -5,6 +5,7 @@ title: 'Articles'
 
 <span class="serif">2023</span>
 
+[Sequences with recurring finite differences](recurring-finite-differences) \
 [Fifth-repeating musical scales](fifth-repeating-musical-scales) \
 [The pyramid hotel](pyramid-hotel) \
 [A tour of Inv (part 2)](tour-of-inv-part-2) \
