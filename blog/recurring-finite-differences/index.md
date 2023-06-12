@@ -24,7 +24,7 @@ $$
 
 This is reminiscent of differential calculus, where the third _derivative_ of $$x^3$$ is also constantly 6. However, the intermediate differences and derivatives do not coincide. For example, the first derivative of $$x^3$$ is $$3x^2$$, but you can see in the table above that the first _difference_ of $$x^3$$ begins with 1, 7, 19, ..., and is in fact equal to $$3x^2 + 3x + 1$$.
 
-Other polynomials behave in a similar way. If the leading term of a polynomial $$f$$ is $$ax^n$$, then $$\Delta^n(f)(x) = an!$$, a rule whose analogue holds in differential calculus. (The $$!$$ symbol here is a factorial, not a punctuation mark.) The "power rule" for finite differences is $$\Delta(x^n) = \Sigma_{i=1}^{n} \binom{n}{i} x^{n-i}$$. Thus the first term of $$\Delta(x^n)$$ is $$nx^{n-1}$$, as with derivatives, but there are generally other terms of smaller degree.
+Other polynomials behave in a similar way. If the leading term of a polynomial $$f(x)$$ is $$ax^n$$, then $$\Delta^n(f)(x) = an!$$, a rule whose analogue holds in differential calculus. (The $$!$$ symbol here is a factorial, not a punctuation mark.) The "power rule" for finite differences is $$\Delta(x^n) = \Sigma_{i=1}^{n} \binom{n}{i} x^{n-i}$$. Thus the first term of $$\Delta(x^n)$$ is $$nx^{n-1}$$, as with derivatives, but there are generally other terms of smaller degree.
 
 There are other near-similarities between derivatives and differences. For example, the derivative of $$e^x$$ is itself, and the difference of $$2^x$$ is itself (because $$2^{x+1} - 2^x = 2^x$$). Thus $$2^x$$ plays a similar role in finite difference calculus as $$e^x$$ does in differential calculus.
 
@@ -62,7 +62,7 @@ f           & 0 & 1 & 3 & 6 \\
 \end{array}
 $$
 
-Now we can repeat the last two steps indefinitely, adding the $$k$$-th term of $$\Delta^3(f)$$ at the bottom and then working upwards along a diagonal line to get the $$(k+3)$$th term of $$f$$.
+Now we can repeat the last two steps indefinitely, adding the $$i$$-th term of $$\Delta^3(f)$$ at the bottom and then working upwards along a diagonal line to get the $$(i+3)$$th term of $$f$$.
 
 $$
 \begin{equation}
@@ -102,9 +102,9 @@ Obviously, nothing I have done here is specific to the case $$n=3$$. For all pos
 
 I wrote a C program to automate the algorithm, which you can find [here](https://github.com/UnaryPlus/recdiff-sequences). The program asks for a "dimension" $$n$$ and a "length" $$r$$, and outputs the first $$r$$ terms of each of the standard basis sequences of $$E_n$$.
 
-But let's return to the case $$n=3$$. We have an algorithm that will generate a sequence in $$E_3$$ given its first three terms, but we don't have any single formula for the resulting sequence. We want an expression in terms of $$a$$, $$b$$, $$c$$, and $$i$$ that will give us the $$i$$-th element of the sequence in $$E_3$$ which begins with $$a$$, $$b$$, $$c$$. The first step to finding such a formula is to find an alternative basis of $$E_3$$ consisting of three sequences that each have a simple formula. One can then write the standard-basis sequences (the sequences of coefficients listed earlier) in terms of this new basis.
+But let's return to the case $$n=3$$. We have an algorithm that will generate a sequence in $$E_3$$ given its first three terms, but we don't have any single formula for the resulting sequence. We want an expression in terms of $$a$$, $$b$$, $$c$$, and $$i$$ that will give us the $$i$$-th term of the sequence in $$E_3$$ which begins with $$a$$, $$b$$, $$c$$. The first step to finding such a formula is to find an alternative basis of $$E_3$$ consisting of three sequences that each have a simple formula. One can then write the standard-basis sequences (the sequences of coefficients listed earlier) in terms of this new basis.
 
-The sequence in $$E_3$$ starting with (0, 1, 1) repeats after six terms: (0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, -1, ...). This makes it a good candidate for inclusion in the new basis. I'll call this sequence $$S_1$$. Similarly, the sequence starting with (1, 1, 0) also repeats after six terms: (1, 1, 0, -1, -1, 0, 1, 1, 0, -1, -1, 0, ...). I'll call this $$S_2$$. Clearly, $$S_1$$ and $$S_2$$ are just shifted versions of each other. Both have an explicit expression in terms of sine:
+The sequence in $$E_3$$ starting with 0, 1, 1 repeats after six terms: (0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, -1, ...). This makes it a good candidate for inclusion in the new basis. I'll call this sequence $$S_1$$. Similarly, the sequence starting with 1, 1, 0 also repeats after six terms: (1, 1, 0, -1, -1, 0, 1, 1, 0, -1, -1, 0, ...). I'll call this $$S_2$$. Clearly, $$S_1$$ and $$S_2$$ are just shifted versions of each other. Both have an explicit expression in terms of sine:
 
 $$
 \begin{align*}
@@ -123,7 +123,7 @@ $$\frac{- 2^i + 4 S_1(i) + S_2(i)}{3}$$
 
 $$\frac{2^i - S_1(i) - S_2(i)}{3}$$
 
-Now remember that to find the sequence in $$E_3$$ starting with $$(a, b, c)$$, you can multiply the standard basis sequences by $$a$$, $$b$$, and $$c$$ respectively and then add the corresponding terms. So the $$i$$-th term of this sequence is
+Now remember that to find the sequence in $$E_3$$ starting with $$a$$, $$b$$, $$c$$, you can multiply the standard basis sequences by $$a$$, $$b$$, and $$c$$ respectively and then add the corresponding terms. So the $$i$$-th term of this sequence is
 
 $$ a\left(\frac{2^i - 4 S_1(i) + 2 S_2(i)}{3}\right) 
 + b\left(\frac{- 2^i + 4 S_1(i) + S_2(i)}{3}\right) 
