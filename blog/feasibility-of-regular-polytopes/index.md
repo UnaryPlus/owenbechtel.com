@@ -57,12 +57,12 @@ where θ{a<sub>0</sub>, a<sub>1</sub>, ... a<sub>n-1</sub>} represents the dihed
 
 The exact formula for θ becomes increasingly complex in higher dimensions:
 
-$$ \begin{align}
+$$ \begin{align*}
   & \theta\{a\} = (a - 2)\frac{\pi}{a} = 2\sin^{-1}\left( \cos\left(\frac{\pi}{a}\right) \right) ^\ast \\
   & \theta\{a, b\} = 2\sin^{-1}\left( \frac{\cos(\frac{\pi}{b})}{\sin(\frac{\pi}{a})} \right) \\
   & \theta\{a, b, c\} = 2\sin^{-1}\left( \cos\left(\frac{\pi}{c}\right) \sin\left(\frac{\pi}{a}\right)
     \sqrt{\frac{1}{\sin(\frac{\pi}{b})^2 - \cos(\frac{\pi}{a})^2}} \right) ^{\ast\ast}
-\end{align} $$
+\end{align*} $$
 
 \* The equation (a - 2) π/a = 2 sin<sup>-1</sup>(cos(π/a)) is true for a ≥ 1. This means we can write all three formulas as 2 sin<sup>-1</sup>(Y), where Y is a function of π/a, π/b, and so on.
 
