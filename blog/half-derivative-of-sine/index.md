@@ -44,10 +44,10 @@ $$ D^{\frac{1}{2}} \sin(x) = \sum_{n=0}^\infty
 
 That's it! We now have a relatively simple formula for the half derivative of sine. By comparing it with the Taylor series for the sine and cosine functions, you can see that the half derivative of sine is in some sense "halfway between" sine and cosine.
 
-$$ \begin{align}
+$$ \begin{align*}
   \sin(x) = \sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!}
   && \cos(x) = \sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!}
-\end{align} $$
+\end{align*} $$
 
 In the series for sine, the exponent is 2n + 1. In the formula for the half derivative of sine, the exponent is 2n + 1/2. And in the series for cosine (i.e. the first derivative of sine), the exponent is simply 2n.
 
