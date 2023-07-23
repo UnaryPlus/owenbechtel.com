@@ -33,7 +33,7 @@ In short, the exponential function gives rise to an infinite chain of abelian gr
 
 ### The exponential numbers
 
-When I discovered all of this back in March, I realized that one could extend the real numbers by continuing this chain in the opposite direction. But I didn't work out the details until earlier today. It turns out that continuing the chain in both direction amounts to taking the colimit of the diagram
+When I discovered all of this back in March, I realized that one could extend the real numbers by continuing this chain in the opposite direction. But I didn't work out the details until earlier today. It turns out that continuing the chain in both directions amounts to taking the colimit of the diagram
 
 $$ \ldots \overset{\exp}{\longleftarrow} \mathbb{R} \overset{\exp}{\longleftarrow} \mathbb{R} \overset{\exp}{\longleftarrow} \mathbb{R} \overset{\exp}{\longleftarrow} \ldots $$
 
