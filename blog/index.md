@@ -5,6 +5,7 @@ title: 'Articles'
 
 <span class="serif">2023</span>
 
+[Googology (archived)](googology) \
 [Regular commutative semigroups](regular-commutative-semigroups) \
 [Sequences with recurring finite differences](recurring-finite-differences) \
 [Fifth-repeating musical scales](fifth-repeating-musical-scales) \
