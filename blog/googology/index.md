@@ -10,7 +10,7 @@ _I wrote this article several years ago, when I was in high school. For a while,
 
 Googology is the study of googolisms, or extremely large numbers. The word "googolism" comes from the number googol, or 10^100. Below is the definition of a function I've created for making big numbers, and the names I've come up with for a few of them.
 
-## The Bracket Function
+### The Bracket Function
 
 I'll start by defining a recursive array function with three rules. This function can take any number of arguments, which are placed inside brackets and separated by commas. In the definition below, lowercase letters are used to represent a single argument, and capital letters are used to represent zero or more arguments.
 
@@ -42,7 +42,7 @@ In other words, [4, 4] is equal to 2 to the power of [this number](2-65536). Ima
 
 I’m going to stop here, because you can probably already tell how big this is going to get. It’s difficult to imagine the size of something like [4, 4, 4] but we might as well try. First, imagine a 4 inside of [4, 4] sets of brackets. Now imagine a 4 inside of that many brackets. Now imagine a 4 inside of _that_ many brackets. Repeat the process one more time and you have finally reached [4, 4, 4].
 
-## The Zigzag Operator
+### The Zigzag Operator
 
 Adding more arguments to the bracket function increases the resulting values hyper-exponentially. Taking advantage of this fact, we can define a new operator, which I will call the zigzag operator, represented by the archaic greek letter qoppa.
 
@@ -59,7 +59,7 @@ Here are a few examples to demonstrate the tremendous power of this new operator
 
 Well that escalated quickly.
 
-## Names and Suffixes
+### Names and Suffixes
 
 Fourov = [4, 4, 4, 4, 4] \
 Fivov = [5, 5, 5, 5, 5] \
