@@ -159,4 +159,9 @@ A rake is a moving gun, or a spaceship that shoots pushers. Rakes which shoot ba
 | self-destruct | P3D2d;5r |
 | pusher-to-box converter | 7S;P1P5d;7G;6e;7s |
 | box-to-pusher converter | z;;r5S;eG5d;s5G;5Q;5ws |
-| 4-bit binary counter | r1R;;;;;;2R1r;2P6er;2A6AAR14r1D1D;9er;9wwr1d2d2d2d |
+| 4-bit binary counter | r1R;;;;;;2R1r;2P6er;2A6AAR14r1d1d;9er17e3d;9wwr1d2d2d2d |
+
+<!-- 
+board reflector: 1z;;1r;1e;FG5d;1s4AS;5Z;6r1R
+AND/XOR gate: 8Q;;;;;9G;7Z3a;P7d;5A2e3r1R;8r;5r1R4Z;8Z6d;5R1S6d;9R;12fA1d;9r1s;13R
+-->
