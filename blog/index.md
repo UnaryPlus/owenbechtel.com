@@ -5,6 +5,7 @@ title: 'Articles'
 
 <span class="serif">2023</span>
 
+<!-- [Three ways for functions to act on power sets](functions-on-power-sets) \ -->
 [Googology (archived)](googology) \
 [Regular commutative semigroups](regular-commutative-semigroups) \
 [Sequences with recurring finite differences](recurring-finite-differences) \
