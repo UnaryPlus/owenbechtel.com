@@ -5,7 +5,7 @@ title: 'Articles'
 
 <span class="serif">2023</span>
 
-<!-- [Three ways for functions to act on power sets](functions-on-power-sets) \ -->
+[Three ways for functions to act on power sets](functions-on-power-sets) \
 [Googology (archived)](googology) \
 [Regular commutative semigroups](regular-commutative-semigroups) \
 [Sequences with recurring finite differences](recurring-finite-differences) \
@@ -15,7 +15,7 @@ title: 'Articles'
 [The chopstick game](chopstick-game) \
 [Cube rotation notation](cube-rotation-notation) \
 [Big and small numbers](big-and-small-numbers) \
-[A tour of Inv](tour-of-inv)
+[A tour of Inv](tour-of-inv) 
 
 <span class="serif">2022</span>
 
