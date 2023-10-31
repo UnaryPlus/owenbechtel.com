@@ -25,7 +25,7 @@ The fact that the preimage is generally "nicer" than the image shows up in many 
 
 It turns out there is a third, lesser-known, way for $$f$$ to act on power sets, which has properties dual to those of the image. For the purposes of this article, I will call this the _coimage_ and denote it by $$f_\forall$$. The coimage of a subset $$X \subseteq A$$ is defined as $$f_\forall(X) = \{ y \in B \mid \forall x \in A. f(x) = y \implies x \in X \}$$. In other words, $$f_\forall(X)$$ is the subset of $$B$$ consisting of elements whose fibers are contained in $$X$$.
 
-The image and the coimage together satisfy the following properties:
+The image and the coimage satisfy the following properties:
 
 1. $$f_\exists(\emptyset) = \emptyset$$.
 2. $$f_\forall(A) = B$$.
