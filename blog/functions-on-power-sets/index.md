@@ -44,7 +44,7 @@ In category theory, the image and coimage are encountered as the left and right 
 * $$f_\exists(X) \subseteq Y$$ if and only if $$X \subseteq f^*(Y)$$ &nbsp;&nbsp;&nbsp; ($$f_\exists$$ is left adjoint to $$f^*$$). 
 * $$Y \subseteq f_\forall(X)$$ if and only if $$f^*(Y) \subseteq X$$ &nbsp;&nbsp;&nbsp; ($$f_\forall$$ is right adjoint to $$f^*$$).
 
-In turns out that these statements are equivalent to the following four statements:
+Or equivalently, 
 
 * $$X \subseteq f^*(f_\exists(X))$$.
 * $$f_\exists(f^*(Y)) \subseteq Y$$.
