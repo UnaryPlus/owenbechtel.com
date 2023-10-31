@@ -8,7 +8,7 @@ mathjax: true
 If $$f$$ is a function from a set $$A$$ to a set $$B$$, there are two well-known ways to "lift" $$f$$ to a function of subsets:
 
 * The _preimage_ of a subset $$Y \subseteq B$$ is the subset $$\{ x \in A \mid f(x) \in Y \}$$. I will denote this as $$f^*(Y)$$.
-* The _image_ of a subset $$X \subseteq A$$ is the subset $$\{ f(x) \\mid x \in X \}$$, which can be written more explicitly as $$\{y \in B \mid \exists x \in X . f(x) = y\}$$. I will denote this as $$f_\exists(X)$$.
+* The _image_ of a subset $$X \subseteq A$$ is the subset $$\{ f(x) \mid x \in X \}$$, which can be written more explicitly as $$\{y \in B \mid \exists x \in X . f(x) = y\}$$. I will denote this as $$f_\exists(X)$$.
 
 The preimage function $$f^* : P(B) \to P(A)$$ has many nice properties:
 
