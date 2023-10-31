@@ -12,7 +12,7 @@ If $$f$$ is a function from a set $$A$$ to a set $$B$$, there are two well-known
 
 The preimage function $$f^* : P(B) \to P(A)$$ has many nice properties:
 
-1. $$f^*(\emptyset) = \emptyset$$.
+1. $$f^*(\varnothing) = \varnothing$$.
 2. $$f^*(B) = A$$.
 3. If $$X \subseteq Y$$, then $$f^*(X) \subseteq f^*(Y)$$.
 4. $$f^*(X \cup Y) = f^*(X) \cup f^*(Y)$$. 
@@ -27,7 +27,7 @@ It turns out there is a third, lesser-known, way for $$f$$ to act on power sets,
 
 The image and the coimage satisfy the following properties:
 
-1. $$f_\exists(\emptyset) = \emptyset$$.
+1. $$f_\exists(\varnothing) = \varnothing$$.
 2. $$f_\forall(A) = B$$.
 3. If $$X \subseteq Y$$, then $$f_\exists(X) \subseteq f_\exists(Y)$$ and $$f_\forall(X) \subseteq f_\forall(Y)$$.
 4. $$f_\exists(X \cup Y) = f_\exists(X) \cup f_\exists(Y)$$.
