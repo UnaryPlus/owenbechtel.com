@@ -1,7 +1,7 @@
 ---
 layout: 'blog'
 title: 'Three ways for functions to act on power sets'
-date: '28 Oct 2023'
+date: '30 Oct 2023'
 mathjax: true
 ---
 
