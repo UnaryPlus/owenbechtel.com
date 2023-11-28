@@ -1,6 +1,6 @@
 ---
 layout: 'blog'
-title: 'Regular Commutative Semigroups'
+title: 'Regular commutative semigroups'
 date: '24 Sep 2023'
 mathjax: true
 ---
