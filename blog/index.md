@@ -7,7 +7,7 @@ title: 'Articles'
 
 <!-- [Ternary gate automata](ternary-gate-automata) \ -->
 <!-- [Z-action lemma](z-action-lemma) \ -->
-<!-- [The structure of the natural numbers](structure-of-natural-numbers) \ -->
+[The structure of the natural numbers](structure-of-natural-numbers) \
 [A structure theorem for semimodules over rings](semimodules-over-rings) \
 [Three ways for functions to act on power sets](functions-on-power-sets) \
 [Googology (archived)](googology) \
