@@ -44,7 +44,7 @@ Multiplication of positive integers corresponds to addition of vectors in this i
 
 The relations $$\mid$$ and $$\leq$$ are logically related in the following way: _if $$b$$ is positive_, then $$a \mid b$$ implies $$a \leq b$$. This can lead to some confusion, which was my motivation for writing this article. I believe there are many cases where people use $$\leq$$ in definitions when they really should use $$\mid$$. I illustrate my point with two examples:
 
-### What is $$gcd(0,0)$$?
+### What is gcd(0, 0)?
 
 The greatest common divisor of $$a$$ and $$b$$ is typically defined as "the greatest number $$x$$ such that $$x\mid a$$ and $$x\mid b$$." This definition works fine when both inputs are positive. It also works when one of the inputs is zero: if $$a = 0$$ and $$b > 0$$, then _everything_ divides $$a$$, so the common divisors of $$a$$ and $$b$$ are just the divisors of $$b$$, the largest of which is $$b$$ itself, so $$\gcd(0, b) = b$$.
 
