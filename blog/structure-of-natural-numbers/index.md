@@ -63,7 +63,7 @@ I propose an alternative definition: $$\ord(x)$$ is the least (with respect to $
 This new definition of order produces the same results as the original one, but with $$\infty$$ replaced by 0. Importantly, it removes the special handling of "infinite-order elements." Whenever a function is defined by cases, any proof of a proposition involving that function will need to use case analysis. So definitions that don't include multiple cases are almost always better than ones that do.
 
 Some other nice properties of the new definition:
-* $$\ord(x)$$ is the generator of the subgroup of integers $$n$$ such that $$x^n = 1$$.
+* $$\ord(x)$$ is the generator of the subgroup of integers $$n$$ such that $$x^n = 1$$: an integer $$n$$ satisfies $$x^n = 1$$ if and only if $$n$$ is a multiple of $$\ord(x)$$.
 * $$\langle x \rangle \subseteq G$$ is isomorphic to $$\Z / \langle \ord(x) \rangle$$.
 
 The new definition of order also matches the notion of the characteristic of a field. Specifically, the characteristic of a field $$K$$ is the additive order of the element $$1 \in K$$. (Fields that contain the rational numbers are usually said to have characteristic 0, not $$\infty$$.)
