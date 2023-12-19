@@ -3,7 +3,11 @@ layout: 'blog'
 title: 'Z-action lemma'
 date: '5 Dec 2023'
 mathjax: true
+center_equations: true
 ---
+
+<!-- TODO: use "homomorphism" -->
+<!-- TODO: this article is really bad -->
 
 <style>
   .fullwidth {
@@ -25,11 +29,31 @@ For any elements $$a, b \in X$$, the sets $$\Orb_u(a)$$ and $$\Orb_u(b)$$ are ei
 
 <img alt="Orbit diagram" src="orbits.png" class="fullwidth">
 
+I will define the "order" of an element $$a \in X$$, denoted $$\ord_u(a)$$, to be the size of $$\Orb_u(a)$$ if $$\Orb_u(a)$$ is finite, or 0 if $$\Orb_u(a)$$ is infinite. 
+
 Similarly, for any element $$a \in Y$$, we can form the set $$\Orb_v(a)$$, and $$Y$$ is a disjoint union of these orbits. <!-- edit -->
 
-Recall that we're trying to find functions $$f : X \to Y$$ such that $$f \circ u = v \circ f$$. It turns out that this property implies the seemingly stronger property of $$f \circ u^n = v^n \circ f$$ for all $$n \in Z$$. To see this, note that we can compose $$v^{-1} and u^{-1}$$ on both sides of the original equation to get $$v^{-1} \circ f \circ u \circ u^{-1} = v^{-1} \circ v \circ f \circ u^{-1}$$. After cancellation, this becomes $$v^{-1} \circ f = f \circ u^{-1}$$, which is precisely the property we're looking for with $$n$$ replaced by $$-1$$. To get this property for all $$n$$, you can simply apply the equations $$f \circ u = v \circ f$$ and $$f \circ u^{-1} = v^{-1} \circ f$$ repeatedly.
+Recall that we're trying to find functions $$f : X \to Y$$ such that 
 
-FINISH
+$$
+\begin{equation}
+f \circ u = v \circ f.
+\end{equation}
+$$
+
+It turns out that property (1) implies the following seemingly stronger property: 
+
+$$
+\begin{equation}
+f \circ u^n = v^n \circ f \text{ for all } n \in \Z.
+\end{equation} 
+$$
+
+To see that (1) implies (2), note that we can compose $$v^{-1}$$ and $$u^{-1}$$ on both sides of equation (1) to get $$v^{-1} \circ f \circ u \circ u^{-1} = v^{-1} \circ v \circ f \circ u^{-1}$$. After cancellation, this becomes $$v^{-1} \circ f = f \circ u^{-1}$$, which is precisely property (2) in the case where $$n = -1$$. To prove the general case, you can repeatedly apply the proven cases of $$n = 1$$ and $$n = -1$$.
+
+Property (2) implies that, once we know the value $$f(x)$$ for a single element $$x \in X$$, the values of $$f$$ on the entire orbit of $$x$$ are determined: $$f(u^n(x)) = v^n(f(x))$$. This gives an upper bound for the number of functions we're looking for: If we define $$X/u$$ to be the set of $$u$$-orbits, then there are at most $$|Y|^{|X/u|}$$ homomorphisms, because every homomorphism is determined by its values on one element from each orbit, and there are $$|Y|^{|X/u|}$$ ways to assign those values, once we've chosen a representative from each orbit.
+
+This is an upper bound rather than an exact solution because it might not be possible to map an orbit representative to any element of $$Y$$. For 
 
 ### Connection to group theory
 
