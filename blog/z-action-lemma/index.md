@@ -1,7 +1,7 @@
 ---
 layout: 'blog'
 title: 'Z-action lemma'
-date: '5 Dec 2023'
+date: '23 Dec 2023'
 mathjax: true
 center_equations: true
 ---
