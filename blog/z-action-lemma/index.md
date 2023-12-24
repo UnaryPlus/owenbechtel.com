@@ -12,12 +12,15 @@ center_equations: true
   }
 </style>
 
-$$ 
-\newcommand{\Z}{\mathbb{Z}} 
-\newcommand{\Orb}{\mathrm{Orb}}
-\newcommand{\ord}{\mathrm{ord}}
-\newcommand{\Fix}{\mathrm{Fix}}
-$$
+<div style="display:none">
+  $$ 
+  \newcommand{\Z}{\mathbb{Z}} 
+  \newcommand{\Orb}{\mathrm{Orb}}
+  \newcommand{\ord}{\mathrm{ord}}
+  \newcommand{\Fix}{\mathrm{Fix}}
+  $$
+</div>
+
 I came up with the following lemma while working on my upcoming article about Ternary Gate Automata. 
 
 The problem is: Suppose $$X$$ and $$Y$$ are sets, and $$u : X \to X$$ and $$v : Y \to Y$$ are bijections (invertible functions). How many functions $$f : X \to Y$$ are there such that $$f \circ u = v \circ f$$, i.e. $$f(u(x)) = v(f(x))$$ for all $$x \in X$$? (For the sake of this article, I will refer to such functions as _homomorphisms_.)
