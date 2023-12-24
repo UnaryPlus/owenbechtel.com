@@ -46,7 +46,7 @@ $$
 f \circ u^n = v^n \circ f \text{ for all } n \in \Z.
 $$
 
-The case where $$n = 1$$ is the definition of a homomorphism. The case where $$n = -1$$ can be proven as follows: Compose $$v^{-1}$$ on the left and $$u^{-1}$$ on the right on both sides of the defining equation of a homomorphism to get $$v^{-1} \circ f \circ u \circ u^{-1} = v^{-1} \circ v \circ f \circ u^{-1}$$. After cancellation, this becomes $$v^{-1} \circ f = f \circ u^{-1}$$; QED. All the other cases can be proven by repeatedly appling the $$n = 1$$ and $$n = -1$$ cases.
+Proof: The case where $$n = 1$$ is the definition of a homomorphism. The case where $$n = -1$$ can be proven as follows: Compose $$v^{-1}$$ on the left and $$u^{-1}$$ on the right on both sides of the defining equation of a homomorphism to get $$v^{-1} \circ f \circ u \circ u^{-1} = v^{-1} \circ v \circ f \circ u^{-1}$$. After cancellation, this becomes $$v^{-1} \circ f = f \circ u^{-1}$$; QED. All the other cases can be proven by repeatedly appling the $$n = 1$$ and $$n = -1$$ cases.
 
 This property implies that, once we know the value $$f(x)$$ for a single element $$x \in X$$, the values of $$f$$ on the entire orbit of $$x$$ are determined: $$f(u^n(x)) = v^n(f(x))$$. This gives an upper bound on the number of homomorphisms: If we fix some representative subset $$A \subseteq X$$, then any homomorphism is determined by its values on $$A$$, so there is at most one homomorphism for each function from $$A$$ to $$Y$$, of which there are 
 
@@ -91,7 +91,7 @@ $$
 An even simpler case occurs when the cyclic group in question is the trivial group $$\Z_1$$, or equivalently, the order of every element of $$X$$ and $$Y$$ is 1. In this case, the formula becomes
 
 $$
-|Y_1|^{|X_1/\Z_1|} = |Y|^|X|,
+|Y_1|^{|X_1/\Z_1|} = |Y|^{|X|},
 $$
 
 reproducing the formula for the total number of functions from $$X$$ to $$Y$$.
