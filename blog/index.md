@@ -3,9 +3,12 @@ layout: 'navbar'
 title: 'Articles'
 ---
 
+<span class="serif">2024</span>
+
+[Ternary gate automata](ternary-gate-automata) 
+
 <span class="serif">2023</span>
 
-<!-- [Ternary gate automata](ternary-gate-automata) \ -->
 [Z-action lemma](z-action-lemma) \
 [The structure of the natural numbers](structure-of-natural-numbers) \
 [A structure theorem for semimodules over rings](semimodules-over-rings) \
