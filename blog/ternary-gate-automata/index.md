@@ -21,12 +21,12 @@ mathjax: true
     border: 1px solid black;
   }
 
-  .hidden {
+  .newcommands {
     display: none;
   }
 </style>
 
-<div class="hidden">
+<div class="newcommands">
   $$ 
   \newcommand{\Z}{\mathbb{Z}} 
   $$
