@@ -1,5 +1,5 @@
-# owenbechtel.com
-This repo contains the source code for my website, [owenbechtel.com](https://owenbechtel.com). Built using Jekyll and hosted by Github Pages.
+# My Website
+This repo contains the source code for my personal website, [owenbechtel.com](https://owenbechtel.com). Built using Jekyll and hosted by Github Pages.
 
 ## To do
 * Fix tanks battle royale; current version breaks when someone disconnects
