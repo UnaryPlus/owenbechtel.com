@@ -28,7 +28,7 @@ Tugboats can be stacked indefinitely as shown below. The resulting period-2 ship
 
 {% include viewer.html rle="2b3o7b3o7b3o7b3o$2bobo7bobo7bobo7bobo2$b3o7b3o7b3o7b3o2$b3o7b3o7b3o7b3o$bobo7bobo7bobo7bobo2$3o9b3o5b3o9b3o2$20b3o9b3o$20bobo9bobo2$19b3o9b3o! [[ GPS 8 ]]" %}
 
-Tugboats can eat blinkers:
+Tugboats can eat [blinkers](/symmetrica/oscillators/#blinker):
 
 {% include viewer.html rle="5b3o3$3o$obo2$b3o! [[ GPS 8 ]]" %}
 
@@ -47,7 +47,7 @@ The schooner can eat blinkers and flares, and can be eaten by a block.
 
 {% include viewer.html rle="7bo11bo7b2o$6bo12bo7b2o$19bo4$3o9b3o9b3o$obo9bobo9bobo2$b3o9b3o9b3o2$b3o9b3o9b3o! [[ GPS 16 ]]" %}
 
-Since the schooner looks similar to the tugboat, but with an additional "blinker," one might wonder whether further "blinkers" can be added, resulting in new spaceships. This is in fact possible, as long as the sides of the ship are stabilized with tugboats. How exactly the stabilization is done depends on the value of the number of "blinkers" modulo n.
+Since the schooner looks similar to the tugboat, but with an additional "blinker," one might wonder whether further "blinkers" can be added, resulting in new spaceships. This is in fact possible, as long as the sides of the ship are stabilized with tugboats. How exactly the stabilization is done depends on the value of the number of "blinkers" modulo 4.
 
 {% include viewer.html rle="6b2o6b2o14b2o6b2o$8bo7bo15bo7bo$3b2ob2o3b2ob2o11b2ob2o3b2ob2o2$4bobobobobobobo11bobobobobobobobo$4bobobobobobobob2o8bobobobobobobobob2o$bo2bobobobobobobo2bo8bobobobobobobobo2bo$18b2o24b2o$b2ob2o3b2ob2o13b2ob2o3b2ob2o$6bo7bo17bo7bo$4b2o6b2o16b2o6b2o7$4b2o6b2o18b2o6b2o$6bo7bo19bo7bo$b2ob2o3b2ob2o15b2ob2o3b2ob2o2$obobobobobobobobo9bobobobobobobobobobo$obobobobobobobobob2o6bobobobobobobobobobob2o$obobobobobobobobo2bo6bobobobobobobobobobo2bo$18b2o26b2o$b2ob2o3b2ob2o15b2ob2o3b2ob2o$6bo7bo19bo7bo$4b2o6b2o18b2o6b2o! [[ GPS 8 ]]" %}
 

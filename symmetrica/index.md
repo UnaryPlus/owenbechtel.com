@@ -3,7 +3,7 @@ layout: 'navbar'
 title: 'Symmetrica'
 ---
 
-Symmetrica is a cellular automaton with two states. (The name "Symmetrica" comes from the word "symmetry" combined with "CA" for cellular automaton.) As in the Game of Life, the states are referred to as "alive" and "dead." Each generation, every cell changes state in accordance with the following rules:
+Symmetrica is a cellular automaton with two states. (The name "Symmetrica" comes from the word "symmetry" combined with "CA" for cellular automaton.) As in the [Game of Life](https://conwaylife.com/), the states are referred to as "alive" and "dead." Each generation, every cell changes state in accordance with the following rules:
 
 1. If the cell is dead and has 2 or 3 live neighbors in a symmetrical configuration, it becomes alive.
 2. If the cell is dead and has 4 live neighbors which are all orthogonal or all diagonal, it becomes alive.
