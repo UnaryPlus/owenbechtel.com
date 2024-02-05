@@ -64,7 +64,7 @@ Two plows can combine to make a puffer than produces shells and pinwheels.
 * Debris: 12 blocks, 5 flares, 5 blinkers, 1 carrier, 1 shell
 * Front section repeats at a period of 16
 * Powered by a [tango](/symmetrica/other-patterns/#tango)
-* See also: [symmetrical byzantine ship](/symmetrica/spaceships/#symmetrical-byzantine-ship), [asymmetrical byzantine ship](/symmetrica/spaceships/#asymmetrical-byzantine-ship)
+* See also: [symmetrical byzantine ship](/symmetrica/spaceships/#symmetrical-byzantine-ship-sbs), [asymmetrical byzantine ship](/symmetrica/spaceships/#asymmetrical-byzantine-ship-abs)
 
 {% include viewer.html rle="bo$3o3$3obo$bob2o$b2obo3$2b2o$b3o$2b3o!" %}
 
@@ -75,6 +75,10 @@ Although the byzantine is fairly dirty on its own, multiple byzantines can combi
 The byzantine can combine with a tugboat to make a period-16 block puffer.
 
 {% include viewer.html rle="10bo$9b3o3$7bob3o$7b2obo$7bob2o3$8b2o$3o5b3o$obo4b3o2$b3o!" %}
+
+The cluster of common objects below produces a byzantine, along with a block and a tugboat.
+
+{% include viewer.html rle="11b2o$11b2o2$4b2o2bo6bo$4b2obobo5bo$2o5bobo5bo$2o6bo!" %}
 
 ### Mason
 

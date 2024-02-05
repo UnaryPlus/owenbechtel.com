@@ -24,3 +24,5 @@ This website is a catalogue of named objects and their properties. You can click
 * [Other patterns](other-patterns)
 
 If you are new to cellular automata and don't know what these terms mean, see [here](https://conwaylife.com/wiki/Glossary_of_basic_terms).
+
+<!-- TODO: use Varangian guards instead of SBSs -->
