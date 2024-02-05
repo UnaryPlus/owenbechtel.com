@@ -1,7 +1,9 @@
 ---
-layout: 'navbar'
+layout: 'symmetrica'
 title: 'Symmetrica'
 ---
+
+{% include viewer.html rle="6b3o51b3o$2o4bo47b2o4bo$2o8b2o42b2o8b2o$7bo4bo48bo4bo$8bo2bo50bo2bo$7bo3b2o48bo3b2o$8bo2bo50bo2bo$7bo4bo48bo4bo$10b2o52b2o$6bo26b3o24bo26b3o$6b3o24bo26b3o24bo$37b2o52b2o$34bo4bo48bo4bo$35bo2bo50bo2bo$34bo3b2o48bo3b2o$35bo2bo50bo2bo$34bo4bo48bo4bo$27b2o8b2o42b2o8b2o$27b2o4bo47b2o4bo$33b3o51b3o! [[ GPS 16 AUTOSTART THUMBZOOM 5.5 ]]" universe=":T108,0" %}
 
 Symmetrica is a cellular automaton with two states. (The name "Symmetrica" comes from the word "symmetry" combined with "CA" for cellular automaton.) As in the [Game of Life](https://conwaylife.com/), the states are referred to as "alive" and "dead." Each generation, every cell changes state in accordance with the following rules:
 
@@ -26,3 +28,4 @@ This website is a catalogue of named objects and their properties. You can click
 If you are new to cellular automata and don't know what these terms mean, see [here](https://conwaylife.com/wiki/Glossary_of_basic_terms).
 
 <!-- TODO: use Varangian guards instead of SBSs -->
+<!-- TODO: add 32 down rake -->

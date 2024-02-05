@@ -3,6 +3,14 @@ layout: 'symmetrica'
 title: 'Symmetrica / Rakes'
 ---
 
+Tugboat rakes are classified according to two properties:
+
+* Spacing: How many cells apart the tugboats are.
+
+* Sign: Either "up" or "down." _Up_ means that the long sides of the tugboats are oriented in the rake's direction of motion; _down_ means that the long sides are oriented away from the rake's direction of motion.
+
+A rake with spacing X is called an X up rake or an X down rake depending on its sign. All rakes known so far have a _front end_ that produces tugboats along with additional debris, and a _back end_ that cleans up the debris.
+
 ### 16 down rake
 
 * Front end consists of two [byzantines](/symmetrica/puffers/#byzantine)
@@ -36,7 +44,7 @@ title: 'Symmetrica / Rakes'
 
 ### Schooner rakes
 
-Any tugboat rake with spacing greater than ~20 can be used to construct a schooner rake with the same spacing and sign by positioning three copies of the rake so as to produce the following reaction:
+Any tugboat rake with spacing greater than ~20 can be used to construct a schooner rake with the same spacing and opposite sign by positioning three copies of the rake so as to produce the following reaction:
 
 {% include viewer.html rle="10b2o$10bo2bo34b2o$10b2obo33bo$13bo34b2ob2o2$2b2o$o2bo$ob2o$o!" %}
 
@@ -68,8 +76,6 @@ o2bo$191bobo6bo9b3o4bo3b3o2b2o$181bo10bo7bo22bo2bo$181bob2o$181bo2bo$
 3bo$205b2o7bo4b3o$198b2o5b2o3bo$o4b3o$3o3bo$3o2bobo2bo$bo3b3o2b2o$7bo
 2bo5$7bo2bo$bo3b3o2b2o$3o2bobo2bo$3o3bo$o4b3o!
 "%}
-
-
 
 ### Mason breeder
 
