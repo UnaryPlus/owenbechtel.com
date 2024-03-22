@@ -6,7 +6,7 @@ date: '21 Mar 2024'
 
 THIS ARTICLE IS NOT FINISHED
 
-This article is more or less a summary of my thoughts on English spelling reform. It consists of a list of things that spelling reforms should not do, followed in the last section by a list of reforms I think are acceptable.
+This article is a summary of my thoughts on English spelling reform. It consists of a list of things that spelling reforms should not do, followed in the last section by a list of reforms I think are acceptable.
 
 ### Respelling 'hat'
 
@@ -32,7 +32,7 @@ My objection is only to the introduction of diacritics into native (or nativized
 
 Many people have at some point made the following observation: "The letter 'c' is pointless! It always makes either the 's' sound or the 'k' sound, so we can get rid of 'c' and just use 's' or 'k' instead." This is a bad idea, for two reasons.
 
-First of all, just as there is no need to respell 'hat', there is no need to respell 'cat'. Under current English orthography, the only reasonable pronunciation of ⟨cat⟩ is /kæt/, and the only reasonable spelling of /kæt/ is ⟨cat⟩. English has few words starting with 'ka-', and they are all loans from other languages, such as 'karma' and 'kanji'. Generally, English obeys a simple rule: at the start of a syllable, the consonant /k/ is spelled as 'k' before the letters 'e' and 'i', and 'c' otherwise (except in the cluster /kw/, which is spelled 'qu'.) Spanish, French, and Italian all have similar rules. I see no good reason to mess with this rule, or with any regular spelling rule, for that matter.
+First of all, just as there is no need to respell 'hat', there is no need to respell 'cat'. Under current English orthography, the only reasonable pronunciation of ⟨cat⟩ is /kæt/, and the only reasonable spelling of /kæt/ is ⟨cat⟩. English has few words starting with 'ka-', and they are all loans from other languages, such as 'karma' and 'kanji'. With the exception of such loan words, English obeys a simple rule: at the start of a syllable, the consonant /k/ is spelled as 'k' before the letters 'e' and 'i', and 'c' otherwise (except in the cluster /kw/, which is spelled 'qu'.) Spanish, French, and Italian all have similar rules. I see no good reason to mess with this rule, or with any regular spelling rule, for that matter.
 
 Second of all, if you eliminate the letter 'c', how will you spell 'rice'? The simplest approach&thinsp;&mdash;&thinsp;replacing every occurence of 'c' with either 's' or 'k'&thinsp;&mdash;&thinsp;results in 'rise', which is already a word, and is pronounced differently. You could, of course, respell 'rise' as 'rize' (which would also result in 'noze', 'cloze', 'pleaze', 'cheeze', and so on), but respelling 'rice' as 'rise' is problematic regardless. The thing is, when a word ends in '-ce', the pronunciation is unambiguously /s/, but when a word ends in '-se', the pronunciation could be either /s/ or /z/. (Compare the two pronunciations of 'close'). So the spelling with '-ce' is superior. It would be better to respell 'base' as 'bace' than to repell 'rice' as 'rise'.
 
@@ -57,25 +57,14 @@ It isn't just the '-s' suffix which has this property. The '-ed' suffix does as 
 Here are some changes I would approve of (some more radical than others):
 
 * Respelling 'read' (past tense) to 'red' to match the pronunciation and to match 'lead'/'led'. If there is one spelling reform I care about, it's this one.
-
 * More generally, respelling 'lead' (the metal), 'dead', 'instead', 'bread', 'head', etc. to 'led', 'ded', 'insted', 'bred', 'hed', etc.
-
 * Replacing '-ible' with '-able'.
-
 * Replacing '-or' and '-ar' (as in 'sailor', 'actor', 'liar', 'beggar') with '-er'.
-
 * More generally, spelling reduced syllabic /r/ consistently as 'er', resulting in 'seperate', 'collaberate', and so on. 
-
 * Replacing '-ent', '-ence' with '-ant', '-ance', unless preceded by a soft 'c' or 'g'. (So 'deterrent', 'dependent', 'rodent' become 'deterrant', 'dependant', 'rodant', but 'complacent' and 'agent' are left alone.) Note that '-ment' is a separate suffix and should be left alone. 
-
 * Respelling 'debt', 'doubt', 'subtle' to 'det', 'dout', 'suttle'.
-
 * Respelling 'heart', 'hearth' to 'hart', 'harth'. Respelling 'earth', 'earn', etc. to 'erth', 'ern', etc.
-
 * Potentially, respelling '-ow' to '-oe' when applicable, resulting in 'groe', 'toe' (from 'tow'), 'loe', 'roe', 'stoe', 'croe', 'noe' (from 'know'), 'bloe', and so on. For verbs with irregular past tenses ending in '-ew', this could potentially be respelled to '-ue' to match more closely the spelling of the present tense, resulting in 'grue', 'nue', 'blue'.
-
 * Respelling words ending in '-mb', resulting in 'lim', 'clime', 'lam', 'toom', 'coam', 'num', 'dum', 'thum', 'plummer', and so on.
-
 * Replacing 'kn' and 'gn' with 'n', resulting in 'nife', 'nee', 'naw', 'nat', etc.
-
 * Doing something about '-ough', of course. I'm thinking 'coff', 'ruff', 'tho', 'doe', 'bow', 'thru'. Words ending in '-ought' should be respelled to '-aught'. In my opinion, '-aught', '-igh(t)', '-eigh(t)', and '-aight' should be left alone. 'Laugh' should perhaps be respelled to 'laff', since it doesn't match the pronunciation in '-aught'.

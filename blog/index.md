@@ -5,7 +5,7 @@ title: 'Articles'
 
 <span class="serif">2024</span>
 
-[Pitfalls of English spelling reform](spelling-reform-pitfalls)
+[Pitfalls of English spelling reform](spelling-reform-pitfalls) \
 [Ternary gate automata](ternary-gate-automata) 
 
 <span class="serif">2023</span>
