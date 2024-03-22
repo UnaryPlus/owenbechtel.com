@@ -67,3 +67,4 @@ Here are some changes I would approve of (some more radical than others):
 * Respelling words ending in '-mb', resulting in 'lim', 'clime', 'lam', 'toom', 'coam', 'num', 'dum', 'thum', 'plummer', and so on.
 * Replacing 'kn' and 'gn' with 'n', resulting in 'nife', 'nee', 'naw', 'nat', etc.
 * Doing something about '-ough', of course. I'm thinking 'coff', 'ruff', 'tho', 'doe', 'bow', 'thru'. Words ending in '-ought' should be respelled to '-aught'. In my opinion, '-aught', '-igh(t)', and '-eigh(t)' should be left alone, but 'straight' should be respelled to 'strait'. 'Laugh' should be respelled to 'laff', since it doesn't match the pronunciation in '-aught'.
+* Replace 'st' with 'ss' when the 't' is silent, resulting in 'glissen', 'lissen', 'cassle'.
