@@ -56,6 +56,7 @@ Here are some changes I would approve of (some more radical than others):
 
 * Respelling 'read' (past tense) to 'red' to match the pronunciation and to match 'lead'/'led'. If there is one spelling reform I care about, it's this one.
 * More generally, respelling 'lead' (the metal), 'dead', 'instead', 'bread', 'head', etc. to 'led', 'ded', 'insted', 'bred', 'hed', etc.
+* Anglicizing the spelling of certain French-origin words, e.g. respelling 'plaque' as 'plack'.
 * Replacing '-ible' with '-able'.
 * Replacing '-or' and '-ar' (as in 'sailor', 'actor', 'liar', 'beggar') with '-er'.
 * More generally, spelling reduced syllabic /r/ consistently as 'er', resulting in 'seperate', 'collaberate', and so on. 
@@ -66,4 +67,3 @@ Here are some changes I would approve of (some more radical than others):
 * Respelling words ending in '-mb', resulting in 'lim', 'clime', 'lam', 'toom', 'coam', 'num', 'dum', 'thum', 'plummer', and so on.
 * Replacing 'kn' and 'gn' with 'n', resulting in 'nife', 'nee', 'naw', 'nat', etc.
 * Doing something about '-ough', of course. I'm thinking 'coff', 'ruff', 'tho', 'doe', 'bow', 'thru'. Words ending in '-ought' should be respelled to '-aught'. In my opinion, '-aught', '-igh(t)', and '-eigh(t)' should be left alone, but 'straight' should be respelled to 'strait'. 'Laugh' should be respelled to 'laff', since it doesn't match the pronunciation in '-aught'.
-* Anglicizing the spelling of certain French-origin words, e.g. respelling 'plaque' as 'plack'.
