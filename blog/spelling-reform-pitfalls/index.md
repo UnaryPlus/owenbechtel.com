@@ -4,8 +4,6 @@ title: 'Pitfalls of English spelling reform'
 date: '21 Mar 2024'
 ---
 
-THIS ARTICLE IS NOT FINISHED
-
 This article is a summary of my thoughts on English spelling reform. It consists of a list of things that spelling reforms should not do, followed in the last section by a list of reforms I think are acceptable.
 
 ### Respelling 'hat'
@@ -50,7 +48,7 @@ The cluster /kw/ is spelled in English as 'qu'. I see no reason to change this. 
 
 The letter 'x' does serve a purpose&thinsp;&mdash;&thinsp;distinguishing words with an '-s' suffix from those without one. Compare 'lacks', which has an '-s' suffix, and 'lax', which does not. If 'fox' were spelled 'focks' or similar, it would look like plural of a noun 'fock'. As I mentioned earlier, this ability to easily determine the morphology of words is a nice feature of English orthography.
 
-It isn't just the '-s' suffix which has this property. The '-ed' suffix does as well: if a verb ends in '-ed', it is always past tense. Compare 'tied', 'lied', and 'denied', which all end in '-ed' and are thus past tense, with 'ride', 'bide', and 'deride', which do not end in '-ed' and are not past tense.
+It isn't just the '-s' suffix which has this property. The '-ed' suffix does as well: if a verb ends in '-ed', it is always past tense. Compare 'tied', 'lied', and 'denied', which all end in '-ed' and are thus past tense, with 'ride', 'bide', and 'deride', which do not end in '-ed' and are not past tense. A purely "phonetic" spelling of English (taking only pronunciation, and not morphology, into account) would flatten this difference; I would consider that a loss.
 
 ### Suggestions for reform
 
@@ -68,3 +66,4 @@ Here are some changes I would approve of (some more radical than others):
 * Respelling words ending in '-mb', resulting in 'lim', 'clime', 'lam', 'toom', 'coam', 'num', 'dum', 'thum', 'plummer', and so on.
 * Replacing 'kn' and 'gn' with 'n', resulting in 'nife', 'nee', 'naw', 'nat', etc.
 * Doing something about '-ough', of course. I'm thinking 'coff', 'ruff', 'tho', 'doe', 'bow', 'thru'. Words ending in '-ought' should be respelled to '-aught'. In my opinion, '-aught', '-igh(t)', '-eigh(t)', and '-aight' should be left alone. 'Laugh' should perhaps be respelled to 'laff', since it doesn't match the pronunciation in '-aught'.
+* Anglicizing the spelling of certain French-origin words, e.g. respelling 'plaque' as 'plack'.
