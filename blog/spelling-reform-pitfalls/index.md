@@ -59,7 +59,6 @@ Here are some changes I would approve of (some more radical than others):
 * Anglicizing the spelling of certain French-origin words, e.g. respelling 'plaque' as 'plack'.
 * Replacing '-ible' with '-able'.
 * Replacing '-or' and '-ar' (as in 'sailor', 'actor', 'liar', 'beggar') with '-er'.
-* More generally, spelling reduced syllabic /r/ consistently as 'er', resulting in 'seperate', 'collaberate', and so on. 
 * Replacing '-ent', '-ence' with '-ant', '-ance', unless preceded by a soft 'c' or 'g'. (So 'deterrent', 'dependent', 'rodent' become 'deterrant', 'dependant', 'rodant', but 'complacent' and 'agent' are left alone.) Note that '-ment' is a separate suffix and should be left alone. 
 * Respelling 'debt', 'doubt', 'subtle' to 'det', 'dout', 'suttle'.
 * Respelling 'heart', 'hearth' to 'hart', 'harth'. Respelling 'earth', 'earn', etc. to 'erth', 'ern', etc.
