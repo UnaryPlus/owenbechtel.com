@@ -6,6 +6,7 @@ title: 'Articles'
 <span class="serif">2024</span>
 
 <!-- [My dialect of English](my-dialect-of-english) \ -->
+[Where do phonesthemes come from?](where-do-phonesthemes-come-from) \
 [Pitfalls of English spelling reform](spelling-reform-pitfalls) \
 [Ternary gate automata](ternary-gate-automata) 
 
