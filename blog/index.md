@@ -5,6 +5,7 @@ title: 'Articles'
 
 <span class="serif">2024</span>
 
+<!-- [My dialect of English](my-dialect-of-english) \ -->
 [Pitfalls of English spelling reform](spelling-reform-pitfalls) \
 [Ternary gate automata](ternary-gate-automata) 
 
