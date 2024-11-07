@@ -2,7 +2,7 @@
 This repo contains the source code for my personal website, [owenbechtel.com](https://owenbechtel.com). Built using Jekyll and hosted by Github Pages.
 
 ## To do
-* Finish "my dialect of English" article
+* Disclaimer on featural alphabet
 * Finish Python article
 * Fix issues with tanks battle royale and chat room
 * Use American-style dates in blog posts
