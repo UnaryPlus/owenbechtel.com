@@ -5,6 +5,7 @@ title: 'Articles'
 
 <span class="serif">2024</span>
 
+[Simple explanation of numpy.bincount](simple-numpy-bincount) \
 [My dialect of English](my-dialect-of-english) \
 [Where do phonesthemes come from?](where-do-phonesthemes-come-from) \
 [Pitfalls of English spelling reform](spelling-reform-pitfalls) \
