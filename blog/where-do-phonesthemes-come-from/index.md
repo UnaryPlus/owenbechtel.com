@@ -19,6 +19,7 @@ I will now list some phonesthemes along with their origin.
 * 'sl-' in words related to frictionless motion, derives from PIE *sley (meaning 'smooth'; whence 'slime', 'slip', 'slick', 'sleek') and *sleydʰ (meaning 'slippery'; whence 'slide', 'sled' (via Dutch), 'sleigh' (via Dutch), 'slither'). It seems likely to me that *sleydʰ is simply a suffixation of *sley. The words 'slush' and 'slosh' are onomatopoeic.
 
 * 'sw-', in words related to long or turning motion, is more difficult to classify.
+
   * 'sweep', 'swoop', 'swipe', 'swivel', and 'swift' are all related, and come from PIE *ksweybʰ.
   * 'swerve' comes from PIE *swerbʰ. 
   * 'swirl' is probably a variation of 'whirl' influenced by the preexisting 'sw-' phonestheme. 
@@ -26,14 +27,17 @@ I will now list some phonesthemes along with their origin.
   * 'sway' probably comes from Old Norse 'sveigja' (meaning 'bend', 'bow'), possibly from a Proto-Germanic verb *swaigijaną.
   * 'swag' probably comes from Old Norse 'sveggja' (meaning 'swing', 'sway'). Wiktionary and Etymonline both list 'sveggja' as potentially related to *swinganą.
   * 'swish', 'swoosh' are onomatopoeic.
+  
   If 'swing', 'sway', and 'swag' are all related, there would only be three origins for the 'sw-' words, discounting onomatopoeiae. The meaning of 'sway' could be due to confusion between 'sveigja' and 'sveggja'.
 
 * 'cl-', in words related to grabbing, derives from the PIE root *gel, meaning 'clump together', via three variations: *glew (whence 'clutch', 'claw'), *glembʰ (whence 'clam', 'clamp', 'clip', 'clasp', and also 'clump'), and *gley (whence 'cling', 'clench', and also 'glue' (via French), 'clay').
 
 * 'sn-', in words related to the nose or mouth, is mostly or entirely imitative.
+
   * 'sneer', 'sneeze', 'snore', 'snort' originally had 'fn-' in Old English, and ultimately derive from PIE *pnew, which meant 'gasp' or 'sneeze' and was "likely onomatopoeic" according to Wiktionary.
   * 'snack', 'snuff', 'snout', 'snot' come from the Proto-Germanic words *snakkōną, *sneufaną, *snūtaz, *snuttuz, with no further etymology. The first three were borrowed from Middle Dutch.
   * 'snorkel' is a recent loan from German 'Schnorchel', ultimately from Proto-West-Germanic *snarkōn (meaning 'snore'), with no further etymology.
   * 'sniff'/'sniffle', 'snarl', 'snicker'/'snigger' are imitative and of Middle English or Modern English origin.
+  
   My overall impression is that the Germanics had a tendency to coin nose- and mouth-related words beginning with 'sn-'. It was likely _because_ of this tendency that the \[fn\] > \[sn\] shift even occurred in English. The small number of Old English words beginning with 'fn-' were all nose-related, since they all came from *pnew, so the \[fn\] > \[sn\] shift was likely motivated by a desire to bring the 'fn-' words with nose-related meanings into consistency with the 'sn-' words with nose-related meanings.
 
