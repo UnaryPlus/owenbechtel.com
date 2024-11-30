@@ -6,6 +6,7 @@ title: 'Articles'
 <span class="serif">2024</span>
 
 <!-- [Coordinate-free definitions of polynomials](coordinate-free-polynomials) \ -->
+[A convention for backward summations](backward-summation-convention) \
 [Simple explanation of numpy.bincount](simple-numpy-bincount) \
 [My dialect of English](my-dialect-of-english) \
 [Where do phonesthemes come from?](where-do-phonesthemes-come-from) \
