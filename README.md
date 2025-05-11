@@ -3,7 +3,8 @@ This repo contains the source code for my personal website, [owenbechtel.com](ht
 
 ## To do
 * Disclaimer on featural alphabet
-* Finish Python article
+* Finish Python article?
+* Finish polynomials article?
 * Fix issues with tanks battle royale and chat room
 * Use American-style dates in blog posts
 * Standardize styles more; minimize &lt;style&gt; tags in body
