@@ -3,6 +3,10 @@ layout: 'navbar'
 title: 'Articles'
 ---
 
+<span class="serif">2025</span>
+
+[Hyperspheres and quasispheres](hyperspheres-and-quasispheres)
+
 <span class="serif">2024</span>
 
 <!-- [Coordinate-free definitions of polynomials](coordinate-free-polynomials) \ -->
