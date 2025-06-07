@@ -5,6 +5,7 @@ title: 'Articles'
 
 <span class="serif">2025</span>
 
+<!-- [Combinatorial knot diagrams](combinatorial-knot-diagrams) -->
 [Hyperspheres and quasispheres](hyperspheres-and-quasispheres)
 
 <span class="serif">2024</span>
