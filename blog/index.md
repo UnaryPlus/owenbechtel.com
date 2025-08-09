@@ -6,6 +6,7 @@ title: 'Articles'
 <span class="serif">2025</span>
 
 <!-- [Combinatorial knot diagrams](combinatorial-knot-diagrams) -->
+[Complex matrices and spatial rotations](complex-matrices-spatial-rotations) \
 [Hyperspheres and quasispheres](hyperspheres-and-quasispheres)
 
 <span class="serif">2024</span>
