@@ -3,6 +3,7 @@ This repo contains the source code for my personal website, [owenbechtel.com](ht
 
 ## To do
 * Disclaimer on featural alphabet
+* Finish knot diagrams article
 * Finish Python article?
 * Finish polynomials article?
 * Fix issues with tanks battle royale and chat room
