@@ -3,9 +3,11 @@ layout: 'navbar'
 title: 'UMass Trail Map'
 ---
 
-In the summer of 2024, I spent a large part of a day mapping the trails north of UMass. I didn't use any compass or GPS, so my original map was rather inaccurate in terms of directions and distances. To make a more accurate map, I used satellite images as well as Apple maps (which includes a few of the trails in the woods), tracing over those trails that were visible and then adding in the remaining trails. There are also trails in other parts of campus, in particular to the west and south of this map, and I might map out those in the fall.
+In the summer of 2024, I spent a large part of a day mapping the trails north of UMass. I didn't use any compass or GPS, so my original map was rather inaccurate in terms of directions and distances. To make a more accurate map, I used satellite images as well as Apple maps (which includes a few of the trails in the woods), tracing over those trails that were visible and then adding in the remaining trails. There are also trails in other parts of campus, in particular to the west and south of this map, and I might map out those sometime this year.
 
-<img alt="UMass Trail Map" src="map.png" width="100%">
+This is version 2 of the map, created September 2025.
+
+<img alt="UMass Trail Map" src="umass_map_v2_sep2025.png" width="100%">
 
 1. Basketball court
 2. Pit
@@ -22,7 +24,7 @@ In the summer of 2024, I spent a large part of a day mapping the trails north of
 13. Massachusetts Farm Bureau Federation hall
 14. Agricultural Learning Center sign (2)
 15. Rolling Ridge Conservation Area
-16. "Labyrinth"
+16. Secluded picnic table
 17. Brick house
 
 *You can go inside the northern one, but the southern one is locked.
