@@ -88,7 +88,7 @@ $$
 2\pi \prod_{j=1}^{n-1}\int_0^\pi (\sin t)^{j} \,\mathrm{d}t = 2\pi \prod_{j=1}^{n-1}2\int_0^\frac{\pi}{2} (\sin t)^{j} \,\mathrm{d}t = 2^n\pi\prod_{j=1}^{n-1}W_j,
 $$
 
-where $$W_j$$ denotes the [Wallace integral](https://en.wikipedia.org/wiki/Wallis'_integrals). By using the formula for $$W_j$$ as a product of fractions, I figured out that the above is equal to
+where $$W_j$$ denotes the [Wallis integral](https://en.wikipedia.org/wiki/Wallis'_integrals). By using the formula for $$W_j$$ as a product of fractions, I figured out that the above is equal to
 
 $$
 \frac{2^{\lfloor\frac{n+2}{2}\rfloor}\pi^{\lfloor\frac{n+1}{2}\rfloor}}{(n-1)!!},
