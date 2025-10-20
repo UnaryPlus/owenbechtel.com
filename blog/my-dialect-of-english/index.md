@@ -154,7 +154,7 @@ Three of these phonemes (/ə/, /ĭ/, and /ŭ/) are reduced vowels, and the rest 
 | fate   | /fet/    | \[feɪt\]          |
 | lore   | /lor/    | \[ɫoɹ\]           |
 | lower  | /lo.ər/  | \[ˈɫəʊɹ&#809;\]   |
-| cole   | /kol/    | \[kʰoɫ\]          |
+| coal   | /kol/    | \[kʰoɫ\]          |
 | coat   | /kot/    | \[kʰəʊt\]         |
 
 **/a/ and /ɒ/**
