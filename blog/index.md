@@ -6,6 +6,7 @@ title: 'Articles'
 <span class="serif">2025</span>
 
 <!-- [Combinatorial knot diagrams](combinatorial-knot-diagrams) -->
+[Some corrections](some-corrections) \
 [Groups with negatives](groups-with-negatives) \
 [REU paper: Consequences of general relativity](reu-paper) \
 [Complex matrices and spatial rotations](complex-matrices-spatial-rotations) \
