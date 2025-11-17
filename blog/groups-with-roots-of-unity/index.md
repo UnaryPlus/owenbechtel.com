@@ -1,10 +1,12 @@
 ---
 layout: 'blog'
 title: 'Groups with roots of unity'
-date: '16 Nov 2025'
+date: '17 Nov 2025'
 mathjax: true
 center_equations: true
 ---
+
+[This article is unfinished.]
 
 In an [article](../groups-with-negatives/) I wrote in September, I defined a structure called a "group with negation", giving three equivalent definitions:
 

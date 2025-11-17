@@ -114,13 +114,13 @@ $$
 \end{align*}
 $$
 
-Update: After writing this, I realized that that formula for the Jones polynomial of $$T_n$$ can also be written as
+[Update: After writing this, I realized that that formula for the Jones polynomial of $$T_n$$ can also be written as
 
 $$
 {(t^{-3})}^{n\text{ mod }2}\left((-t)^{-n} + (1+t^2)\sum_{k=-n+1}^0 (-t)^k\right),
 $$
 
-which never involves any backward summation, but I like this formula somewhat less, the reason being that the first formula separates out all of the powers of $$t$$ (when $$n \geq 2$$), whereas this one does not.
+which never involves any backward summation, but I like this formula somewhat less, the reason being that the first formula separates out all of the powers of $$t$$ (when $$n \geq 2$$), whereas this one does not.]
 
 ### Half-inclusive convention
 

@@ -59,7 +59,7 @@ Here are some changes I would approve of (some more radical than others):
 * Anglicizing the spelling of certain French-origin words, e.g. respelling 'plaque' as 'plack'.
 * Replacing '-ible' with '-able'.
 * Replacing '-or' and '-ar' (as in 'sailor', 'actor', 'liar', 'beggar') with '-er'.
-* Replacing '-ent', '-ence' with '-ant', '-ance', unless preceded by a soft 'c' or 'g'. (So 'deterrent', 'dependent', 'rodent' become 'deterrant', 'dependant', 'rodant', but 'complacent' and 'agent' are left alone.) Note that '-ment' is a separate suffix and should be left alone. 
+* Replacing '-ent', '-ence' with '-ant', '-ance', unless preceded by a soft 'c' or 'g'.** (So 'deterrent', 'dependent', 'rodent' become 'deterrant', 'dependant', 'rodant', but 'complacent' and 'agent' are left alone.) Note that '-ment' is a separate suffix and should be left alone. 
 * Respelling 'debt', 'doubt', 'subtle' to 'det', 'dout', 'suttle'.
 * Respelling 'heart', 'hearth' to 'hart', 'harth'. Respelling 'earth', 'earn', etc. to 'erth', 'ern', etc.
 * Potentially, respelling '-ow' to '-oe' when applicable, resulting in 'groe', 'toe' (from 'tow'), 'loe', 'roe', 'stoe', 'croe', 'noe' (from 'know'), 'bloe', and so on. For verbs with irregular past tenses ending in '-ew', this could be respelled to '-ue' to match more closely the spelling of the present tense, resulting in 'grue', 'nue', 'blue' as past tenses of 'groe', 'noe', 'bloe'.
@@ -67,3 +67,5 @@ Here are some changes I would approve of (some more radical than others):
 * Replacing 'kn' and 'gn' with 'n', resulting in 'nife', 'nee', 'naw', 'nat', etc.
 * Doing something about '-ough', of course. I'm thinking 'coff', 'ruff', 'tho', 'doe', 'bow', 'thru'. Words ending in '-ought' should be respelled to '-aught'. In my opinion, '-aught', '-igh(t)', and '-eigh(t)' should be left alone, but 'straight' should be respelled to 'strait'. 'Laugh' should be respelled to 'laff', since it doesn't match the pronunciation in '-aught'.
 * Replacing 'st' with 'ss' when the 't' is silent, resulting in 'glissen', 'lissen', 'cassle'.
+
+\[**Update Nov 17, 2025: I would not have suggested this change if had considered the suffixes '-ential' and '-antial', in which the first vowel is stressed. For example, while the endings of 'deference' and 'substance' are pronounced the same, the distinction between the 'e' and the 'a' becomes important in the related words 'deferential' and 'substantial'. So it would not be wise to respell 'deference' to 'deferance'.\]

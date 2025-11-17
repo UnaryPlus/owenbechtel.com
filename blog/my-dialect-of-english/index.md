@@ -83,6 +83,8 @@ Three of these phonemes (/ə/, /ĭ/, and /ŭ/) are reduced vowels, and the rest 
 
 * The vowels /ɪ/, /ʊ/, /ɛ/, /ʌ/, and /æ/ do not occur syllable-finally, except in interjections such as 'uh'. /a/ is rare syllable-finally, occuring only in words of foreign origin such as 'spa', 'bra', 'mardi gras', 'Fermat', etc.
 
+  [Update Nov 17, 2025: Since writing this article, I have realized that the vowel /æ/, at least, can occur syllable-finally. An example is given by the word "plateau" /plæto/. The /t/ in this word certainly belongs to the second syllable (because it is aspirated rather than tapped), which implies that the first syllable ends in /æ/. However, it remains true that /æ/ cannot occur at the end of a word.]
+
 * /i/ is a monophthong. It is never pronounced as a dipthong.
 
 * /u/ is slightly diphthongized. It is fronter than cardinal \[u\], becoming closer, backer, and more rounded over its duration. I can't tell what the exact phonetic value is, so I will simply transcribe this allophone as \[u&#799;\]. Before /l/, /u/ is more or less a cardinal \[u\]. /ŭ/ is closer than /u/ to being a monopthong, as one would expect for a reduced vowel.
