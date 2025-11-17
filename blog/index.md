@@ -5,7 +5,8 @@ title: 'Articles'
 
 <span class="serif">2025</span>
 
-<!-- [Combinatorial knot diagrams](combinatorial-knot-diagrams) -->
+<!-- [Combinatorial knot diagrams](combinatorial-knot-diagrams) \ -->
+<!-- [Groups with roots of unity](groups-with-roots-of-unity) \ -->
 [Some corrections](some-corrections) \
 [Groups with negatives](groups-with-negatives) \
 [REU paper: Consequences of general relativity](reu-paper) \
