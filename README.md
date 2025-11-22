@@ -2,7 +2,6 @@
 This repo contains the source code for my personal website, [owenbechtel.com](https://owenbechtel.com). Built using Jekyll and hosted by Github Pages.
 
 ## To do
-* Disclaimer on featural alphabet
 * Finish knot diagrams article
 * Finish Python article?
 * Finish polynomials article?
@@ -10,3 +9,4 @@ This repo contains the source code for my personal website, [owenbechtel.com](ht
 * Use American-style dates in blog posts
 * Standardize styles more; minimize &lt;style&gt; tags in body
 * Fix mathjax equation overflow in column layout
+* Make articles serif? (something like latex.css?)
