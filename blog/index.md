@@ -3,9 +3,12 @@ layout: 'navbar'
 title: 'Articles'
 ---
 
+<span class="serif">2026</span>
+
+[Honors thesis: Deformed G2 instantons](honors-thesis)
+
 <span class="serif">2025</span>
 
-<!-- [Combinatorial knot diagrams](combinatorial-knot-diagrams) \ -->
 [Groups with roots of unity](groups-with-roots-of-unity) \
 [Groups with negatives](groups-with-negatives) \
 [REU paper: Consequences of general relativity](reu-paper) \
@@ -14,7 +17,6 @@ title: 'Articles'
 
 <span class="serif">2024</span>
 
-<!-- [Coordinate-free definitions of polynomials](coordinate-free-polynomials) \ -->
 [A convention for backward summations](backward-summation-convention) \
 [Simple explanation of numpy.bincount](simple-numpy-bincount) \
 [My dialect of English](my-dialect-of-english) \
